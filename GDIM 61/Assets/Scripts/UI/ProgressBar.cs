@@ -9,20 +9,32 @@ public class ProgressBar : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI percentage;
 
-    public void onSliderChanged(float value)
+    [SerializeField]
+    private int currentValue;
+
+    [SerializeField]
+    private int addValue;
+
+    [SerializeField]
+    private Slider slider;
+
+    public void onSliderChanged(int value)
     {
-        percentage.text = value.ToString();
+        percentage.text = currentValue.ToString(value.ToString());
     }
 
-    // Start is called before the first frame update
     void Start()
     {
-        
+        currentValue = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKey(KeyCode.Space))
+        {
+            currentValue += addValue;
+            slider.value = currentValue;
+        }
     }
 }
