@@ -34,7 +34,7 @@ public class PlayerScript : MonoBehaviour
         ytrans = Input.GetAxis("Vertical") * speed;
 
         anim.SetFloat("Speed", new Vector2(xtrans, ytrans).magnitude);
-        print(anim.GetFloat("Speed"));
+        //print(anim.GetFloat("Speed"));
         anim.SetBool("FaceRight", faceRight);
     }
     private void FixedUpdate()
