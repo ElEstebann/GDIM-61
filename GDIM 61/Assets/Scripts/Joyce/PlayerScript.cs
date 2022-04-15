@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
+// Joyce Mai
 public class PlayerScript : MonoBehaviour
 {
     [SerializeField] private float speed = 5f;
     private float xtrans;
     private float ytrans;
-    [SerializeField] private Animator anim;
+    [SerializeField] private Animator anim; // reference to animator; controls the left/right idle/movement animation trasitions
 
     private bool faceRight;
 
@@ -23,6 +23,8 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         xtrans = Input.GetAxis("Horizontal") * speed;
+        ytrans = Input.GetAxis("Vertical") * speed;
+
         if (xtrans > 0) // determines which way the player is facing
         {
             faceRight = true;
@@ -31,13 +33,11 @@ public class PlayerScript : MonoBehaviour
         {
             faceRight = false;
         }
-        ytrans = Input.GetAxis("Vertical") * speed;
-
+        // variables that determine animation state
         anim.SetFloat("Speed", new Vector2(xtrans, ytrans).magnitude);
-        //print(anim.GetFloat("Speed"));
         anim.SetBool("FaceRight", faceRight);
     }
-    private void FixedUpdate()
+    private void FixedUpdate() // using fixed update instead of Update to decrease jitter
     {
         transform.Translate(xtrans * Time.fixedDeltaTime, ytrans * Time.fixedDeltaTime , 0);
     }
