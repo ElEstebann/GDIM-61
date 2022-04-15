@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     private bool GameIsPause = false; // if the game is paused or not
+
     [SerializeField]
     private GameObject pauseMenuUI; // UI of pause menu 
 
@@ -52,7 +53,7 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene("Title");
     }
 
-    // quits game in build
+    //quits game in build
     public void QuitGame()
     {
         Debug.Log("Quitting game");

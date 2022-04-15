@@ -18,13 +18,14 @@ public class Health : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.J))
+        if(Input.GetKeyDown(KeyCode.J)) //change to if being seen 
         {
             TakeDamage(1);
         }
 
         if(dead == true)
         {
+            Debug.Log("dead!");
             //game ended
         }
     }

@@ -10,31 +10,52 @@ public class ProgressBar : MonoBehaviour
     private TextMeshProUGUI percentage;
 
     [SerializeField]
-    private int currentValue;
+    private float currentValue;
 
     [SerializeField]
-    private int addValue;
+    private float addValue;
 
     [SerializeField]
     private Slider slider;
 
+    [SerializeField]
+    private GameObject player;
+
+    [SerializeField]
+    private float range;
+
+    [SerializeField]
+    private Animator anim;
+
+    //percentage number change with the bar value
     public void onSliderChanged(int value)
     {
         percentage.text = currentValue.ToString(value.ToString());
     }
 
+    //zero percent when start
     void Start()
     {
         currentValue = 0;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.Space))
+        //if player is within the bar range
+        if(Vector2.Distance(player.transform.position, slider.transform.position) < range)
         {
-            currentValue += addValue;
-            slider.value = currentValue;
+            anim.enabled = true;
+
+            //value is added and bar is filled
+            if (Input.GetKey(KeyCode.Space))
+            {
+                currentValue += addValue;
+                slider.value = currentValue;
+            }
+        }
+        else
+        {
+            anim.enabled = false;
         }
     }
 }
