@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Written by Zane
 public class HumanFOV : MonoBehaviour
 {
     [SerializeField] private float radius;
