@@ -1,25 +1,22 @@
 fileFormatVersion: 2
-guid: 5b0ccf71ebdba114697c1c40a6e97462
+guid: 4a60594e377ae29408cbf54c6ea800e6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4208126894944693974
-    second: microwave_0
+      213: -6696897164379916337
+    second: stove_0
   - first:
-      213: 6584293020456541394
-    second: microwave_1
+      213: -2886747468824742174
+    second: stove_1
   - first:
-      213: -1699494112831178317
-    second: microwave_2
+      213: -8645177133111620160
+    second: stove_2
   - first:
-      213: 7329018735246389460
-    second: microwave_3
+      213: 8464661611770427596
+    second: stove_3
   - first:
-      213: -8567966264667546344
-    second: microwave_4
-  - first:
-      213: 5818381826809803289
-    second: microwave_5
+      213: 915007849812676374
+    second: stove_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -60,7 +57,7 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 1
+  spriteExtrude: 0
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
@@ -86,7 +83,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -98,7 +95,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -109,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: microwave_0
+      name: stove_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 0
         y: 0
-        width: 13
-        height: 7
+        width: 18
+        height: 16
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -123,20 +120,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a21dd0972eab995c0800000000000000
-      internalID: -4208126894944693974
+      spriteID: fc770dbb287df03a0800000000000000
+      internalID: -6696897164379916337
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: microwave_1
+      name: stove_1
       rect:
         serializedVersion: 2
-        x: 19
+        x: 18
         y: 0
-        width: 13
-        height: 7
+        width: 18
+        height: 16
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,20 +141,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2dc5565fd9b106b50800000000000000
-      internalID: 6584293020456541394
+      spriteID: 2e67174c87630f7d0800000000000000
+      internalID: -2886747468824742174
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: microwave_2
+      name: stove_2
       rect:
         serializedVersion: 2
-        x: 37
+        x: 36
         y: 0
-        width: 11
-        height: 8
+        width: 18
+        height: 16
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,20 +162,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b974d2db1f2a68e0800000000000000
-      internalID: -1699494112831178317
+      spriteID: 0cd4d889339260880800000000000000
+      internalID: -8645177133111620160
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: microwave_3
+      name: stove_3
       rect:
         serializedVersion: 2
-        x: 53
+        x: 54
         y: 0
-        width: 13
-        height: 10
+        width: 18
+        height: 16
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -186,20 +183,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d03b8a75b7e5b560800000000000000
-      internalID: 7329018735246389460
+      spriteID: cc8367163e4887570800000000000000
+      internalID: 8464661611770427596
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: microwave_4
+      name: stove_4
       rect:
         serializedVersion: 2
-        x: 71
+        x: 72
         y: 0
-        width: 11
-        height: 11
+        width: 18
+        height: 16
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -207,29 +204,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81dd5fac318781980800000000000000
-      internalID: -8567966264667546344
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: microwave_5
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 0
-        width: 77
-        height: 15
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9123692c17b0fb050800000000000000
-      internalID: 5818381826809803289
+      spriteID: 61f47ce9ac2c2bc00800000000000000
+      internalID: 915007849812676374
       vertices: []
       indices: 
       edges: []
