@@ -3,16 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+// Written by Zane
 public class CountdownTimer : MonoBehaviour
 {
     [SerializeField] private float timeValue;
     [SerializeField] private TextMeshProUGUI timeText;
+
+    public bool timeTicking;
 
     void Update()
     {
         if(timeValue > 0)
         {
             timeValue -= Time.deltaTime;
+            timeTicking = true;
         }
         else
         {
@@ -20,6 +24,7 @@ public class CountdownTimer : MonoBehaviour
 
             //stop timer at 0
             timeValue = 0;
+            timeTicking = false;
         }
 
         DisplayTime(timeValue);

@@ -75,8 +75,8 @@ public class HumanFOV : MonoBehaviour
     private void OnDrawGizmos()
     {
         // creates a visible circle in the gizmos that represents the viewing range of the AI
-        Gizmos.color = Color.white;
-        UnityEditor.Handles.DrawWireDisc(transform.position, Vector3.forward, radius);
+        //Gizmos.color = Color.white;
+        //UnityEditor.Handles.DrawWireDisc(transform.position, Vector3.forward, radius);
 
         // positions the viewing angle
         Vector3 angle1 = DirectionFromAngle(-transform.eulerAngles.x, -angle / 2);

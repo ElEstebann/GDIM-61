@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Written by Zane
+// Written by Zane
 public class HumanPatrol : MonoBehaviour
 {
     [SerializeField] private Transform leftEdge;
     [SerializeField] private Transform rightEdge;
-
     [SerializeField] private Transform humanAI;
+
     [SerializeField] private float humanSpeed;
     [SerializeField] private float idleDuration;
 
