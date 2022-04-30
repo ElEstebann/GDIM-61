@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class Arrow : MonoBehaviour
@@ -10,6 +11,8 @@ public class Arrow : MonoBehaviour
     public GameObject camera;
     private Transform image;
     private float normalXPos;
+    private Image sprite;
+    public float ratio = 1f;
     void Start()
     {
         camera = GameObject.FindGameObjectsWithTag("MainCamera")[0];
@@ -17,6 +20,7 @@ public class Arrow : MonoBehaviour
         LookAt image = this.gameObject.transform.GetChild(0).GetComponent<LookAt>();
         image.camera = camera;
         image.target = target;
+        sprite = this.gameObject.transform.GetChild(0).GetComponent<Image>();
         
     }
 
@@ -24,7 +28,9 @@ public class Arrow : MonoBehaviour
     void Update()
     {
         transform.localPosition = target.transform.position - camera.transform.position;
-        
+
+        //For testing color
+        //updateColor(ratio);
         //These values found by trial and error lol
         float xMax = 860f;
         float yMax = 440f;
@@ -47,5 +53,18 @@ public class Arrow : MonoBehaviour
             }
         }
         //Debug.Log("x: " + transform.localPosition.x + "y: " +transform.localPosition.y);
+    }
+
+    public void updateColor(float ratio)
+    {
+        if(ratio <= 0.5f )
+        {
+            sprite.color = new Color(1f,ratio*2,0f,1f);
+            
+        }
+        else if (ratio <= 1f)
+        {
+            sprite.color = new Color(1f,1f,0.5f + 0.5f*ratio,1f);
+        }
     }
 }
