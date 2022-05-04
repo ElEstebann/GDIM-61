@@ -27,6 +27,9 @@ public class ProgressBar : MonoBehaviour
     [SerializeField]
     private Animator anim;
 
+    [SerializeField]
+    private GameObject BalloonText;
+
     //percentage number change with the bar value
     public void onSliderChanged(int value)
     {
@@ -56,6 +59,19 @@ public class ProgressBar : MonoBehaviour
         else
         {
             anim.enabled = false;
+        }
+
+        if (currentValue >= 100.0f && currentValue < 100.1f)
+        {
+            BalloonText.SetActive(true);
+
+            StartCoroutine(RemoveAfterSeconds(5, BalloonText));
+        }
+
+        IEnumerator RemoveAfterSeconds(int seconds, GameObject BalloonText)
+        {
+            yield return new WaitForSeconds(seconds);
+            BalloonText.SetActive(false);
         }
     }
 }
