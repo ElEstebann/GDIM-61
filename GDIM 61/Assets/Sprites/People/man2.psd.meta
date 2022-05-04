@@ -1,16 +1,19 @@
 fileFormatVersion: 2
-guid: 2123af3a2c6e2534b8879397586ed27f
+guid: 2cb912f39c37f144687ea7bdf8d9de6d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6611446552465093707
-    second: plug_fall_0
+      213: -7709688681058168235
+    second: man2_0
   - first:
-      213: -6937420737676730313
-    second: plug_fall_1
+      213: 1179145017729752491
+    second: man2_1
   - first:
-      213: 8376200577605413995
-    second: plug_fall_2
+      213: 7635336493284671850
+    second: man2_2
+  - first:
+      213: 2891512088110781726
+    second: man2_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -55,7 +58,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,12 +103,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: plug_fall_0
+      name: man2_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 18
+        width: 16
         height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -114,19 +117,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b44b92b4c9390cb50800000000000000
-      internalID: 6611446552465093707
+      spriteID: 5529da40efea10590800000000000000
+      internalID: -7709688681058168235
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: plug_fall_1
+      name: man2_1
       rect:
         serializedVersion: 2
-        x: 18
+        x: 16
         y: 0
-        width: 18
+        width: 16
         height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -135,19 +138,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 730a959589459bf90800000000000000
-      internalID: -6937420737676730313
+      spriteID: bad1470752a2d5010800000000000000
+      internalID: 1179145017729752491
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: plug_fall_2
+      name: man2_2
       rect:
         serializedVersion: 2
-        x: 36
+        x: 32
         y: 0
-        width: 18
+        width: 16
         height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -156,8 +159,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6ca79bdb0e3e3470800000000000000
-      internalID: 8376200577605413995
+      spriteID: a614fce361a26f960800000000000000
+      internalID: 7635336493284671850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: man2_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e15579b9ce6b02820800000000000000
+      internalID: 2891512088110781726
       vertices: []
       indices: 
       edges: []
