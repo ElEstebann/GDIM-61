@@ -178,7 +178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   percentage: {fileID: 119260181}
   currentValue: 0
-  addValue: 1
+  addValue: 0.08
   slider: {fileID: 27929902}
   player: {fileID: 132136711}
   range: 2
@@ -770,7 +770,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 132136711}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.12, y: -3.37, z: 0}
+  m_LocalPosition: {x: -2.62, y: 0.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1561,7 +1561,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   percentage: {fileID: 203280802}
   currentValue: 0
-  addValue: 0.08
+  addValue: 1
   slider: {fileID: 847600365}
   player: {fileID: 132136711}
   range: 2

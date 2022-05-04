@@ -61,7 +61,7 @@ public class ProgressBar : MonoBehaviour
             anim.enabled = false;
         }
 
-        if (currentValue >= 100.0f && currentValue < 100.1f)
+        if (currentValue >= 100.0f && currentValue < 100.01f)
         {
             BalloonText.SetActive(true);
 
