@@ -216,6 +216,7 @@ GameObject:
   - component: {fileID: 239879312}
   - component: {fileID: 239879314}
   - component: {fileID: 239879313}
+  - component: {fileID: 239879315}
   m_Layer: 5
   m_Name: Win
   m_TagString: Untagged
@@ -262,7 +263,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You Win!
+  m_text: You Win !!!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: aaba279d38f16f041a0cb644e5a251bd, type: 2}
   m_sharedMaterial: {fileID: 1358707599231895787, guid: aaba279d38f16f041a0cb644e5a251bd, type: 2}
@@ -305,7 +306,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -339,6 +340,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 239879311}
   m_CullTransparentMesh: 1
+--- !u!95 &239879315
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239879311}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 47eb66e37bf5f4e1d9c1ba4646365b59, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &446028071
 GameObject:
   m_ObjectHideFlags: 0
