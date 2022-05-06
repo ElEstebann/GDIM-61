@@ -11,12 +11,13 @@ public class HumanPatrolRandom : MonoBehaviour
     [SerializeField] private Transform leftEdge;
     [SerializeField] private Transform rightEdge;
     [SerializeField] private Transform humanAI;
+    [SerializeField] private Animator anim;
+
     [SerializeField] private Transform[] moveLocations;
 
     private int randomPosition;
     private float idleTimer;
     private bool facingLeft = false;
-    private bool facingRight = false;
 
     private Vector3 initialScale;
 
@@ -82,23 +83,23 @@ public class HumanPatrolRandom : MonoBehaviour
 
     private void DirectionChange(int direction)
     {
-        //anim.SetBool("moving", false)
+        // deactivates walking animation
+        anim.SetBool("Walk", false);
 
         if (direction == 1)
         {
-            facingRight = true;
             facingLeft = false;
         }
         else if (direction == -1)
         {
             facingLeft = true;
-            facingRight = false;
         }
     }
 
     private void MoveDirection(int direction)
     {
-        // anim.SetBool("moving", true)
+        // activates walking animation
+        anim.SetBool("Walk", true);
 
         // makes the AI face a direction
         humanAI.localScale = new Vector3(Mathf.Abs(initialScale.x) * direction, initialScale.y, initialScale.z);

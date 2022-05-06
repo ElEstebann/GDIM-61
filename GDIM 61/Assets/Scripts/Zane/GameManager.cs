@@ -46,6 +46,7 @@ public class GameManager : MonoBehaviour
         state = GAMESTATE.PLAYING;
         instance.level = 0;
         SceneManager.LoadScene(instance.levels[0]);
+        Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = 1.0f;
     }
 
@@ -72,13 +73,19 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    public static void WinGame()
+    public static void WinScreen()
     {
         state = GAMESTATE.WIN;
+
+        Cursor.lockState = CursorLockMode.None;
+        SceneManager.LoadScene("Win");
     }
 
-    public static void LoseGame()
+    public static void LoseScreen()
     {
         state = GAMESTATE.LOSE;
+
+        Cursor.lockState = CursorLockMode.None;
+        SceneManager.LoadScene("Lose");
     }
 }

@@ -9,22 +9,29 @@ public class GhostTask : MonoBehaviour
 
     [SerializeField] private float radius;
     [SerializeField] private float holdTime;
+    [SerializeField] private float taskDuration;
 
     [SerializeField] LayerMask playerLayer;
     [SerializeField] LayerMask wallLayer;
 
     [SerializeField] GameObject Player;
 
-    private float startTime = 0f;
-    private float timer = 0f;
+    private float keyHeldStartTime = 0f;
+    private float keyHeldTimer;
+    private float taskTimer;
 
+    private bool pauseTaskTimer = false;
+    private bool taskCompleted = false;
     private bool keyHeld = false;
+    public static bool taskDone;
     public bool inRange { get; private set; }
 
 
     void Start()
     {
         StartCoroutine(RangeCheck());
+
+        taskTimer = taskDuration;
     }
 
     private void Update()
@@ -32,29 +39,49 @@ public class GhostTask : MonoBehaviour
         // checks if the player is in range of the task
         if (inRange == true)
         {
-            // starts the timer when the key is pressed
-            if (Input.GetKeyDown(holdKey))
-            {
-                timer = startTime;
-            }
-
             // adds time to the timer while the key is held down
             if (Input.GetKey(holdKey) && keyHeld == false)
             {
-                timer += Time.deltaTime;
+                keyHeldTimer += Time.deltaTime;
 
                 // when the key is held down for the required time, the timer stops and the function is called
-                if (timer >= (startTime + holdTime))
+                if (keyHeldTimer >= (keyHeldStartTime + holdTime))
                 {
                     keyHeld = true;
+                    taskDone = true;
                     ButtonHeld();
                 }
+
+                pauseTaskTimer = true;
             }
 
             // allows for key to be pressed again
             if (Input.GetKeyUp(holdKey))
             {
                 keyHeld = false;
+                pauseTaskTimer = false;
+            }
+
+            // resets the timer when the key is pressed again
+            if (Input.GetKeyDown(holdKey))
+            {
+                //timer = startTime;
+            }
+        }
+
+        // checks if timer has reached zero and if key is held down
+        if (taskTimer > 0 && pauseTaskTimer == false)
+        {
+            // timer counts down
+            taskTimer -= Time.deltaTime;
+        }
+        else if (pauseTaskTimer == false)
+        {
+            // checks if task was completed
+            if (!taskCompleted)
+            {
+                TaskFailed();
+                taskCompleted = true;
             }
         }
     }
@@ -62,6 +89,13 @@ public class GhostTask : MonoBehaviour
     private void ButtonHeld()
     {
         Debug.Log("TASK COMPLETE!! Key held down for " + holdTime + " seconds.");
+        Destroy(this.transform.parent.gameObject);
+    }
+
+    private void TaskFailed()
+    {
+        Debug.Log("YOU LOSE!! Failed to complete the task in " + taskDuration + " seconds.");
+        GameManager.LoseScreen();
     }
 
     private IEnumerator RangeCheck()

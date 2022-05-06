@@ -15,16 +15,25 @@ public class CountdownTimer : MonoBehaviour
     {
         if(timeValue > 0)
         {
-            timeValue -= Time.deltaTime;
             timeTicking = true;
+
+            // timer counts down
+            timeValue -= Time.deltaTime;
+
+            // tasks start to spawn
+            // GameObject.Find("Task Handler").GetComponent<GhostTaskSpawner>().SpawnTask();
         }
         else
         {
-            //send player to lose screen
-
-            //stop timer at 0
-            timeValue = 0;
             timeTicking = false;
+
+            // timer stops at zero
+            timeValue = 0;
+
+            // sends player to next level
+            //GameManager.NextLevel();
+
+            GameManager.WinScreen();
         }
 
         DisplayTime(timeValue);

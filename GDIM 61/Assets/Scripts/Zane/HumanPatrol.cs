@@ -57,10 +57,11 @@ public class HumanPatrol : MonoBehaviour
 
     private void DirectionChange()
     {
-        // anim.SetBool("moving", false)
+        // deactivates walking animation
+        anim.SetBool("Walk", false);
 
         // changes direction of the AI as soon as it reaches the edge
-        if(movingLeft)
+        if (movingLeft)
         {
             //humanAI.localScale = new Vector3(Mathf.Abs(initialScale.x) * 1, initialScale.y, initialScale.z);
         }
@@ -69,6 +70,7 @@ public class HumanPatrol : MonoBehaviour
             //humanAI.localScale = new Vector3(Mathf.Abs(initialScale.x) * -1, initialScale.y, initialScale.z);
         }
 
+        // starts idle timer
         idleTimer += Time.deltaTime;
 
         // checks if AI has idled long enough
@@ -81,9 +83,11 @@ public class HumanPatrol : MonoBehaviour
 
     private void MoveInDirection(int direction)
     {
-        idleTimer = 0;
+        // activates walking animation
+        anim.SetBool("Walk", true);
 
-        // anim.SetBool("moving", true)
+        // resets idle timer
+        idleTimer = 0;
 
         // makes the AI face a direction
         humanAI.localScale = new Vector3(Mathf.Abs(initialScale.x) * direction, initialScale.y, initialScale.z);

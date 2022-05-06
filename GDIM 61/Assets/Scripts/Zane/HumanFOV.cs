@@ -24,8 +24,8 @@ public class HumanFOV : MonoBehaviour
 
     private IEnumerator FOVCheck()
     {
-        // checks if the player is in view every 0.2 seconds
-        WaitForSeconds wait = new WaitForSeconds(0.2f);
+        // checks if the player is in view every 0.1 seconds
+        WaitForSeconds wait = new WaitForSeconds(0.1f);
 
         while (true)
         {
@@ -48,7 +48,7 @@ public class HumanFOV : MonoBehaviour
             // checks if the player is within the viewing angle of the AI
             if (Vector2.Angle(transform.right * transform.localScale.x, directionToPlayer) < angle / 2)
             {
-                float distanceToPlayer = Vector2.Distance(transform.position * transform.localScale.x, player.position);
+                float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
                 // checks if the player is in the direct line of sight of the AI
                 if (!Physics2D.Raycast(transform.position, directionToPlayer, distanceToPlayer, wallLayer))
