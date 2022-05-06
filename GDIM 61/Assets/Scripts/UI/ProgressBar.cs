@@ -30,6 +30,9 @@ public class ProgressBar : MonoBehaviour
     [SerializeField]
     private GameObject BalloonText;
 
+    [SerializeField]
+    private GameObject Range;
+
     //percentage number change with the bar value
     public void onSliderChanged(int value)
     {
@@ -45,7 +48,7 @@ public class ProgressBar : MonoBehaviour
     void Update()
     {
         //if player is within the bar range
-        if(Vector2.Distance(player.transform.position, slider.transform.position) < range)
+        if (Vector2.Distance(player.transform.position, slider.transform.position) < range)
         {
             anim.enabled = true;
 
@@ -57,7 +60,7 @@ public class ProgressBar : MonoBehaviour
             }
         }
         else
-        {
+            {
             anim.enabled = false;
         }
 
