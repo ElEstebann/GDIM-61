@@ -1,19 +1,31 @@
 fileFormatVersion: 2
-guid: 2cb912f39c37f144687ea7bdf8d9de6d
+guid: 34952a20486fa9344b3079adcfcc66d6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7709688681058168235
-    second: man2_0
+      213: 3400063988163018495
+    second: man_purple_0
   - first:
-      213: 1179145017729752491
-    second: man2_1
+      213: 6481539682520000265
+    second: man_purple_1
   - first:
-      213: 7635336493284671850
-    second: man2_2
+      213: -8758603326703235915
+    second: man_purple_2
   - first:
-      213: 2891512088110781726
-    second: man2_3
+      213: 7157276321232019695
+    second: man_purple_3
+  - first:
+      213: 4629805659464284698
+    second: man_purple_4
+  - first:
+      213: 2691902384662335667
+    second: man_purple_5
+  - first:
+      213: 1490045339681902575
+    second: man_purple_6
+  - first:
+      213: 1653885612685020300
+    second: man_purple_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -58,7 +70,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,7 +115,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: man2_0
+      name: man_purple_0
       rect:
         serializedVersion: 2
         x: 0
@@ -117,14 +129,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5529da40efea10590800000000000000
-      internalID: -7709688681058168235
+      spriteID: ffefd04de247f2f20800000000000000
+      internalID: 3400063988163018495
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: man2_1
+      name: man_purple_1
       rect:
         serializedVersion: 2
         x: 16
@@ -138,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bad1470752a2d5010800000000000000
-      internalID: 1179145017729752491
+      spriteID: 907e336200e03f950800000000000000
+      internalID: 6481539682520000265
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: man2_2
+      name: man_purple_2
       rect:
         serializedVersion: 2
         x: 32
@@ -159,14 +171,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a614fce361a26f960800000000000000
-      internalID: 7635336493284671850
+      spriteID: 5bc8c4feda0337680800000000000000
+      internalID: -8758603326703235915
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: man2_3
+      name: man_purple_3
       rect:
         serializedVersion: 2
         x: 48
@@ -180,8 +192,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e15579b9ce6b02820800000000000000
-      internalID: 2891512088110781726
+      spriteID: fe0695ea4e0c35360800000000000000
+      internalID: 7157276321232019695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: man_purple_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1a367fa7bf504040800000000000000
+      internalID: 4629805659464284698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: man_purple_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b053dfd4fe8b5520800000000000000
+      internalID: 2691902384662335667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: man_purple_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fef47f28754bda410800000000000000
+      internalID: 1490045339681902575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: man_purple_7
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8c483bb338c3f610800000000000000
+      internalID: 1653885612685020300
       vertices: []
       indices: 
       edges: []
