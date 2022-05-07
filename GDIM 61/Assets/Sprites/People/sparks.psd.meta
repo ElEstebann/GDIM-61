@@ -11,6 +11,27 @@ TextureImporter:
   - first:
       213: 8376200577605413995
     second: plug_fall_2
+  - first:
+      213: -3414685646930808390
+    second: sparks_0
+  - first:
+      213: -2175977229370253631
+    second: sparks_1
+  - first:
+      213: 6071348644026256547
+    second: sparks_2
+  - first:
+      213: -6651666008571180006
+    second: sparks_3
+  - first:
+      213: -2699882869271498167
+    second: sparks_4
+  - first:
+      213: -713243664759220773
+    second: sparks_5
+  - first:
+      213: 884133168945618297
+    second: sparks_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -55,7 +76,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 18
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,13 +121,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: plug_fall_0
+      name: sparks_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 18
-        height: 22
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,20 +135,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b44b92b4c9390cb50800000000000000
-      internalID: 6611446552465093707
+      spriteID: ab17013fe799c90d0800000000000000
+      internalID: -3414685646930808390
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: plug_fall_1
+      name: sparks_1
       rect:
         serializedVersion: 2
         x: 18
         y: 0
         width: 18
-        height: 22
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -135,20 +156,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 730a959589459bf90800000000000000
-      internalID: -6937420737676730313
+      spriteID: 1ce1c0c1d306dc1e0800000000000000
+      internalID: -2175977229370253631
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: plug_fall_2
+      name: sparks_2
       rect:
         serializedVersion: 2
         x: 36
         y: 0
         width: 18
-        height: 22
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,8 +177,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6ca79bdb0e3e3470800000000000000
-      internalID: 8376200577605413995
+      spriteID: 3ac0cb2ac63c14450800000000000000
+      internalID: 6071348644026256547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sparks_3
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 0
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1c039ad10980b3a0800000000000000
+      internalID: -6651666008571180006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sparks_4
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 0
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 942f8e1c5d6188ad0800000000000000
+      internalID: -2699882869271498167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sparks_5
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 0
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd59ab37aac0a16f0800000000000000
+      internalID: -713243664759220773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sparks_6
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 0
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97dd42dce62154c00800000000000000
+      internalID: 884133168945618297
       vertices: []
       indices: 
       edges: []
