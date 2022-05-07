@@ -73,6 +73,34 @@ AnimationClip:
     path: Air Conditioner AlertIcon
     classID: 1
     script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 20
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.2
+        value: 20
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: EmissionModule.rateOverTime.scalar
+    path: Gas Particles
+    classID: 198
+    script: {fileID: 0}
   m_PPtrCurves:
   - curve:
     - time: 0
@@ -80,8 +108,6 @@ AnimationClip:
     - time: 0.1
       value: {fileID: 7921532174247717686, guid: f4f81943a7c174545b3a7570ecbab229, type: 3}
     - time: 0.2
-      value: {fileID: 1200202875583889586, guid: f4f81943a7c174545b3a7570ecbab229, type: 3}
-    - time: 0.3
       value: {fileID: 1200202875583889586, guid: f4f81943a7c174545b3a7570ecbab229, type: 3}
     attribute: m_Sprite
     path: 
@@ -115,17 +141,23 @@ AnimationClip:
       typeID: 212
       customType: 23
       isPPtrCurve: 1
+    - serializedVersion: 2
+      path: 4232931651
+      attribute: 2883525743
+      script: {fileID: 0}
+      typeID: 198
+      customType: 27
+      isPPtrCurve: 0
     pptrCurveMapping:
     - {fileID: -7584977976804591723, guid: f4f81943a7c174545b3a7570ecbab229, type: 3}
     - {fileID: 7921532174247717686, guid: f4f81943a7c174545b3a7570ecbab229, type: 3}
-    - {fileID: 1200202875583889586, guid: f4f81943a7c174545b3a7570ecbab229, type: 3}
     - {fileID: 1200202875583889586, guid: f4f81943a7c174545b3a7570ecbab229, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.3166667
+    m_StopTime: 0.21666667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -196,6 +228,34 @@ AnimationClip:
     attribute: m_IsActive
     path: Air Conditioner AlertIcon
     classID: 1
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 20
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.2
+        value: 20
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: EmissionModule.rateOverTime.scalar
+    path: Gas Particles
+    classID: 198
     script: {fileID: 0}
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
