@@ -38,18 +38,18 @@ public class FearBar : MonoBehaviour
             }
             
         }
-        else
-        {
-            if (transform.localScale.x >= min)
-            {
-                transform.localScale = new Vector3(transform.localScale.x - scale, transform.localScale.y, transform.localScale.z);
-            }
-            else
-            {
-                transform.localScale = new Vector3(min, transform.localScale.y, transform.localScale.z);
-            }
+       // else
+       // {
+       //     if (transform.localScale.x >= min)
+       //     {
+       //         transform.localScale = new Vector3(transform.localScale.x - scale, transform.localScale.y, transform.localScale.z);
+       //     }
+       //     else
+       //     {
+       //         transform.localScale = new Vector3(min, transform.localScale.y, transform.localScale.z);
+       //     }
 
-        }
+       // }
     }
 
 }
