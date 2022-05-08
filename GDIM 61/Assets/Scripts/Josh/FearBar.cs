@@ -33,7 +33,8 @@ public class FearBar : MonoBehaviour
             }
             else
             {
-                transform.localScale = new Vector3(max, transform.localScale.y, transform.localScale.z);
+                //transform.localScale = new Vector3(max, transform.localScale.y, transform.localScale.z);
+                GameManager.LoseScreen();
             }
             
         }
