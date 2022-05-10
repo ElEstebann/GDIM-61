@@ -15,8 +15,9 @@ public class TestTitleScreen : MonoBehaviour
 
     public void ActivateStart()
     {
-        //GameManager.NewGame();
         AudioManager.instance.Stop("MenuTheme");
+        GameManager.NewGame();
+        
 
     }
 
