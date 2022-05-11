@@ -10,11 +10,15 @@ public class TestTitleScreen : MonoBehaviour
     private void Awake()
     {
         GameManager.TitleScreen();
+        AudioManager.instance.Play("MenuTheme");
     }
 
     public void ActivateStart()
     {
+        AudioManager.instance.Stop("MenuTheme");
         GameManager.NewGame();
+        
+
     }
 
     public void ActivateCredits()

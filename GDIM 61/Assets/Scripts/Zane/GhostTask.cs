@@ -15,6 +15,8 @@ public class GhostTask : MonoBehaviour
     [SerializeField] LayerMask wallLayer;
 
     [SerializeField] GameObject Player;
+    private MovementScript playerMoveScript;
+    [SerializeField] Animator anim; // added a pointer to the task's animator - Joyce
 
     private float keyHeldStartTime = 0f;
     private float keyHeldTimer;
@@ -32,6 +34,12 @@ public class GhostTask : MonoBehaviour
         StartCoroutine(RangeCheck());
 
         taskTimer = taskDuration;
+
+        /// added in temp animation stuff - Joyce
+        anim = GetComponentInParent<Animator>();
+        anim.SetTrigger("Danger");
+
+        playerMoveScript = Player.GetComponent<MovementScript>();
     }
 
     private void Update()
@@ -43,6 +51,7 @@ public class GhostTask : MonoBehaviour
             if (Input.GetKey(holdKey) && keyHeld == false)
             {
                 keyHeldTimer += Time.deltaTime;
+                playerMoveScript.SetFixingBool(true);
 
                 // when the key is held down for the required time, the timer stops and the function is called
                 if (keyHeldTimer >= (keyHeldStartTime + holdTime))
@@ -50,6 +59,7 @@ public class GhostTask : MonoBehaviour
                     keyHeld = true;
                     taskDone = true;
                     ButtonHeld();
+                    playerMoveScript.SetFixingBool(false);
                 }
 
                 pauseTaskTimer = true;
@@ -60,12 +70,15 @@ public class GhostTask : MonoBehaviour
             {
                 keyHeld = false;
                 pauseTaskTimer = false;
+                playerMoveScript.SetFixingBool(false);
             }
 
             // resets the timer when the key is pressed again
             if (Input.GetKeyDown(holdKey))
             {
                 //timer = startTime;
+                playerMoveScript.SetFixTrigger();
+                playerMoveScript.SetFixingBool(true);
             }
         }
 
@@ -89,7 +102,10 @@ public class GhostTask : MonoBehaviour
     private void ButtonHeld()
     {
         Debug.Log("TASK COMPLETE!! Key held down for " + holdTime + " seconds.");
-        Destroy(this.transform.parent.gameObject);
+        //Destroy(this.transform.parent.gameObject);
+        // added in changing animation state to fixed and disabling the script component once done - Joyce
+        anim.SetTrigger("Fixed");
+        this.enabled = false;
     }
 
     private void TaskFailed()

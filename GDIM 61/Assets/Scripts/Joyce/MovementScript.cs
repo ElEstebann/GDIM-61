@@ -9,7 +9,12 @@ public class MovementScript : MonoBehaviour
     [SerializeField] private float speed = 5f;
     private float xtrans;
     private float ytrans;
+
+    [SerializeField] private float bumpDistance = 1.5f;
     [SerializeField] private Animator anim; // reference to animator; controls the left/right idle/movement animation trasitions
+    [SerializeField] private GameObject cam; // referece to the main camera which will be used to tracking purposes later
+    private CameraScript camScript;
+    [SerializeField] private string CamTag;
 
     private bool faceRight;
     [SerializeField] private bool freeze;
@@ -20,6 +25,7 @@ public class MovementScript : MonoBehaviour
 
         faceRight = true;
         freeze = false;
+        camScript = cam.GetComponent<CameraScript>();
     }
 
     void Update()
@@ -36,10 +42,17 @@ public class MovementScript : MonoBehaviour
             faceRight = false;
         }
         // variables that determine animation state
-        anim.SetFloat("Speed", new Vector2(xtrans, ytrans).magnitude);
+        if(xtrans != 0 || ytrans != 0)
+        {
+            anim.SetFloat("Speed", 1);
+        }
+        else
+        {
+            anim.SetFloat("Speed", 0);
+        }
         anim.SetBool("FaceRight", faceRight);
 
-        // example code to set the triggers for the fixing animation
+        // example code to set the triggers for the fixing animation - added functions to trigger these externally
         /*
         if (Input.GetKeyDown(KeyCode.E))
         {
@@ -61,6 +74,41 @@ public class MovementScript : MonoBehaviour
         {
             transform.Translate(xtrans * Time.fixedDeltaTime, ytrans * Time.fixedDeltaTime, 0);
         }
+    }
+    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag.Equals(CamTag) && camScript != null)
+        {
+            camScript.SnapCam(collision.gameObject.transform);
+            SnapPos(collision.gameObject.transform);
+        }
+    }
+
+    private void SnapPos(Transform borders)
+    {
+        Vector3 borderPos = borders.position;
+        if (ytrans < 0) // if moving down
+        {
+            float newY = (borderPos.y + (borders.localScale.y / 2)) - bumpDistance;
+            print("going down" + newY);
+            transform.position = new Vector3(transform.position.x, newY, transform.position.z);
+        }
+        else if (ytrans > 0) // if moving up
+        {
+            float newY = (borderPos.y - (borders.localScale.y / 2)) + bumpDistance;
+            print("going up" + newY);
+            transform.position = new Vector3(transform.position.x, newY , transform.position.z);
+        }
+    }
+
+    public void SetFixTrigger()
+    {
+        anim.SetTrigger("Fix");
+    }
+    public void SetFixingBool(bool isFixing)
+    {
+        anim.SetBool("Fixing", isFixing);
     }
 
 }
