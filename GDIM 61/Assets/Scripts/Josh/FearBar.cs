@@ -9,12 +9,14 @@ public class FearBar : MonoBehaviour
     private HumanFOV detection;
 
     [SerializeField] private float scale = 0.001f;
+    
+    private float initialFill = 0f;
     private float max = 1f;
-    private float min = 0f;
-    private float newX;
+    //private float min = 0f;
     
     void Start()
     {
+        transform.localScale = new Vector3(initialFill, transform.localScale.y, transform.localScale.z);
         detection = ai.GetComponent<HumanFOV>();
     }
 
