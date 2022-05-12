@@ -185,6 +185,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   Player: {fileID: 5310938606256461295, guid: e0ae587943a00d146b96c82fabfb08ce, type: 3}
+  anim: {fileID: 513226518709680517}
 --- !u!1001 &923126193549033737
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -210,11 +211,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6284243183370663187, guid: 720cf5388c14b38428e1f4a394a31ffd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.4382
+      value: 0.442
       objectReference: {fileID: 0}
     - target: {fileID: 6284243183370663187, guid: 720cf5388c14b38428e1f4a394a31ffd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.25
+      value: 0.313
       objectReference: {fileID: 0}
     - target: {fileID: 6284243183370663187, guid: 720cf5388c14b38428e1f4a394a31ffd, type: 3}
       propertyPath: m_LocalPosition.z

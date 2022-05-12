@@ -54,6 +54,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   Player: {fileID: 5310938606256461295, guid: e0ae587943a00d146b96c82fabfb08ce, type: 3}
+  anim: {fileID: 6592921760787673087}
 --- !u!1 &6592921760787673074
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,7 +215,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6284243183370663187, guid: 720cf5388c14b38428e1f4a394a31ffd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.25
+      value: 1.379
       objectReference: {fileID: 0}
     - target: {fileID: 6284243183370663187, guid: 720cf5388c14b38428e1f4a394a31ffd, type: 3}
       propertyPath: m_LocalPosition.z

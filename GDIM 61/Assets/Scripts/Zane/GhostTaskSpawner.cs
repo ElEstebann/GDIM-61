@@ -15,8 +15,8 @@ public class GhostTaskSpawner : MonoBehaviour
 
     private float spawnInterval;
     private int previousTask;
-    private int tasks;
-    private int spawns;
+    private int spawnsIndex;
+    public int tasksIndex;
 
     private void Start()
     {
@@ -31,18 +31,18 @@ public class GhostTaskSpawner : MonoBehaviour
         do
         {
             // gets random index from tasks array
-            tasks = Random.Range(0, ghostTasks.Length);
+            tasksIndex = Random.Range(0, ghostTasks.Length);
 
             // each task is activated at it's corresponding spawnpoint
-            spawns = tasks;
+            spawnsIndex = tasksIndex;
         }
-        while (previousTask == tasks && ghostTasks.Length > 1);
+        while (previousTask == tasksIndex && ghostTasks.Length > 1);
 
         // sets previous task activated
-        previousTask = tasks;
+        previousTask = tasksIndex;
 
         // raycasts a circle around the spawnpoint
-        Collider2D[] spawnCheck = Physics2D.OverlapCircleAll(spawnPoints[spawns].position, 1.0f, taskLayer);
+        Collider2D[] spawnCheck = Physics2D.OverlapCircleAll(spawnPoints[spawnsIndex].position, 1.0f, taskLayer);
 
         // checks if the task has already spawned in
         if (spawnCheck.Length > 0)
@@ -52,7 +52,9 @@ public class GhostTaskSpawner : MonoBehaviour
         else
         {
             // random task is spawned in
-            Instantiate(ghostTasks[tasks], spawnPoints[spawns].position, spawnPoints[spawns].rotation);
+            Instantiate(ghostTasks[tasksIndex], spawnPoints[spawnsIndex].position, spawnPoints[spawnsIndex].rotation);
+
+            ///ghostTasks[tasksIndex].SetActive(true);
         }
     }
 }

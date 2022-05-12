@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Written by Zane
-public class GhostTask : MonoBehaviour
+public class GhostTask : GhostTaskSpawner
 {
     [SerializeField] private KeyCode holdKey;
 
@@ -11,12 +11,13 @@ public class GhostTask : MonoBehaviour
     [SerializeField] private float holdTime;
     [SerializeField] private float taskDuration;
 
-    [SerializeField] LayerMask playerLayer;
-    [SerializeField] LayerMask wallLayer;
+    [SerializeField] private LayerMask playerLayer;
+    [SerializeField] private LayerMask wallLayer;
 
-    [SerializeField] GameObject Player;
+    [SerializeField] private GameObject Player;
+    [SerializeField] private Animator taskAnimator; // added a pointer to the task's animator - Joyce
+
     private MovementScript playerMoveScript;
-    [SerializeField] Animator anim; // added a pointer to the task's animator - Joyce
 
     private float keyHeldStartTime = 0f;
     private float keyHeldTimer;
@@ -35,10 +36,9 @@ public class GhostTask : MonoBehaviour
 
         taskTimer = taskDuration;
 
-        /// added in temp animation stuff - Joyce
-        anim = GetComponentInParent<Animator>();
-        anim.SetTrigger("Danger");
-
+        // added in temp animation stuff - Joyce
+        taskAnimator = GetComponentInParent<Animator>();
+        taskAnimator.SetTrigger("Danger");
         playerMoveScript = Player.GetComponent<MovementScript>();
     }
 
@@ -102,10 +102,12 @@ public class GhostTask : MonoBehaviour
     private void ButtonHeld()
     {
         Debug.Log("TASK COMPLETE!! Key held down for " + holdTime + " seconds.");
-        //Destroy(this.transform.parent.gameObject);
+
+        Destroy(this.transform.parent.gameObject);
+
         // added in changing animation state to fixed and disabling the script component once done - Joyce
-        anim.SetTrigger("Fixed");
-        this.enabled = false;
+        taskAnimator.SetTrigger("Fixed");
+        ///this.enabled = false;
     }
 
     private void TaskFailed()

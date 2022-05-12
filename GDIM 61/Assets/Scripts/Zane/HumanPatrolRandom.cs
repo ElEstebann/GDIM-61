@@ -84,7 +84,7 @@ public class HumanPatrolRandom : MonoBehaviour
     private void DirectionChange(int direction)
     {
         // deactivates walking animation
-        anim.SetBool("Walk", false);
+        anim.SetBool("Walking", false);
 
         if (direction == 1)
         {
@@ -99,7 +99,7 @@ public class HumanPatrolRandom : MonoBehaviour
     private void MoveDirection(int direction)
     {
         // activates walking animation
-        anim.SetBool("Walk", true);
+        anim.SetBool("Walking", true);
 
         // makes the AI face a direction
         humanAI.localScale = new Vector3(Mathf.Abs(initialScale.x) * direction, initialScale.y, initialScale.z);

@@ -204,7 +204,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2.5
+  bumpDistance: 1.5
   anim: {fileID: 200120700}
+  cam: {fileID: 0}
+  CamTag: 
+  freeze: 0
 --- !u!95 &200120700
 Animator:
   serializedVersion: 3
@@ -1019,7 +1023,7 @@ Animator:
   m_GameObject: {fileID: 1357353600}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 82d1bd08a8c5b1b408e8c7b159998697, type: 2}
+  m_Controller: {fileID: 9100000, guid: d85f43f2d28007d4b9fb258d2acf790b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1092,7 +1096,7 @@ Animator:
   m_GameObject: {fileID: 1734933577}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 82d1bd08a8c5b1b408e8c7b159998697, type: 2}
+  m_Controller: {fileID: 9100000, guid: d85f43f2d28007d4b9fb258d2acf790b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

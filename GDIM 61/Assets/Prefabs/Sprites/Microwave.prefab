@@ -185,6 +185,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   Player: {fileID: 5310938606256461295, guid: e0ae587943a00d146b96c82fabfb08ce, type: 3}
+  anim: {fileID: 7706760687203914400}
 --- !u!1001 &1639980800
 PrefabInstance:
   m_ObjectHideFlags: 0
