@@ -35,6 +35,7 @@ public class GhostTask : GhostTaskSpawner
         StartCoroutine(RangeCheck());
 
         taskTimer = taskDuration;
+        Player = GameObject.FindGameObjectWithTag("Player");
 
         // added in temp animation stuff - Joyce
         taskAnimator = GetComponentInParent<Animator>();
