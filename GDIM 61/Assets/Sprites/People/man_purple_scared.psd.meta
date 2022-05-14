@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: d7c031fe6d3bebf4591286544a46c576
+guid: 2f3bf93f0b4c51347b45758e43a8781d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3953267501080892527
-    second: man_scared_0
+      213: -3655074474193154528
+    second: man_purple_scared_0
   - first:
-      213: 7654302640411276575
-    second: man_scared_1
+      213: -6488748951707842278
+    second: man_purple_scared_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: man_scared_0
+      name: man_purple_scared_0
       rect:
         serializedVersion: 2
         x: 0
@@ -111,14 +111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f64d500d8d3dcd630800000000000000
-      internalID: 3953267501080892527
+      spriteID: 02e8e129121964dc0800000000000000
+      internalID: -3655074474193154528
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: man_scared_1
+      name: man_purple_scared_1
       rect:
         serializedVersion: 2
         x: 16
@@ -132,8 +132,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f157c0d72bb893a60800000000000000
-      internalID: 7654302640411276575
+      spriteID: a1904c0153553f5a0800000000000000
+      internalID: -6488748951707842278
       vertices: []
       indices: 
       edges: []
