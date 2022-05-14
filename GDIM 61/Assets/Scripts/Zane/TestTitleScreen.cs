@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// Written by Zane
 public class TestTitleScreen : MonoBehaviour
 {
     [SerializeField] private Animator anim;
@@ -17,8 +18,6 @@ public class TestTitleScreen : MonoBehaviour
     {
         AudioManager.instance.Stop("MenuTheme");
         GameManager.NewGame();
-        
-
     }
 
     public void ActivateCredits()

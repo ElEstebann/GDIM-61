@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6070118699076384080}
   - component: {fileID: 3280334957604817416}
-  - component: {fileID: 3130282620387349182}
   m_Layer: 8
   m_Name: Task Manager
   m_TagString: Untagged
@@ -64,18 +63,6 @@ MonoBehaviour:
     m_Bits: 64
   Player: {fileID: 6784455462238060340, guid: e0ae587943a00d146b96c82fabfb08ce, type: 3}
   taskAnimator: {fileID: 0}
---- !u!114 &3130282620387349182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1328469787033330648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07b8fc3d547c5a449bc50d61041e0b56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4879678261680241571
 GameObject:
   m_ObjectHideFlags: 0

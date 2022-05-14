@@ -11,6 +11,7 @@ public class HumanPatrolRandom : MonoBehaviour
     [SerializeField] private Transform leftEdge;
     [SerializeField] private Transform rightEdge;
     [SerializeField] private Transform humanAI;
+    [SerializeField] private Transform humanFOV;
     [SerializeField] private Animator anim;
 
     [SerializeField] private Transform[] moveLocations;
@@ -103,5 +104,6 @@ public class HumanPatrolRandom : MonoBehaviour
 
         // makes the AI face a direction
         humanAI.localScale = new Vector3(Mathf.Abs(initialScale.x) * direction, initialScale.y, initialScale.z);
+        humanFOV.localScale = new Vector3(Mathf.Abs(initialScale.x) * direction, initialScale.y, initialScale.z);
     }
 }

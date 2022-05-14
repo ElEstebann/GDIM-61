@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // Written by Zane
-public class GhostTaskSpawner : MonoBehaviour
+public class GhostTaskActivator : MonoBehaviour
 {
-    [SerializeField] private Transform[] spawnPoints;
+    ///[SerializeField] private Transform[] spawnPoints;
     [SerializeField] private GameObject[] ghostTasks;
+    [SerializeField] private GameObject[] alertIcons;
+    [SerializeField] private GameObject[] arrowTargets;
+    [SerializeField] private Animator[] taskAnimators;
 
     [SerializeField] private float minimumSpawnInterval;
     [SerializeField] private float maximumSpawnInterval;
@@ -15,8 +18,8 @@ public class GhostTaskSpawner : MonoBehaviour
 
     private float spawnInterval;
     private int previousTask;
-    private int spawnsIndex;
-    public int tasksIndex;
+    private int tasksIndex;
+    ///private int spawnsIndex;
 
     private void Start()
     {
@@ -34,7 +37,7 @@ public class GhostTaskSpawner : MonoBehaviour
             tasksIndex = Random.Range(0, ghostTasks.Length);
 
             // each task is activated at it's corresponding spawnpoint
-            spawnsIndex = tasksIndex;
+            ///spawnsIndex = tasksIndex;
         }
         while (previousTask == tasksIndex && ghostTasks.Length > 1);
 
@@ -42,19 +45,23 @@ public class GhostTaskSpawner : MonoBehaviour
         previousTask = tasksIndex;
 
         // raycasts a circle around the spawnpoint
-        Collider2D[] spawnCheck = Physics2D.OverlapCircleAll(spawnPoints[spawnsIndex].position, 1.0f, taskLayer);
+        ///Collider2D[] spawnCheck = Physics2D.OverlapCircleAll(spawnPoints[spawnsIndex].position, 1.0f, taskLayer);
 
-        // checks if the task has already spawned in
-        if (spawnCheck.Length > 0)
+        // checks if the task has already bee activated
+        if (taskAnimators[tasksIndex].GetBool("Fixed") == false)
         {
-            // task already spawned in
+            // task already activated
         }
         else
         {
             // random task is spawned in
-            Instantiate(ghostTasks[tasksIndex], spawnPoints[spawnsIndex].position, spawnPoints[spawnsIndex].rotation);
+            ///Instantiate(ghostTasks[tasksIndex], spawnPoints[spawnsIndex].position, spawnPoints[spawnsIndex].rotation);
 
-            ///ghostTasks[tasksIndex].SetActive(true);
+            // random task is activated
+            taskAnimators[tasksIndex].SetBool("Fixed", false);
+            taskAnimators[tasksIndex].SetTrigger("Danger");
+            alertIcons[tasksIndex].SetActive(true);
+            arrowTargets[tasksIndex].SetActive(true);
         }
     }
 }

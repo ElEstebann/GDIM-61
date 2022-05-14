@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Written by Zane
-public class GhostTask : GhostTaskSpawner
+public class GhostTask : MonoBehaviour
 {
     [SerializeField] private KeyCode holdKey;
 
@@ -15,7 +15,9 @@ public class GhostTask : GhostTaskSpawner
     [SerializeField] private LayerMask wallLayer;
 
     [SerializeField] private GameObject Player;
-    [SerializeField] private Animator taskAnimator; // added a pointer to the task's animator - Joyce
+    [SerializeField] private GameObject alertIcon;
+    [SerializeField] private GameObject arrowTarget;
+    [SerializeField] private Animator taskAnimator;
 
     private MovementScript playerMoveScript;
 
@@ -26,24 +28,37 @@ public class GhostTask : GhostTaskSpawner
     private bool pauseTaskTimer = false;
     private bool taskCompleted = false;
     private bool keyHeld = false;
+    private bool playing;
     public static bool taskDone;
     public bool inRange { get; private set; }
 
 
     void Start()
     {
+        playing = true;
         StartCoroutine(RangeCheck());
-
         taskTimer = taskDuration;
-        Player = GameObject.FindGameObjectWithTag("Player");
+        taskAnimator.SetBool("Fixed", true);
 
-        // added in temp animation stuff - Joyce
         taskAnimator = GetComponentInParent<Animator>();
-        taskAnimator.SetTrigger("Danger");
         playerMoveScript = Player.GetComponent<MovementScript>();
+        Player = GameObject.FindGameObjectWithTag("Player");
     }
 
     private void Update()
+    {
+        if (taskAnimator.GetBool("Fixed") == false)
+        {
+            TaskKeyPress();
+            TaskTimer();
+        }
+        else
+        {
+            pauseTaskTimer = false;
+        }
+    }
+
+    private void TaskKeyPress()
     {
         // checks if the player is in range of the task
         if (inRange == true)
@@ -59,8 +74,9 @@ public class GhostTask : GhostTaskSpawner
                 {
                     keyHeld = true;
                     taskDone = true;
-                    ButtonHeld();
                     playerMoveScript.SetFixingBool(false);
+
+                    KeyHeld();
                 }
 
                 pauseTaskTimer = true;
@@ -77,12 +93,15 @@ public class GhostTask : GhostTaskSpawner
             // resets the timer when the key is pressed again
             if (Input.GetKeyDown(holdKey))
             {
-                //timer = startTime;
+                ///timer = startTime;
                 playerMoveScript.SetFixTrigger();
                 playerMoveScript.SetFixingBool(true);
             }
         }
+    }
 
+    private void TaskTimer()
+    {
         // checks if timer has reached zero and if key is held down
         if (taskTimer > 0 && pauseTaskTimer == false)
         {
@@ -98,23 +117,37 @@ public class GhostTask : GhostTaskSpawner
                 taskCompleted = true;
             }
         }
-    }
 
-    private void ButtonHeld()
-    {
-        Debug.Log("TASK COMPLETE!! Key held down for " + holdTime + " seconds.");
-
-        Destroy(this.transform.parent.gameObject);
-
-        // added in changing animation state to fixed and disabling the script component once done - Joyce
-        taskAnimator.SetTrigger("Fixed");
-        ///this.enabled = false;
+        // activates extreme animation when the task timer is 10 seconds or less
+        if (taskTimer <= 10)
+        {
+            taskAnimator.SetTrigger("Extreme");
+        }
     }
 
     private void TaskFailed()
     {
         Debug.Log("YOU LOSE!! Failed to complete the task in " + taskDuration + " seconds.");
         GameManager.LoseScreen();
+    }
+
+    private void KeyHeld()
+    {
+        Debug.Log("TASK COMPLETE!! Key held down for " + holdTime + " seconds.");
+
+        // resets task
+        taskTimer = taskDuration;
+        keyHeldTimer = 0f;
+        keyHeld = false;
+
+        // resets task animation to default
+        alertIcon.SetActive(false);
+        arrowTarget.SetActive(false);
+        taskAnimator.SetBool("Fixed", true);
+        taskAnimator.ResetTrigger("Danger");
+
+        ///Destroy(this.transform.parent.gameObject);
+        ///this.enabled = false;
     }
 
     private IEnumerator RangeCheck()
@@ -160,15 +193,21 @@ public class GhostTask : GhostTaskSpawner
 
     private void OnDrawGizmos()
     {
-        // creates a visible circle in the gizmos that represents the key press range of the task
-        UnityEditor.Handles.color = Color.white;
-        UnityEditor.Handles.DrawWireDisc(transform.position, Vector3.forward, radius);
-
-        // if the player is in range of the task, then the circle turns green
-        if (inRange)
+        if (playing == true)
         {
-            UnityEditor.Handles.color = Color.green;
-            UnityEditor.Handles.DrawWireDisc(transform.position, Vector3.forward, radius);
+            if (taskAnimator.GetBool("Fixed") == false)
+            {
+                // creates a visible circle in the gizmos that represents the key press range of the task
+                UnityEditor.Handles.color = Color.white;
+                UnityEditor.Handles.DrawWireDisc(transform.position, Vector3.forward, radius);
+
+                // if the player is in range of the task, then the circle turns green
+                if (inRange)
+                {
+                    UnityEditor.Handles.color = Color.green;
+                    UnityEditor.Handles.DrawWireDisc(transform.position, Vector3.forward, radius);
+                }
+            }
         }
     }
 }

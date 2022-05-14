@@ -19,9 +19,6 @@ public class CountdownTimer : MonoBehaviour
 
             // timer counts down
             timeValue -= Time.deltaTime;
-
-            // tasks start to spawn
-            // GameObject.Find("Task Handler").GetComponent<GhostTaskSpawner>().SpawnTask();
         }
         else
         {
