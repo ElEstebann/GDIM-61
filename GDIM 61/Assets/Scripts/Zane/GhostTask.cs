@@ -195,7 +195,7 @@ public class GhostTask : MonoBehaviour
     {
         if (playing == true)
         {
-            if (taskAnimator.GetBool("Fixed") == false)
+           /* if (taskAnimator.GetBool("Fixed") == false)
             {
                 // creates a visible circle in the gizmos that represents the key press range of the task
                 UnityEditor.Handles.color = Color.white;
@@ -207,7 +207,7 @@ public class GhostTask : MonoBehaviour
                     UnityEditor.Handles.color = Color.green;
                     UnityEditor.Handles.DrawWireDisc(transform.position, Vector3.forward, radius);
                 }
-            }
+            }*/
         }
     }
 }

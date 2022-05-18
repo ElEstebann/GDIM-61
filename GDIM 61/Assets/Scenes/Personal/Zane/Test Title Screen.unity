@@ -1834,7 +1834,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levels:
-  - Test Level One
+  - Level One
   SceneName: Test Title Screen
 --- !u!4 &1253924218
 Transform:

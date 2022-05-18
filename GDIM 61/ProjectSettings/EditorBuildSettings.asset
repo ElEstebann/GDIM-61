@@ -8,9 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Personal/Zane/Test Title Screen.unity
     guid: 6e4c699c44de0124a8c2bbfc5cceb516
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Personal/Zane/Test Level One.unity
     guid: 0f8f6cd3d41b8d24da90853ddeac4a67
+  - enabled: 1
+    path: Assets/Scenes/Level1.unity
+    guid: bcb8aaeb9c7a73d44a8887dbc27aece8
   - enabled: 1
     path: Assets/Scenes/Personal/Amber/Win.unity
     guid: 49a4940273c8d41b093a4a3eda4de11b
