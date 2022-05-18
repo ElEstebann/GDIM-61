@@ -8,7 +8,7 @@ public class FearBar : MonoBehaviour
     [SerializeField] GameObject ai;
     private HumanFOV detection;
 
-    [SerializeField] private float scale = 0.001f;
+    [SerializeField] private float scale = 0.15f;
     
     private float initialFill = 0f;
     private float max = 1f;
@@ -31,7 +31,7 @@ public class FearBar : MonoBehaviour
         {
             if (transform.localScale.x <= max)
             {
-                transform.localScale = new Vector3(transform.localScale.x + scale, transform.localScale.y, transform.localScale.z);
+                transform.localScale = new Vector3(transform.localScale.x + (scale * Time.deltaTime), transform.localScale.y, transform.localScale.z);
             }
             else
             {
