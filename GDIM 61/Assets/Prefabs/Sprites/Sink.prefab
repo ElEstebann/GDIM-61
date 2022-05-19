@@ -175,14 +175,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81ee9a817c29f7d4bbf8969a9d6d6e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoints: []
-  ghostTasks: []
-  minimumSpawnInterval: 0
-  maximumSpawnInterval: 0
-  taskLayer:
-    serializedVersion: 2
-    m_Bits: 0
-  tasksIndex: 0
   holdKey: 101
   radius: 1
   holdTime: 5
@@ -194,7 +186,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   Player: {fileID: 6784455462238060340, guid: e0ae587943a00d146b96c82fabfb08ce, type: 3}
+  alertIcon: {fileID: 0}
+  arrowTarget: {fileID: 0}
   taskAnimator: {fileID: 0}
+  target: {fileID: 0}
 --- !u!1001 &25205475743002118
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -205,6 +200,14 @@ PrefabInstance:
     - target: {fileID: 4666479050465511490, guid: 5bb57d82c938a754f86ec8c2b5f10a11, type: 3}
       propertyPath: m_Name
       value: Target
+      objectReference: {fileID: 0}
+    - target: {fileID: 4666479050465511493, guid: 5bb57d82c938a754f86ec8c2b5f10a11, type: 3}
+      propertyPath: m_Size.y
+      value: 1.3923897
+      objectReference: {fileID: 0}
+    - target: {fileID: 4666479050465511493, guid: 5bb57d82c938a754f86ec8c2b5f10a11, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.19619483
       objectReference: {fileID: 0}
     - target: {fileID: 4666479050465511494, guid: 5bb57d82c938a754f86ec8c2b5f10a11, type: 3}
       propertyPath: m_Enabled

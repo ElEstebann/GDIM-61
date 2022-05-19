@@ -36,6 +36,7 @@ public class GhostTask : MonoBehaviour
 
     void Start()
     {
+        Player = GameObject.FindGameObjectsWithTag("Player")[0];
         playing = true;
         StartCoroutine(RangeCheck());
         taskTimer = taskDuration;
@@ -47,6 +48,8 @@ public class GhostTask : MonoBehaviour
         target = arrowTarget.GetComponent(typeof(Target)) as Target;
 
     }
+
+
 
     private void Update()
     {
@@ -217,8 +220,16 @@ public class GhostTask : MonoBehaviour
 
     private void updateArrowColor()
     {
-        if(target.enabled)
+        if(target && target.enabled && arrowTarget.activeSelf && arrowTarget && target != null)
         {
+            if(arrowTarget.activeSelf)
+            {
+                Debug.Log("Arrow Active");
+            }
+            else{
+                Debug.Log("Arrow INACTIVE!");
+            }
+            target = arrowTarget.GetComponent(typeof(Target)) as Target;
             float ratio = (float)(taskTimer/taskDuration);
             //Debug.Log(ratio);
             target.updatePointerColor(ratio);

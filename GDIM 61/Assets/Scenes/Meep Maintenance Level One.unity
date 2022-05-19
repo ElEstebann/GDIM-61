@@ -230,6 +230,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Microwave
       objectReference: {fileID: 0}
+    - target: {fileID: 7706760687203914407, guid: 6f28ef8dafd32cc4d83952706d6dfd86, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f28ef8dafd32cc4d83952706d6dfd86, type: 3}
 --- !u!95 &104294168 stripped
@@ -2921,6 +2925,22 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 999504995}
+    - target: {fileID: 1515557641324611460, guid: 094232dcab79e0d48af38cf8b51b0e0e, type: 3}
+      propertyPath: m_Size.x
+      value: 1.4724025
+      objectReference: {fileID: 0}
+    - target: {fileID: 1515557641324611460, guid: 094232dcab79e0d48af38cf8b51b0e0e, type: 3}
+      propertyPath: m_Size.y
+      value: 0.8153087
+      objectReference: {fileID: 0}
+    - target: {fileID: 1515557641324611460, guid: 094232dcab79e0d48af38cf8b51b0e0e, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0017907023
+      objectReference: {fileID: 0}
+    - target: {fileID: 1515557641324611460, guid: 094232dcab79e0d48af38cf8b51b0e0e, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.00018709898
+      objectReference: {fileID: 0}
     - target: {fileID: 1515557642175234513, guid: 094232dcab79e0d48af38cf8b51b0e0e, type: 3}
       propertyPath: m_Name
       value: Camera
@@ -3638,6 +3658,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Air Conditioner
       objectReference: {fileID: 0}
+    - target: {fileID: 4879678261680241571, guid: efef896479e133d4c8647f91a5fc21bf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6284243182335228805, guid: efef896479e133d4c8647f91a5fc21bf, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -3923,6 +3947,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sink
       objectReference: {fileID: 0}
+    - target: {fileID: 513226518709680518, guid: 253ea384b49cacf4ba27cc393c75533f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1500076599775648558, guid: 253ea384b49cacf4ba27cc393c75533f, type: 3}
       propertyPath: Player
       value: 
@@ -4046,6 +4074,10 @@ PrefabInstance:
     - target: {fileID: 6592921760787673074, guid: 7cbc5ac563b717842ac24b7e87a34a0b, type: 3}
       propertyPath: m_Name
       value: Stove
+      objectReference: {fileID: 0}
+    - target: {fileID: 6592921760787673074, guid: 7cbc5ac563b717842ac24b7e87a34a0b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6592921760787673084, guid: 7cbc5ac563b717842ac24b7e87a34a0b, type: 3}
       propertyPath: m_RootOrder
