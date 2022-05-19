@@ -21,6 +21,11 @@ public class LookAt : MonoBehaviour
             //Set Z to 0 because its 2d
             transform.right = target.transform.position - camera.transform.position;
             transform.right = new Vector3(transform.right.x,transform.right.y,0);    
+            //Debug.Log(target.transform.position);
+        }
+        if(target.transform.position == null)
+        {
+            Debug.Log("?????\n");
         }
     }
 

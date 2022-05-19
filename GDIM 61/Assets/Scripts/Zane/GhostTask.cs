@@ -31,6 +31,7 @@ public class GhostTask : MonoBehaviour
     private bool playing;
     public static bool taskDone;
     public bool inRange { get; private set; }
+    [SerializeField] private Target target;
 
 
     void Start()
@@ -43,6 +44,8 @@ public class GhostTask : MonoBehaviour
         taskAnimator = GetComponentInParent<Animator>();
         playerMoveScript = Player.GetComponent<MovementScript>();
         Player = GameObject.FindGameObjectWithTag("Player");
+        target = arrowTarget.GetComponent(typeof(Target)) as Target;
+
     }
 
     private void Update()
@@ -51,6 +54,7 @@ public class GhostTask : MonoBehaviour
         {
             TaskKeyPress();
             TaskTimer();
+            updateArrowColor();
         }
         else
         {
@@ -209,5 +213,16 @@ public class GhostTask : MonoBehaviour
                 }
             }*/
         }
+    }
+
+    private void updateArrowColor()
+    {
+        if(target.enabled)
+        {
+            float ratio = (float)(taskTimer/taskDuration);
+            //Debug.Log(ratio);
+            target.updatePointerColor(ratio);
+        }
+        
     }
 }

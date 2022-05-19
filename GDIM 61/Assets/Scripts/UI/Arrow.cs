@@ -12,7 +12,8 @@ public class Arrow : MonoBehaviour
     private Transform image;
     private float normalXPos;
     private Image sprite;
-    public float ratio = 1f;
+    public float progress = 0.5f;
+    public bool active = true;
     void Start()
     {
         camera = GameObject.FindGameObjectsWithTag("MainCamera")[0];
@@ -21,15 +22,31 @@ public class Arrow : MonoBehaviour
         image.camera = camera;
         image.target = target;
         sprite = this.gameObject.transform.GetChild(0).GetComponent<Image>();
+        pointPosition();
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.localPosition = target.transform.position - camera.transform.position;
+        if(target.activeSelf)
+        {
 
-        //For testing color
+            
+            
+            pointPosition();
+            updateColor(progress);
+        }
+        else
+        {
+            beInvisible();
+        }
+        //Debug.Log("x: " + transform.localPosition.x + "y: " +transform.localPosition.y);
+    }
+
+    private void pointPosition()
+    {
+        transform.localPosition = target.transform.position - camera.transform.position;
         //updateColor(ratio);
         //These values found by trial and error lol
         float xMax = 860f;
@@ -52,19 +69,52 @@ public class Arrow : MonoBehaviour
                 transform.localPosition = new Vector3(transform.localPosition.x,yMax,transform.localPosition.z);
             }
         }
-        //Debug.Log("x: " + transform.localPosition.x + "y: " +transform.localPosition.y);
     }
-
     public void updateColor(float ratio)
     {
-        if(ratio <= 0.5f )
+        if(active)
         {
-            sprite.color = new Color(1f,ratio*2,0f,1f);
-            
-        }
-        else if (ratio <= 1f)
-        {
-            sprite.color = new Color(1f,1f,0.5f + 0.5f*ratio,1f);
+            if(ratio <= 0.5f )
+            {
+                sprite.color = new Color(1f,ratio*2,0f,1f);
+                
+            }
+            else if (ratio <= 1f)
+            {
+                sprite.color = new Color(1f,1f,2f*(ratio-0.5f),1f);
+            }
         }
     }
+
+    public void beInvisible()
+    {
+        sprite.color = new Color(sprite.color.r,sprite.color.b,sprite.color.g,0f);
+    }
+
+    public void beVisible()
+    {
+        updateColor(progress);
+    }
+
+    public void disable()
+    {
+        active = false;
+        beInvisible();
+    }
+
+    public void enable()
+    {
+        active = true;
+        pointPosition();
+        updateColor(progress);
+        
+    }
+
+    public void updateProgress(float ratio)
+    {
+        progress = ratio;
+    }
+
+    
+
 }

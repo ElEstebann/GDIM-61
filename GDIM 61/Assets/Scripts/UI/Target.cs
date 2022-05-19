@@ -39,8 +39,8 @@ public class Target : MonoBehaviour
         
         if(collision.tag == "MainCamera")
         {
-            Debug.Log(collision.tag + " can see object");
-            pointer.SetActive(false);
+            //Debug.Log(collision.tag + " can see object");
+            disablePointer();
         }
         
     }
@@ -50,10 +50,26 @@ public class Target : MonoBehaviour
         
         if(collision.tag == "MainCamera")
         {
-            Debug.Log(collision.tag + " left");
-            pointer.SetActive(true);
+            //Debug.Log(collision.tag + " left");
+            enablePointer();
         }
         
         
     }
+
+    public void disablePointer()
+    {
+        arrow.disable();
+    }
+
+    public void enablePointer()
+    {
+        arrow.enable();
+    }
+
+    public void updatePointerColor(float ratio)
+    {
+        arrow.updateProgress((float)ratio);
+    }
+
 }
