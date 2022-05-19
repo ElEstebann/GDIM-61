@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 //Written by Zane
 public class GhostTask : MonoBehaviour
@@ -17,13 +18,18 @@ public class GhostTask : MonoBehaviour
     [SerializeField] private GameObject Player;
     [SerializeField] private GameObject alertIcon;
     [SerializeField] private GameObject arrowTarget;
+    [SerializeField] private GameObject progressBarCanvas;
+    [SerializeField] private Slider taskProgressBar;
     [SerializeField] private Animator taskAnimator;
+    [SerializeField] private Target target;
 
     private MovementScript playerMoveScript;
 
     private float keyHeldStartTime = 0f;
     private float keyHeldTimer;
     private float taskTimer;
+    private float taskProgressValue;
+    private float taskProgressAdd;
 
     private bool pauseTaskTimer = false;
     private bool taskCompleted = false;
@@ -31,25 +37,25 @@ public class GhostTask : MonoBehaviour
     private bool playing;
     public static bool taskDone;
     public bool inRange { get; private set; }
-    [SerializeField] private Target target;
-
 
     void Start()
     {
-        Player = GameObject.FindGameObjectsWithTag("Player")[0];
         playing = true;
-        StartCoroutine(RangeCheck());
-        taskTimer = taskDuration;
-        taskAnimator.SetBool("Fixed", true);
+
+        Player = GameObject.FindGameObjectsWithTag("Player")[0];
+        Player = GameObject.FindGameObjectWithTag("Player");
 
         taskAnimator = GetComponentInParent<Animator>();
         playerMoveScript = Player.GetComponent<MovementScript>();
-        Player = GameObject.FindGameObjectWithTag("Player");
+
+        StartCoroutine(RangeCheck());
+        taskAnimator.SetBool("Fixed", true);
+        taskTimer = taskDuration;
+        taskProgressValue = 0;
+
         target = arrowTarget.GetComponent(typeof(Target)) as Target;
 
     }
-
-
 
     private void Update()
     {
@@ -74,7 +80,14 @@ public class GhostTask : MonoBehaviour
             if (Input.GetKey(holdKey) && keyHeld == false)
             {
                 keyHeldTimer += Time.deltaTime;
+                pauseTaskTimer = true;
                 playerMoveScript.SetFixingBool(true);
+
+                // task progress bar
+                progressBarCanvas.SetActive(true);
+                taskProgressAdd = 100 / holdTime;
+                taskProgressValue += taskProgressAdd * Time.deltaTime;
+                taskProgressBar.value = taskProgressValue;
 
                 // when the key is held down for the required time, the timer stops and the function is called
                 if (keyHeldTimer >= (keyHeldStartTime + holdTime))
@@ -85,8 +98,10 @@ public class GhostTask : MonoBehaviour
 
                     KeyHeld();
                 }
-
-                pauseTaskTimer = true;
+            }
+            else
+            {
+                progressBarCanvas.SetActive(false);
             }
 
             // allows for key to be pressed again
@@ -97,10 +112,9 @@ public class GhostTask : MonoBehaviour
                 playerMoveScript.SetFixingBool(false);
             }
 
-            // resets the timer when the key is pressed again
+            // allows for fixing animation to be played again
             if (Input.GetKeyDown(holdKey))
             {
-                ///timer = startTime;
                 playerMoveScript.SetFixTrigger();
                 playerMoveScript.SetFixingBool(true);
             }
@@ -146,7 +160,9 @@ public class GhostTask : MonoBehaviour
         // resets task
         taskTimer = taskDuration;
         keyHeldTimer = 0f;
+        taskProgressValue = 0;
         keyHeld = false;
+        progressBarCanvas.SetActive(false);
 
         // resets task animation to default
         alertIcon.SetActive(false);
