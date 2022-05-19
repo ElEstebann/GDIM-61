@@ -24,6 +24,7 @@ public class MainMenuScreen : MonoBehaviour
     // credits appear
     public void ActivateCredits()
     {
+        Debug.Log("Credits");
         titleAnimator.SetTrigger("Change");
         titleAnimator.SetBool("Credits", true);
 
@@ -32,20 +33,25 @@ public class MainMenuScreen : MonoBehaviour
     // credits disappear
     public void DectivateCredits()
     {
+        titleAnimator.ResetTrigger("Change");
         titleAnimator.SetBool("Credits", false);
     }
 
     // options appear
     public void ActivateOptions()
     {
+        Debug.Log("Options");
         titleAnimator.SetTrigger("Change");
         titleAnimator.SetBool("Options", true);
+        
     }
 
     // options disappear
     public void DectivateOptions()
     {
+        titleAnimator.ResetTrigger("Change");
         titleAnimator.SetBool("Options", false);
+
     }
 
     // quits the game
