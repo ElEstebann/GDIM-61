@@ -135,6 +135,7 @@ public class GhostTask : MonoBehaviour
     private void TaskFailed()
     {
         Debug.Log("YOU LOSE!! Failed to complete the task in " + taskDuration + " seconds.");
+        AudioManager.instance.Stop("MainTheme");
         GameManager.LoseScreen();
     }
 
@@ -224,10 +225,10 @@ public class GhostTask : MonoBehaviour
         {
             if(arrowTarget.activeSelf)
             {
-                Debug.Log("Arrow Active");
+                //Debug.Log("Arrow Active");
             }
             else{
-                Debug.Log("Arrow INACTIVE!");
+                //Debug.Log("Arrow INACTIVE!");
             }
             target = arrowTarget.GetComponent(typeof(Target)) as Target;
             float ratio = (float)(taskTimer/taskDuration);

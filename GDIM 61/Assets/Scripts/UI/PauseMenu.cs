@@ -45,6 +45,7 @@ public class PauseMenu : MonoBehaviour
 
     public void LoadMenu()
     {
+        AudioManager.instance.Stop("MainTheme");
         GameIsPause = false;
         Time.timeScale = 1f;
         Debug.Log("Loading menu...");
