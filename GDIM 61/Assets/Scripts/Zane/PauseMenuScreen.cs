@@ -51,9 +51,11 @@ public class PauseMenuScreen : MonoBehaviour
     // quits to the main menu
     public void QuitToMenu()
     {
-        AudioManager.instance.Stop("MainTheme");
-        GameManager.QuitToMenu();
+        Time.timeScale = 1.0f;
         gamePaused = false;
+        
+        GameManager.QuitToMenu();
+        
     }
 
     // quits the game

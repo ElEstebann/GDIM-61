@@ -53,6 +53,7 @@ public class GameManager : MonoBehaviour
     public static void NextLevel()
     {
         ///state = GAMESTATE.PLAYING;
+        AudioManager.instance.Stop("MainTheme");
         SceneManager.LoadScene(instance.levels[instance.level++]);
     }
 
@@ -73,6 +74,7 @@ public class GameManager : MonoBehaviour
     public static void QuitToMenu()
     {
         ///state = GAMESTATE.TITLESCREEN;
+        AudioManager.instance.Stop("MainTheme");
         instance.level = 1;
         SceneManager.LoadScene(0);
     }
@@ -80,6 +82,7 @@ public class GameManager : MonoBehaviour
     public static void WinScreen()
     {
         ///state = GAMESTATE.WIN;
+        AudioManager.instance.Stop("MainTheme");
         Cursor.lockState = CursorLockMode.None;
         SceneManager.LoadScene("Win");
     }
@@ -87,6 +90,7 @@ public class GameManager : MonoBehaviour
     public static void LoseScreen()
     {
         ///state = GAMESTATE.LOSE;
+        AudioManager.instance.Stop("MainTheme");
         Cursor.lockState = CursorLockMode.None;
         SceneManager.LoadScene("Lose");
     }
