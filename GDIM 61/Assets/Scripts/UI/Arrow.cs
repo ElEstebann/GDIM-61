@@ -72,7 +72,7 @@ public class Arrow : MonoBehaviour
     }
     public void updateColor(float ratio)
     {
-        if(active)
+        if(active && sprite)
         {
             if(ratio <= 0.5f )
             {
@@ -88,7 +88,9 @@ public class Arrow : MonoBehaviour
 
     public void beInvisible()
     {
-        sprite.color = new Color(sprite.color.r,sprite.color.b,sprite.color.g,0f);
+        if(sprite){
+            sprite.color = new Color(sprite.color.r,sprite.color.b,sprite.color.g,0f);
+        }
     }
 
     public void beVisible()
