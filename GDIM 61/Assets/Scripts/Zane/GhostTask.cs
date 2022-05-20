@@ -18,7 +18,7 @@ public class GhostTask : MonoBehaviour
     [SerializeField] private GameObject Player;
     [SerializeField] private GameObject alertIcon;
     [SerializeField] private GameObject arrowTarget;
-    [SerializeField] private GameObject progressBarCanvas;
+    [SerializeField] private GameObject progressBar;
     [SerializeField] private Slider taskProgressBar;
     [SerializeField] private Animator taskAnimator;
     [SerializeField] private Target target;
@@ -34,6 +34,8 @@ public class GhostTask : MonoBehaviour
     private bool pauseTaskTimer = false;
     private bool taskCompleted = false;
     private bool keyHeld = false;
+    private bool keyHolding;
+    private bool fixing;
     private bool playing;
     public static bool taskDone;
     public bool inRange { get; private set; }
@@ -59,6 +61,7 @@ public class GhostTask : MonoBehaviour
 
     private void Update()
     {
+        // checks if task is not fixed
         if (taskAnimator.GetBool("Fixed") == false)
         {
             TaskKeyPress();
@@ -77,53 +80,76 @@ public class GhostTask : MonoBehaviour
         if (inRange == true)
         {
             // adds time to the timer while the key is held down
-            if (Input.GetKey(holdKey) && keyHeld == false)
+            if (Input.GetKey(holdKey) && keyHeld == false && fixing == true)
             {
-                keyHeldTimer += Time.deltaTime;
-                pauseTaskTimer = true;
                 playerMoveScript.SetFixingBool(true);
+                progressBar.SetActive(true);
 
                 // task progress bar
-                progressBarCanvas.SetActive(true);
                 taskProgressAdd = 100 / holdTime;
                 taskProgressValue += taskProgressAdd * Time.deltaTime;
                 taskProgressBar.value = taskProgressValue;
+
+                // task hold timer
+                keyHeldTimer += Time.deltaTime;
+                pauseTaskTimer = true;
+                fixing = true;
 
                 // when the key is held down for the required time, the timer stops and the function is called
                 if (keyHeldTimer >= (keyHeldStartTime + holdTime))
                 {
                     keyHeld = true;
                     taskDone = true;
+                    fixing = false;
                     playerMoveScript.SetFixingBool(false);
 
                     KeyHeld();
                 }
             }
-            else
-            {
-                progressBarCanvas.SetActive(false);
-            }
 
-            // allows for key to be pressed again
+            // checks if the fix key has been released to allow the task to be fixed again
             if (Input.GetKeyUp(holdKey))
             {
-                keyHeld = false;
                 pauseTaskTimer = false;
+                keyHeld = false;
+                fixing = false;
                 playerMoveScript.SetFixingBool(false);
             }
 
-            // allows for fixing animation to be played again
+            // checks if the fix key has been held to allow the fixing animation to be played again
             if (Input.GetKeyDown(holdKey))
             {
+                fixing = true;
                 playerMoveScript.SetFixTrigger();
                 playerMoveScript.SetFixingBool(true);
             }
+
+            // checks if the task is being fixed to show the task progress bar
+            if (fixing == true)
+            {
+                progressBar.SetActive(true);
+            }
+            else
+            {
+                progressBar.SetActive(false);
+            }
+        }
+        else
+        {
+            // checks if the fix key is being held while the player is out of range of the task
+            if (Input.GetKey(holdKey))
+            {
+                playerMoveScript.SetFixingBool(false);
+                pauseTaskTimer = false;
+            }
+
+            progressBar.SetActive(false);
         }
     }
 
     private void TaskTimer()
     {
-        // checks if timer has reached zero and if key is held down
+        // checks if timer has reached zero and if the fix key is held down
         if (taskTimer > 0 && pauseTaskTimer == false)
         {
             // timer counts down
@@ -131,7 +157,7 @@ public class GhostTask : MonoBehaviour
         }
         else if (pauseTaskTimer == false)
         {
-            // checks if task was completed
+            // checks if the task was completed
             if (!taskCompleted)
             {
                 TaskFailed();
@@ -162,13 +188,13 @@ public class GhostTask : MonoBehaviour
         keyHeldTimer = 0f;
         taskProgressValue = 0;
         keyHeld = false;
-        progressBarCanvas.SetActive(false);
 
         // resets task animation to default
         alertIcon.SetActive(false);
         arrowTarget.SetActive(false);
         taskAnimator.SetBool("Fixed", true);
         taskAnimator.ResetTrigger("Danger");
+        taskAnimator.ResetTrigger("Extreme");
 
         ///Destroy(this.transform.parent.gameObject);
         ///this.enabled = false;
@@ -191,7 +217,7 @@ public class GhostTask : MonoBehaviour
         // raycasts a circle around the task
         Collider2D[] rangeCheck = Physics2D.OverlapCircleAll(transform.position, radius, playerLayer);
 
-        // checks if the player is within range of the task for the button to be pressed
+        // checks if the player is within range of the task for the key to be pressed
         if (rangeCheck.Length > 0)
         {
             Transform player = rangeCheck[0].transform;
@@ -219,7 +245,7 @@ public class GhostTask : MonoBehaviour
     {
         if (playing == true)
         {
-           /* if (taskAnimator.GetBool("Fixed") == false)
+           if (taskAnimator.GetBool("Fixed") == false)
             {
                 // creates a visible circle in the gizmos that represents the key press range of the task
                 UnityEditor.Handles.color = Color.white;
@@ -231,7 +257,7 @@ public class GhostTask : MonoBehaviour
                     UnityEditor.Handles.color = Color.green;
                     UnityEditor.Handles.DrawWireDisc(transform.position, Vector3.forward, radius);
                 }
-            }*/
+            }
         }
     }
 
