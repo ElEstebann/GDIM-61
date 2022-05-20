@@ -12,6 +12,7 @@ public class FearBar : MonoBehaviour
     
     private float initialFill = 0f;
     private float max = 1f;
+    public bool hidden = false;
     //private float min = 0f;
     
     void Start()
@@ -27,7 +28,7 @@ public class FearBar : MonoBehaviour
 
     void FillBar()
     {
-        if (detection.detectPlayer)
+        if (detection.detectPlayer && !hidden)
         {
             if (transform.localScale.x <= max)
             {
