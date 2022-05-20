@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
         LOSE
     }
 
-    private static GAMESTATE state;
+    ///private static GAMESTATE state;
 
     private void Awake()
     {
@@ -38,12 +38,12 @@ public class GameManager : MonoBehaviour
 
     public static void TitleScreen()
     {
-        state = GAMESTATE.TITLESCREEN;
+        ///state = GAMESTATE.TITLESCREEN;
     }
 
     public static void NewGame()
     {
-        state = GAMESTATE.PLAYING;
+        ///state = GAMESTATE.PLAYING;
         instance.level = 0;
         SceneManager.LoadScene(instance.levels[0]);
         Cursor.lockState = CursorLockMode.Locked;
@@ -52,39 +52,45 @@ public class GameManager : MonoBehaviour
 
     public static void NextLevel()
     {
-        state = GAMESTATE.PLAYING;
+        ///state = GAMESTATE.PLAYING;
+        AudioManager.instance.Stop("MainTheme");
         SceneManager.LoadScene(instance.levels[instance.level++]);
     }
 
     public static void PauseGame()
     {
-        state = GAMESTATE.PAUSED;
+        ///state = GAMESTATE.PAUSED;
+        Time.timeScale = 0f;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public static void ResumeGame()
     {
-        state = GAMESTATE.PLAYING;
+        ///state = GAMESTATE.PLAYING;
+        Time.timeScale = 1.0f;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public static void QuitToMenu()
     {
-        state = GAMESTATE.TITLESCREEN;
+        ///state = GAMESTATE.TITLESCREEN;
+        AudioManager.instance.Stop("MainTheme");
         instance.level = 1;
         SceneManager.LoadScene(0);
     }
 
     public static void WinScreen()
     {
-        state = GAMESTATE.WIN;
-
+        ///state = GAMESTATE.WIN;
+        AudioManager.instance.Stop("MainTheme");
         Cursor.lockState = CursorLockMode.None;
         SceneManager.LoadScene("Win");
     }
 
     public static void LoseScreen()
     {
-        state = GAMESTATE.LOSE;
-
+        ///state = GAMESTATE.LOSE;
+        AudioManager.instance.Stop("MainTheme");
         Cursor.lockState = CursorLockMode.None;
         SceneManager.LoadScene("Lose");
     }

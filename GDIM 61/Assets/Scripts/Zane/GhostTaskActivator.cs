@@ -26,6 +26,7 @@ public class GhostTaskActivator : MonoBehaviour
         // tasks start to be activated
         spawnInterval = Random.Range(minimumSpawnInterval, maximumSpawnInterval);
         InvokeRepeating("SpawnTask", 0f, spawnInterval);
+        AudioManager.instance.Play("MainTheme");
     }
 
     private void SpawnTask()

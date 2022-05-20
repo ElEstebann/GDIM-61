@@ -193,7 +193,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3198780572807909102, guid: 0422e70d70c334d418190ff372ba8acf, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 4294967295
+      value: 2483027967
       objectReference: {fileID: 0}
     - target: {fileID: 3198780573993892783, guid: 0422e70d70c334d418190ff372ba8acf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -429,7 +429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 285710107bdc90943958b1b2c0be5cc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 258836455}
+  titleAnimator: {fileID: 258836455}
 --- !u!224 &258836454
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1088,7 +1088,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3198780572807909102, guid: 0422e70d70c334d418190ff372ba8acf, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 4294967295
+      value: 2483027967
       objectReference: {fileID: 0}
     - target: {fileID: 3198780573993892783, guid: 0422e70d70c334d418190ff372ba8acf, type: 3}
       propertyPath: m_Navigation.m_Mode
@@ -1834,8 +1834,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levels:
-  - Test Level One
-  SceneName: Test Title Screen
+  - Meep Maintenance Level One
+  SceneName: Meep Maintenance Main Menu
 --- !u!4 &1253924218
 Transform:
   m_ObjectHideFlags: 0
@@ -3010,7 +3010,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3198780572807909102, guid: 0422e70d70c334d418190ff372ba8acf, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 4294967295
+      value: 2483027967
       objectReference: {fileID: 0}
     - target: {fileID: 3198780573993892783, guid: 0422e70d70c334d418190ff372ba8acf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -3180,7 +3180,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3198780572807909102, guid: 0422e70d70c334d418190ff372ba8acf, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 4294967295
+      value: 2483027967
       objectReference: {fileID: 0}
     - target: {fileID: 3198780573993892783, guid: 0422e70d70c334d418190ff372ba8acf, type: 3}
       propertyPath: m_Navigation.m_Mode
