@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class Hidden : MonoBehaviour
 {
-    // [SerializeField] GameObject ai;
-    // private HumanFOV detection;
-    [SerializeField] GameObject fearbar;
+    [SerializeField] private GameObject fearbar;
     private FearBar fear;
+    [SerializeField] private SpriteRenderer meep;
+
     [SerializeField] private float fillRate = 0.15f;
     [SerializeField] private float depleteRate = 0.3f;
     private float max = 1f;
     private float min = 0f;
+    private float ogVal = 1f;
+    private float hideVal = 0.5f;
     void Start()
     {
-       fear = fearbar.GetComponent<FearBar>();
+        fear = fearbar.GetComponent<FearBar>();
         transform.localScale = new Vector3(max, transform.localScale.y, transform.localScale.z);
     }
 
@@ -26,6 +28,7 @@ public class Hidden : MonoBehaviour
             if ((!fear.hidden) && (transform.localScale.x == max))
             {
                 fear.hidden = true;
+                meep.color = new Color(ogVal, ogVal, ogVal, hideVal);
             }
         }
 
@@ -43,6 +46,7 @@ public class Hidden : MonoBehaviour
             else
             {
                 fear.hidden = false;
+                meep.color = new Color(ogVal, ogVal, ogVal, ogVal);
             }
         }
 
@@ -60,24 +64,4 @@ public class Hidden : MonoBehaviour
         
     }
 
-   // void DepleteSkillBar()
-   // {
-   //     if (transform.localScale.x >= min)
-   //     {
-   //         transform.localScale = new Vector3(transform.localScale.x - (scale * Time.deltaTime), transform.localScale.y, transform.localScale.z);
-   //     }
-   //     if (transform.localScale.x <= min)
-    //    {
-    //        fear.hidden = false;
-    //    }
-        
-    //}
-
-   // void RefillSkillBar()
-   // {
-    //    if (transform.localScale.x < max)
-    //    {
-    //        transform.localScale = new Vector3(transform.localScale.x + (scale * Time.deltaTime), transform.localScale.y, transform.localScale.z);
-    //    }
-    //}
 }

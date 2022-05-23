@@ -496,7 +496,7 @@ GameObject:
   - component: {fileID: 232529609}
   - component: {fileID: 232529608}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -534,6 +534,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fearbar: {fileID: 2019720471}
+  meep: {fileID: 293696475}
   fillRate: 0.15
   depleteRate: 0.3
 --- !u!114 &232529609
@@ -760,6 +761,11 @@ GameObject:
 --- !u!4 &293696470 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6784455462238060346, guid: e0ae587943a00d146b96c82fabfb08ce, type: 3}
+  m_PrefabInstance: {fileID: 1521401644}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &293696475 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 6784455462238060347, guid: e0ae587943a00d146b96c82fabfb08ce, type: 3}
   m_PrefabInstance: {fileID: 1521401644}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &336881938
@@ -1721,6 +1727,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ai: {fileID: 218106362}
   alert: {fileID: 383650482}
+  fearbar: {fileID: 2019720471}
 --- !u!1 &860189906
 GameObject:
   m_ObjectHideFlags: 0

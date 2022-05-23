@@ -7,11 +7,14 @@ public class Detected : MonoBehaviour
     [SerializeField] GameObject ai;
     [SerializeField] private GameObject alert;
     private HumanFOV detection;
-   // [SerializeField] private Transform parent;
+    [SerializeField] private GameObject fearbar;
+    private FearBar fear;
+    // [SerializeField] private Transform parent;
     // Start is called before the first frame update
     void Start()
     {
         detection = ai.GetComponent<HumanFOV>();
+        fear = fearbar.GetComponent<FearBar>();
         transform.position = new Vector3(transform.parent.parent.position.x, transform.parent.parent.position.y, transform.parent.parent.position.y);
     }
 
@@ -19,7 +22,7 @@ public class Detected : MonoBehaviour
     void Update()
     {
         transform.position = new Vector3(transform.parent.parent.position.x, transform.parent.parent.position.y + 1, transform.parent.parent.position.z);
-        if (detection.detectPlayer)
+        if (detection.detectPlayer && !fear.hidden)
         {
             alert.SetActive(true);
         }

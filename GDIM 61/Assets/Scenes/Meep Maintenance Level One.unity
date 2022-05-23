@@ -2846,6 +2846,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &686821267 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1309536127, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
+  m_PrefabInstance: {fileID: 705414135}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &697784595
 GameObject:
   m_ObjectHideFlags: 0
@@ -3901,6 +3906,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ai: {fileID: 914979081}
   alert: {fileID: 650251233}
+  fearbar: {fileID: 686821267}
 --- !u!1 &942972778
 GameObject:
   m_ObjectHideFlags: 0
