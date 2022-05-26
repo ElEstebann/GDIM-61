@@ -11,12 +11,12 @@ public class GhostTaskActivator : MonoBehaviour
     [SerializeField] private GameObject[] arrowTargets;
     [SerializeField] private Animator[] taskAnimators;
 
-    [SerializeField] private float minimumSpawnInterval;
-    [SerializeField] private float maximumSpawnInterval;
+    [SerializeField] private float minimumActivationInterval;
+    [SerializeField] private float maximumActivationInterval;
 
     [SerializeField] LayerMask taskLayer;
 
-    private float spawnInterval;
+    private float activationInterval;
     private int previousTask;
     private int tasksIndex;
     ///private int spawnsIndex;
@@ -24,8 +24,8 @@ public class GhostTaskActivator : MonoBehaviour
     private void Start()
     {
         // tasks start to be activated
-        spawnInterval = Random.Range(minimumSpawnInterval, maximumSpawnInterval);
-        InvokeRepeating("SpawnTask", 0f, spawnInterval);
+        activationInterval = Random.Range(minimumActivationInterval, maximumActivationInterval);
+        InvokeRepeating("SpawnTask", 0f, activationInterval);
         AudioManager.instance.Play("MainTheme");
     }
 
@@ -34,7 +34,7 @@ public class GhostTaskActivator : MonoBehaviour
         // makes sure the same task isn't activated twice in a row
         do
         {
-            // gets random index from tasks array
+            // gets random index from tasks list
             tasksIndex = Random.Range(0, ghostTasks.Length);
 
             // each task is activated at it's corresponding spawnpoint

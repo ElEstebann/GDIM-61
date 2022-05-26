@@ -3723,8 +3723,8 @@ MonoBehaviour:
   - {fileID: 1589892228}
   - {fileID: 1913328560}
   - {fileID: 1895886578}
-  minimumSpawnInterval: 5
-  maximumSpawnInterval: 10
+  minimumActivationInterval: 5
+  maximumActivationInterval: 10
   taskLayer:
     serializedVersion: 2
     m_Bits: 256
@@ -4979,7 +4979,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1.0625}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1533646149

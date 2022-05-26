@@ -2,76 +2,61 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-//Written by Zane
-public class GhostTask : MonoBehaviour
+public class BalloonTask: MonoBehaviour
 {
+    [SerializeField] private GameObject powerLines;
     [SerializeField] private KeyCode holdKey;
 
     [SerializeField] private float radius;
     [SerializeField] private float holdTime;
-    [SerializeField] private float taskDuration;
 
     [SerializeField] private LayerMask playerLayer;
     [SerializeField] private LayerMask wallLayer;
 
     [SerializeField] private GameObject Player;
-    [SerializeField] private GameObject alertIcon;
-    [SerializeField] private GameObject arrowTarget;
     [SerializeField] private GameObject progressBar;
     [SerializeField] private Slider taskProgressBar;
-    [SerializeField] private Animator taskAnimator;
-    [SerializeField] private Target target;
+    [SerializeField] private Animator balloonAnimator;
 
     private MovementScript playerMoveScript;
 
     private float keyHeldStartTime = 0f;
     private float keyHeldTimer;
-    private float taskTimer;
     private float taskProgressValue;
     private float taskProgressAdd;
 
-    private bool pauseTaskTimer = false;
-    private bool taskCompleted = false;
     private bool keyHeld = false;
-    private bool keyHolding;
-    private bool fixing;
+    private bool popping;
+    private bool collided;
     private bool playing;
-    public static bool taskDone;
     public bool inRange { get; private set; }
 
-    void Start()
+
+    private void Start()
     {
         playing = true;
         taskProgressValue = 0;
-        taskTimer = taskDuration;
-        taskAnimator.SetBool("Fixed", true);
+        balloonAnimator.SetBool("Floating", false);
 
         // finds player object
         Player = GameObject.FindGameObjectsWithTag("Player")[0];
         Player = GameObject.FindGameObjectWithTag("Player");
 
         // assigns components to variables
-        taskAnimator = GetComponentInParent<Animator>();
+        balloonAnimator = GetComponentInParent<Animator>();
         playerMoveScript = Player.GetComponent<MovementScript>();
-        target = arrowTarget.GetComponent(typeof(Target)) as Target;
 
         StartCoroutine(RangeCheck());
-
     }
 
     private void Update()
     {
         // checks if task is not fixed
-        if (taskAnimator.GetBool("Fixed") == false)
+        if (balloonAnimator.GetBool("Floating") == true)
         {
             TaskKeyPress();
-            TaskTimer();
-            updateArrowColor();
-        }
-        else
-        {
-            pauseTaskTimer = false;
         }
     }
 
@@ -81,7 +66,7 @@ public class GhostTask : MonoBehaviour
         if (inRange == true)
         {
             // adds time to the timer while the key is held down
-            if (Input.GetKey(holdKey) && keyHeld == false && fixing == true)
+            if (Input.GetKey(holdKey) && keyHeld == false && popping == true)
             {
                 playerMoveScript.SetFixingBool(true);
                 progressBar.SetActive(true);
@@ -93,15 +78,13 @@ public class GhostTask : MonoBehaviour
 
                 // task hold timer
                 keyHeldTimer += Time.deltaTime;
-                pauseTaskTimer = true;
-                fixing = true;
+                popping = true;
 
                 // when the key is held down for the required time, the timer stops and the function is called
                 if (keyHeldTimer >= (keyHeldStartTime + holdTime))
                 {
                     keyHeld = true;
-                    taskDone = true;
-                    fixing = false;
+                    popping = false;
                     playerMoveScript.SetFixingBool(false);
 
                     KeyHeld();
@@ -111,22 +94,21 @@ public class GhostTask : MonoBehaviour
             // checks if the fix key has been released to allow the task to be fixed again
             if (Input.GetKeyUp(holdKey))
             {
-                pauseTaskTimer = false;
                 keyHeld = false;
-                fixing = false;
+                popping = false;
                 playerMoveScript.SetFixingBool(false);
             }
 
             // checks if the fix key has been held to allow the fixing animation to be played again
             if (Input.GetKeyDown(holdKey))
             {
-                fixing = true;
+                popping = true;
                 playerMoveScript.SetFixTrigger();
                 playerMoveScript.SetFixingBool(true);
             }
 
             // checks if the task is being fixed to show the task progress bar
-            if (fixing == true)
+            if (popping == true)
             {
                 progressBar.SetActive(true);
             }
@@ -141,64 +123,32 @@ public class GhostTask : MonoBehaviour
             if (Input.GetKey(holdKey))
             {
                 playerMoveScript.SetFixingBool(false);
-                pauseTaskTimer = false;
             }
 
             progressBar.SetActive(false);
         }
     }
 
-    private void TaskTimer()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        // checks if timer has reached zero and if the fix key is held down
-        if (taskTimer > 0 && pauseTaskTimer == false)
+        // checks if balloons have collided with the power lines
+        if (collision.gameObject == powerLines && collided == false)
         {
-            // timer counts down
-            taskTimer -= Time.deltaTime;
-        }
-        else if (pauseTaskTimer == false)
-        {
-            // checks if the task was completed
-            if (!taskCompleted)
-            {
-                TaskFailed();
-                taskCompleted = true;
-            }
-        }
-
-        // activates extreme animation when the task timer is 10 seconds or less
-        if (taskTimer <= 10)
-        {
-            taskAnimator.SetTrigger("Extreme");
+            TaskFailed();
+            collided = true;
         }
     }
 
     private void TaskFailed()
     {
-        Debug.Log("YOU LOSE!! Failed to complete the task in " + taskDuration + " seconds.");
-        AudioManager.instance.Stop("MainTheme");
-        GameManager.LoseScreen();
+        Debug.Log("YOU LOSE!! Failed to pop the balloon before it hit the power line.");
+        //SceneManager.LoadScene("Lose");
     }
 
     private void KeyHeld()
     {
         Debug.Log("TASK COMPLETE!! Key held down for " + holdTime + " seconds.");
-
-        // resets task
-        taskTimer = taskDuration;
-        keyHeldTimer = 0f;
-        taskProgressValue = 0;
-        keyHeld = false;
-
-        // resets task animation to default
-        alertIcon.SetActive(false);
-        arrowTarget.SetActive(false);
-        taskAnimator.SetBool("Fixed", true);
-        taskAnimator.ResetTrigger("Danger");
-        taskAnimator.ResetTrigger("Extreme");
-
-        ///Destroy(this.transform.parent.gameObject);
-        ///this.enabled = false;
+        Destroy(this.gameObject);
     }
 
     private IEnumerator RangeCheck()
@@ -246,7 +196,7 @@ public class GhostTask : MonoBehaviour
     {
         if (playing == true)
         {
-           if (taskAnimator.GetBool("Fixed") == false)
+            if (balloonAnimator.GetBool("Floating") == true)
             {
                 // creates a visible circle in the gizmos that represents the key press range of the task
                 UnityEditor.Handles.color = Color.white;
@@ -260,24 +210,5 @@ public class GhostTask : MonoBehaviour
                 }
             }
         }
-    }
-
-    private void updateArrowColor()
-    {
-        if(target && target.enabled && arrowTarget.activeSelf && arrowTarget && target != null)
-        {
-            if(arrowTarget.activeSelf)
-            {
-                //Debug.Log("Arrow Active");
-            }
-            else{
-                //Debug.Log("Arrow INACTIVE!");
-            }
-            target = arrowTarget.GetComponent(typeof(Target)) as Target;
-            float ratio = (float)(taskTimer/taskDuration);
-            //Debug.Log(ratio);
-            target.updatePointerColor(ratio);
-        }
-        
     }
 }
