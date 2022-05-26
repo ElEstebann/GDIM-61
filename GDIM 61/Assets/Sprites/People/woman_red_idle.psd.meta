@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 0c6a09a380276984a959a17cfe1d8733
+guid: 00a5e02337a2b6e489b2e00b0d8b2e3c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4122597067671167742
-    second: man_red_idle_0
+      213: 8273863710413331126
+    second: woman_red_idle_0
   - first:
-      213: 5045231025623611844
-    second: man_red_idle_1
+      213: -2731784892481431451
+    second: woman_red_idle_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: man_red_idle_0
+      name: woman_red_idle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -105,20 +105,20 @@ TextureImporter:
         width: 16
         height: 22
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef26b9ac038663930800000000000000
-      internalID: 4122597067671167742
+      spriteID: 6ba9e23353ba2d270800000000000000
+      internalID: 8273863710413331126
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: man_red_idle_1
+      name: woman_red_idle_1
       rect:
         serializedVersion: 2
         x: 16
@@ -126,14 +126,14 @@ TextureImporter:
         width: 16
         height: 22
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c9331413e2440640800000000000000
-      internalID: 5045231025623611844
+      spriteID: 5689dd82d10c61ad0800000000000000
+      internalID: -2731784892481431451
       vertices: []
       indices: 
       edges: []

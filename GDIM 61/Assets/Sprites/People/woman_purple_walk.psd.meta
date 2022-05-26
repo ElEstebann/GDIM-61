@@ -1,31 +1,31 @@
 fileFormatVersion: 2
-guid: ba061ab8baeb2de46b6c4624162c0fa1
+guid: 7368f911cbf7dbb49b159f9aecd907d4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6314215849977829876
-    second: man_wedding_walk_0
+      213: 348407798956740916
+    second: woman_purple_walk_0
   - first:
-      213: -1829822894264944198
-    second: man_wedding_walk_1
+      213: -6281948016502018350
+    second: woman_purple_walk_1
   - first:
-      213: 7458275334180649580
-    second: man_wedding_walk_2
+      213: 7913119838373433880
+    second: woman_purple_walk_2
   - first:
-      213: -8975852142161851368
-    second: man_wedding_walk_3
+      213: 2995313231544700854
+    second: woman_purple_walk_3
   - first:
-      213: -8327452801932664974
-    second: man_wedding_walk_4
+      213: 7042009882583533655
+    second: woman_purple_walk_4
   - first:
-      213: 8685954334936962393
-    second: man_wedding_walk_5
+      213: 2120432882648815888
+    second: woman_purple_walk_5
   - first:
-      213: -3002326192721854259
-    second: man_wedding_walk_6
+      213: 2327194428591247081
+    second: woman_purple_walk_6
   - first:
-      213: -1453060016594116179
-    second: man_wedding_walk_7
+      213: 6882785628911445753
+    second: woman_purple_walk_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -115,7 +115,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: man_wedding_walk_0
+      name: woman_purple_walk_0
       rect:
         serializedVersion: 2
         x: 0
@@ -129,14 +129,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f9d1158cd990a750800000000000000
-      internalID: 6314215849977829876
+      spriteID: 431dac51c0bc5d400800000000000000
+      internalID: 348407798956740916
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: man_wedding_walk_1
+      name: woman_purple_walk_1
       rect:
         serializedVersion: 2
         x: 16
@@ -150,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab9f571c5c92b96e0800000000000000
-      internalID: -1829822894264944198
+      spriteID: 2de6deaef8902d8a0800000000000000
+      internalID: -6281948016502018350
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: man_wedding_walk_2
+      name: woman_purple_walk_2
       rect:
         serializedVersion: 2
         x: 32
@@ -171,14 +171,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6a35ea96ed118760800000000000000
-      internalID: 7458275334180649580
+      spriteID: 8125857419c01dd60800000000000000
+      internalID: 7913119838373433880
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: man_wedding_walk_3
+      name: woman_purple_walk_3
       rect:
         serializedVersion: 2
         x: 48
@@ -192,14 +192,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81c8306680e5f6380800000000000000
-      internalID: -8975852142161851368
+      spriteID: 6bfcf35a38d719920800000000000000
+      internalID: 2995313231544700854
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: man_wedding_walk_4
+      name: woman_purple_walk_4
       rect:
         serializedVersion: 2
         x: 64
@@ -213,14 +213,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27fd8f02cc1fe6c80800000000000000
-      internalID: -8327452801932664974
+      spriteID: 7588e249dae3ab160800000000000000
+      internalID: 7042009882583533655
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: man_wedding_walk_5
+      name: woman_purple_walk_5
       rect:
         serializedVersion: 2
         x: 80
@@ -234,14 +234,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9559e2d8275ba8870800000000000000
-      internalID: 8685954334936962393
+      spriteID: 0191754e87a4d6d10800000000000000
+      internalID: 2120432882648815888
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: man_wedding_walk_6
+      name: woman_purple_walk_6
       rect:
         serializedVersion: 2
         x: 96
@@ -255,14 +255,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc086f61c389556d0800000000000000
-      internalID: -3002326192721854259
+      spriteID: 9ee0377b00bdb4020800000000000000
+      internalID: 2327194428591247081
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: man_wedding_walk_7
+      name: woman_purple_walk_7
       rect:
         serializedVersion: 2
         x: 112
@@ -276,8 +276,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da1a5911d91b5dbe0800000000000000
-      internalID: -1453060016594116179
+      spriteID: 9f62e6c1011948f50800000000000000
+      internalID: 6882785628911445753
       vertices: []
       indices: 
       edges: []

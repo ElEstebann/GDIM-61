@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Man_Idle
+  m_Name: Woman_Purple_Idle
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,11 +20,11 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 4122597067671167742, guid: 0c6a09a380276984a959a17cfe1d8733, type: 3}
+      value: {fileID: -1126533682197480441, guid: bdb73bb2e5ce44c4ba471d30cc48d73d, type: 3}
     - time: 0.083333336
-      value: {fileID: 5045231025623611844, guid: 0c6a09a380276984a959a17cfe1d8733, type: 3}
+      value: {fileID: -4393029498393285291, guid: bdb73bb2e5ce44c4ba471d30cc48d73d, type: 3}
     - time: 0.15
-      value: {fileID: 5045231025623611844, guid: 0c6a09a380276984a959a17cfe1d8733, type: 3}
+      value: {fileID: -4393029498393285291, guid: bdb73bb2e5ce44c4ba471d30cc48d73d, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -44,9 +44,9 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 4122597067671167742, guid: 0c6a09a380276984a959a17cfe1d8733, type: 3}
-    - {fileID: 5045231025623611844, guid: 0c6a09a380276984a959a17cfe1d8733, type: 3}
-    - {fileID: 5045231025623611844, guid: 0c6a09a380276984a959a17cfe1d8733, type: 3}
+    - {fileID: -1126533682197480441, guid: bdb73bb2e5ce44c4ba471d30cc48d73d, type: 3}
+    - {fileID: -4393029498393285291, guid: bdb73bb2e5ce44c4ba471d30cc48d73d, type: 3}
+    - {fileID: -4393029498393285291, guid: bdb73bb2e5ce44c4ba471d30cc48d73d, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
