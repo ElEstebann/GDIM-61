@@ -58,7 +58,7 @@ public class HumanPatrol : MonoBehaviour
     private void DirectionChange()
     {
         // deactivates walking animation
-        anim.SetBool("Walk", false);
+        anim.SetBool("Walking", false);
 
         // changes direction of the AI as soon as it reaches the edge
         if (movingLeft)
@@ -84,7 +84,7 @@ public class HumanPatrol : MonoBehaviour
     private void MoveInDirection(int direction)
     {
         // activates walking animation
-        anim.SetBool("Walk", true);
+        anim.SetBool("Walking", true);
 
         // resets idle timer
         idleTimer = 0;
