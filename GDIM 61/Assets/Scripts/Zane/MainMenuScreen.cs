@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 // Written by Amber/Zane
 public class MainMenuScreen : MonoBehaviour
 {
     [SerializeField] private Animator titleAnimator;
+    [SerializeField] private Image optionsIcon;
+    [SerializeField] private Image creditsIcon;
 
     private void Awake()
     {
@@ -27,7 +30,6 @@ public class MainMenuScreen : MonoBehaviour
         Debug.Log("Credits");
         titleAnimator.SetTrigger("Change");
         titleAnimator.SetBool("Credits", true);
-
     }
 
     // credits disappear
@@ -43,7 +45,6 @@ public class MainMenuScreen : MonoBehaviour
         Debug.Log("Options");
         titleAnimator.SetTrigger("Change");
         titleAnimator.SetBool("Options", true);
-        
     }
 
     // options disappear
@@ -51,7 +52,6 @@ public class MainMenuScreen : MonoBehaviour
     {
         titleAnimator.ResetTrigger("Change");
         titleAnimator.SetBool("Options", false);
-
     }
 
     // quits the game
