@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class FearBar : MonoBehaviour
@@ -8,8 +9,12 @@ public class FearBar : MonoBehaviour
     [SerializeField] GameObject ai;
     private HumanFOV detection;
 
-    [SerializeField] private float scale = 0.15f;
     
+
+    [SerializeField] private float scale = 0.15f;
+
+    [SerializeField] private Animator Transition;
+
     private float initialFill = 0f;
     private float max = 1f;
     public bool hidden = false;
@@ -37,7 +42,8 @@ public class FearBar : MonoBehaviour
             else
             {
                 //transform.localScale = new Vector3(max, transform.localScale.y, transform.localScale.z);
-                GameManager.LoseScreen();
+                //GameManager.LoseScreen();
+                StartCoroutine(transition(SceneManager.GetActiveScene().buildIndex + 1));
             }
             
         }
@@ -53,6 +59,15 @@ public class FearBar : MonoBehaviour
        //     }
 
        // }
+    }
+
+    IEnumerator transition (int LevelIndex)
+    {
+        Transition.SetTrigger("Start");
+
+        yield return new WaitForSeconds(1);
+
+        SceneManager.LoadScene(LevelIndex);
     }
 
 }
