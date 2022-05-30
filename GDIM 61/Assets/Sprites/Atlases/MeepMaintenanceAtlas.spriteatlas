@@ -156,6 +156,18 @@ SpriteAtlas:
   - {fileID: -6713964981533700900, guid: 217eb9453f9274d48be5014d0c5e5be7, type: 3}
   - {fileID: 5445964308389325622, guid: 217eb9453f9274d48be5014d0c5e5be7, type: 3}
   - {fileID: 6031998534451051593, guid: 217eb9453f9274d48be5014d0c5e5be7, type: 3}
+  - {fileID: -1042171715792223178, guid: f11577e5557cc184c9bac839f8c8759d, type: 3}
+  - {fileID: -8058837272425426012, guid: f11577e5557cc184c9bac839f8c8759d, type: 3}
+  - {fileID: -5274473948798862368, guid: f11577e5557cc184c9bac839f8c8759d, type: 3}
+  - {fileID: 1238479702247936981, guid: f11577e5557cc184c9bac839f8c8759d, type: 3}
+  - {fileID: 8614278585613346071, guid: f11577e5557cc184c9bac839f8c8759d, type: 3}
+  - {fileID: -4117306756920022158, guid: f11577e5557cc184c9bac839f8c8759d, type: 3}
+  - {fileID: -8516258206435792477, guid: f11577e5557cc184c9bac839f8c8759d, type: 3}
+  - {fileID: 6147777685625707044, guid: f11577e5557cc184c9bac839f8c8759d, type: 3}
+  - {fileID: 7784327073971885887, guid: f11577e5557cc184c9bac839f8c8759d, type: 3}
+  - {fileID: -7795879407906154744, guid: f11577e5557cc184c9bac839f8c8759d, type: 3}
+  - {fileID: -7723630769064488876, guid: f11577e5557cc184c9bac839f8c8759d, type: 3}
+  - {fileID: -6906340560826483880, guid: f11577e5557cc184c9bac839f8c8759d, type: 3}
   - {fileID: 1559915471669483522, guid: 18af7ee57c363074d89f04bed89277c1, type: 3}
   - {fileID: -3527056022417232336, guid: 18af7ee57c363074d89f04bed89277c1, type: 3}
   - {fileID: -6256732298934330293, guid: 18af7ee57c363074d89f04bed89277c1, type: 3}
@@ -173,6 +185,7 @@ SpriteAtlas:
   - {fileID: 1796050059168075848, guid: f593b6d67d8012242a63e2eda66552b5, type: 3}
   - {fileID: 7479400241521334696, guid: f593b6d67d8012242a63e2eda66552b5, type: 3}
   - {fileID: -3510547738046677975, guid: f593b6d67d8012242a63e2eda66552b5, type: 3}
+  - {fileID: 21300000, guid: 39f270475d7c88841995b504666fadeb, type: 3}
   - {fileID: 21300000, guid: 9f015e675f2b87245881c5a1d097416b, type: 3}
   - {fileID: 21300000, guid: 6139fd871f2fa3f45bac7d649f09e642, type: 3}
   - {fileID: 6033178316231366272, guid: 5e53b39756eb15b43854a2b0ed666c4b, type: 3}
@@ -390,6 +403,18 @@ SpriteAtlas:
   - Exclamation_2
   - Exclamation_1
   - Exclamation_0
+  - Fan_7
+  - Fan_6
+  - Fan_5
+  - Fan_4
+  - Fan_3
+  - Fan_2
+  - Fan_1
+  - Fan_0
+  - Fan_9
+  - Fan_8
+  - Fan_10
+  - Fan_11
   - move_1
   - move_0
   - move_3
@@ -407,6 +432,7 @@ SpriteAtlas:
   - man_pink_walk_4
   - man_pink_walk_7
   - man_pink_walk_6
+  - Fan_Wire
   - 3Dusk
   - Level1
   - sink_5
