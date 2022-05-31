@@ -135,6 +135,11 @@ public class Arrow : MonoBehaviour
         progress = ratio;
     }
 
+    public void destroy()
+    {
+        Destroy(gameObject);
+    }
+
     
 
 }

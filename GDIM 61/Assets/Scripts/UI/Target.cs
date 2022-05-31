@@ -74,4 +74,9 @@ public class Target : MonoBehaviour
         arrow.updateProgress((float)ratio);
     }
 
+    void OnDestroy()
+    {
+        arrow.destroy();
+    }
+
 }
