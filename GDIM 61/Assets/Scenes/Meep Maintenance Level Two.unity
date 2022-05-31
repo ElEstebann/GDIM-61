@@ -8598,7 +8598,7 @@ PrefabInstance:
     - target: {fileID: 1309536129, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
       propertyPath: Transition
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1523467085}
     - target: {fileID: 334851450668273866, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -9111,6 +9111,11 @@ MonoBehaviour:
 --- !u!1 &1493171272 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1309536127, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
+  m_PrefabInstance: {fileID: 1493171264}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1523467085 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7253018098979154437, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
   m_PrefabInstance: {fileID: 1493171264}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1541655801

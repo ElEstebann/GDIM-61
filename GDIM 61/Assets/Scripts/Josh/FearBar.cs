@@ -43,7 +43,7 @@ public class FearBar : MonoBehaviour
             {
                 //transform.localScale = new Vector3(max, transform.localScale.y, transform.localScale.z);
                 //GameManager.LoseScreen();
-                StartCoroutine(transition(SceneManager.GetActiveScene().buildIndex + 1));
+                StartCoroutine(transition());
             }
             
         }
@@ -61,13 +61,14 @@ public class FearBar : MonoBehaviour
        // }
     }
 
-    IEnumerator transition (int LevelIndex)
+    IEnumerator transition ()
     {
         Transition.SetTrigger("Start");
 
         yield return new WaitForSeconds(1);
 
-        SceneManager.LoadScene(LevelIndex);
+        //SceneManager.LoadScene(LevelIndex);
+        GameManager.LoseScreen();
     }
 
 }

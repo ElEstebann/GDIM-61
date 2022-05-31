@@ -76,7 +76,10 @@ public class Target : MonoBehaviour
 
     void OnDestroy()
     {
-        arrow.destroy();
+        if(arrow)
+        {
+            arrow.destroy();
+        }
     }
 
 }

@@ -569,7 +569,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ai: {fileID: 0}
   scale: 0.15
-  Transition: {fileID: 0}
+  Transition: {fileID: 7253018098979154437}
   hidden: 0
 --- !u!1 &1885967446140603202
 GameObject:
