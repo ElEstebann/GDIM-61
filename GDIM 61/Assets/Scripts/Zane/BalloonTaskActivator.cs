@@ -6,8 +6,9 @@ public class BalloonTaskActivator : MonoBehaviour
 {
     [SerializeField] private List<Rigidbody2D> balloons;
     [SerializeField] private List<Animator> balloonAnimators;
+    [SerializeField] private List<GameObject> arrowTargets;
 
-    [SerializeField] private float balloonSpeed;
+    [SerializeField] public float balloonSpeed;
     [SerializeField] private float minimumActivationInterval;
     [SerializeField] private float maximumActivationInterval;
 
@@ -34,6 +35,7 @@ public class BalloonTaskActivator : MonoBehaviour
             // removes balloon from each list when activated
             balloons.Remove(balloons[balloonsIndex]);
             balloonAnimators.Remove(balloonAnimators[balloonsIndex]);
+            arrowTargets.Remove(arrowTargets[balloonsIndex]);
         }
 
         // checks if there are no balloons in the list
@@ -48,7 +50,9 @@ public class BalloonTaskActivator : MonoBehaviour
 
             // random balloon starts to float upwards
             balloons[balloonsIndex].velocity = new Vector2(0f, 1f * balloonSpeed);
-            balloonAnimators[balloonsIndex].SetBool("Floating", true);
+            balloonAnimators[balloonsIndex].SetBool("Fixed", false);
+            balloonAnimators[balloonsIndex].SetTrigger("Danger");
+            arrowTargets[balloonsIndex].SetActive(true);
         }
     }
 }

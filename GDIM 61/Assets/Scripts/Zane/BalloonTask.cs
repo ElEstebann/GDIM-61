@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class BalloonTask: MonoBehaviour
 {
-    [SerializeField] private GameObject powerLines;
     [SerializeField] private KeyCode holdKey;
 
     [SerializeField] private float radius;
@@ -16,16 +15,25 @@ public class BalloonTask: MonoBehaviour
     [SerializeField] private LayerMask wallLayer;
 
     [SerializeField] private GameObject Player;
+    [SerializeField] private GameObject powerLines;
+    [SerializeField] private GameObject balloon;
+    [SerializeField] private GameObject arrowTarget;
     [SerializeField] private GameObject progressBar;
     [SerializeField] private Slider taskProgressBar;
     [SerializeField] private Animator balloonAnimator;
+    [SerializeField] private BalloonTaskActivator balloonScript;
+    [SerializeField] private Target target;
 
     private MovementScript playerMoveScript;
 
     private float keyHeldStartTime = 0f;
     private float keyHeldTimer;
+    private float taskTimer;
     private float taskProgressValue;
     private float taskProgressAdd;
+    private float distance;
+    private float speed;
+    private float time;
 
     private bool keyHeld = false;
     private bool popping;
@@ -37,8 +45,14 @@ public class BalloonTask: MonoBehaviour
     private void Start()
     {
         playing = true;
-        taskProgressValue = 0;
-        balloonAnimator.SetBool("Floating", false);
+        taskProgressValue = 0f;
+        balloonAnimator.SetBool("Fixed", true);
+
+        // allows the arrow to change color according to the balloon's distance from the power lines
+        speed = balloonScript.balloonSpeed;
+        distance = powerLines.transform.position.y - balloon.transform.position.y;
+        time = distance / speed;
+        taskTimer = time;
 
         // finds player object
         Player = GameObject.FindGameObjectsWithTag("Player")[0];
@@ -47,6 +61,7 @@ public class BalloonTask: MonoBehaviour
         // assigns components to variables
         balloonAnimator = GetComponentInParent<Animator>();
         playerMoveScript = Player.GetComponent<MovementScript>();
+        target = arrowTarget.GetComponent(typeof(Target)) as Target;
 
         StartCoroutine(RangeCheck());
     }
@@ -54,9 +69,11 @@ public class BalloonTask: MonoBehaviour
     private void Update()
     {
         // checks if task is not fixed
-        if (balloonAnimator.GetBool("Floating") == true)
+        if (balloonAnimator.GetBool("Fixed") == false)
         {
             TaskKeyPress();
+            TaskTimer();
+            updateArrowColor();
         }
     }
 
@@ -119,20 +136,24 @@ public class BalloonTask: MonoBehaviour
         }
         else
         {
-            // checks if the fix key is being held while the player is out of range of the task
-            if (Input.GetKey(holdKey))
-            {
-                playerMoveScript.SetFixingBool(false);
-            }
-
             progressBar.SetActive(false);
+        }
+    }
+
+    private void TaskTimer()
+    {
+        // checks if timer has reached zero and if the fix key is held down
+        if (taskTimer > 0)
+        {
+            // timer counts down
+            taskTimer -= Time.deltaTime;
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // checks if balloons have collided with the power lines
-        if (collision.gameObject == powerLines && collided == false)
+        if (collision.gameObject.tag == "Power Lines" && collided == false)
         {
             TaskFailed();
             collided = true;
@@ -142,12 +163,21 @@ public class BalloonTask: MonoBehaviour
     private void TaskFailed()
     {
         Debug.Log("YOU LOSE!! Failed to pop the balloon before it hit the power line.");
-        //SceneManager.LoadScene("Lose");
+        SceneManager.LoadScene("Lose");
     }
 
     private void KeyHeld()
     {
         Debug.Log("TASK COMPLETE!! Key held down for " + holdTime + " seconds.");
+        arrowTarget.SetActive(false);
+        balloonAnimator.SetBool("Fixed", true);
+        balloonAnimator.ResetTrigger("Danger");
+        StartCoroutine(Cooldown());
+    }
+
+    IEnumerator Cooldown()
+    {
+        yield return new WaitForSeconds(1);
         Destroy(this.gameObject);
     }
 
@@ -196,7 +226,7 @@ public class BalloonTask: MonoBehaviour
     {
         if (playing == true)
         {
-            if (balloonAnimator.GetBool("Floating") == true)
+            if (balloonAnimator.GetBool("Fixed") == false)
             {
                 // creates a visible circle in the gizmos that represents the key press range of the task
                 UnityEditor.Handles.color = Color.white;
@@ -209,6 +239,25 @@ public class BalloonTask: MonoBehaviour
                     UnityEditor.Handles.DrawWireDisc(transform.position, Vector3.forward, radius);
                 }
             }
+        }
+    }
+
+    private void updateArrowColor()
+    {
+        if (target && target.enabled && arrowTarget.activeSelf && arrowTarget && target != null)
+        {
+            if (arrowTarget.activeSelf)
+            {
+                //Debug.Log("Arrow Active");
+            }
+            else
+            {
+                //Debug.Log("Arrow INACTIVE!");
+            }
+            target = arrowTarget.GetComponent(typeof(Target)) as Target;
+            float ratio = (float)(taskTimer / time);
+            //Debug.Log(ratio);
+            target.updatePointerColor(ratio);
         }
     }
 }

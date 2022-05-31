@@ -326,7 +326,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efbff5ebb6921874fa65403a736283c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerLines: {fileID: 879743165}
   holdKey: 101
   radius: 1
   holdTime: 0.5
@@ -1564,7 +1563,7 @@ GameObject:
   - component: {fileID: 879743166}
   m_Layer: 0
   m_Name: Power Lines
-  m_TagString: Untagged
+  m_TagString: Power Lines
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2323,7 +2322,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efbff5ebb6921874fa65403a736283c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerLines: {fileID: 879743165}
   holdKey: 101
   radius: 1
   holdTime: 0.5
@@ -2941,7 +2939,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efbff5ebb6921874fa65403a736283c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerLines: {fileID: 879743165}
   holdKey: 101
   radius: 1
   holdTime: 0.5
@@ -3151,7 +3148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efbff5ebb6921874fa65403a736283c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerLines: {fileID: 879743165}
   holdKey: 101
   radius: 1
   holdTime: 0.5
@@ -3356,7 +3352,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efbff5ebb6921874fa65403a736283c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerLines: {fileID: 879743165}
   holdKey: 101
   radius: 1
   holdTime: 0.5
@@ -3698,7 +3693,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efbff5ebb6921874fa65403a736283c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerLines: {fileID: 879743165}
   holdKey: 101
   radius: 1
   holdTime: 0.5

@@ -24,7 +24,7 @@ public class LookAt : MonoBehaviour
             {
                 //transform.right = target.transform.position - camera.transform.position;
                 transform.right = new Vector3(0,0,0);  
-                Debug.Log(target.transform.position);  
+                //Debug.Log(target.transform.position);  
             }
             else
             {

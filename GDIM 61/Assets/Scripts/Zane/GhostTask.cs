@@ -83,7 +83,6 @@ public class GhostTask : MonoBehaviour
             // adds time to the timer while the key is held down
             if (Input.GetKey(holdKey) && keyHeld == false && fixing == true)
             {
-                playerMoveScript.SetFixingBool(true);
                 progressBar.SetActive(true);
 
                 // task progress bar
@@ -137,13 +136,6 @@ public class GhostTask : MonoBehaviour
         }
         else
         {
-            // checks if the fix key is being held while the player is out of range of the task
-            if (Input.GetKey(holdKey))
-            {
-                playerMoveScript.SetFixingBool(false);
-                pauseTaskTimer = false;
-            }
-
             progressBar.SetActive(false);
         }
     }

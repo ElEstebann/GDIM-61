@@ -154,6 +154,11 @@ SpriteAtlas:
   - {fileID: -6713964981533700900, guid: 217eb9453f9274d48be5014d0c5e5be7, type: 3}
   - {fileID: 5445964308389325622, guid: 217eb9453f9274d48be5014d0c5e5be7, type: 3}
   - {fileID: 6031998534451051593, guid: 217eb9453f9274d48be5014d0c5e5be7, type: 3}
+  - {fileID: -6623931398525493558, guid: d3d324e5ba0686e408482e4d5a448a18, type: 3}
+  - {fileID: 5390159895719797930, guid: d3d324e5ba0686e408482e4d5a448a18, type: 3}
+  - {fileID: -8030835215644163416, guid: d3d324e5ba0686e408482e4d5a448a18, type: 3}
+  - {fileID: 6656177661250876350, guid: d3d324e5ba0686e408482e4d5a448a18, type: 3}
+  - {fileID: 7200212785383552425, guid: d3d324e5ba0686e408482e4d5a448a18, type: 3}
   - {fileID: -1042171715792223178, guid: f11577e5557cc184c9bac839f8c8759d, type: 3}
   - {fileID: -8058837272425426012, guid: f11577e5557cc184c9bac839f8c8759d, type: 3}
   - {fileID: -5274473948798862368, guid: f11577e5557cc184c9bac839f8c8759d, type: 3}
@@ -391,6 +396,11 @@ SpriteAtlas:
   - Exclamation_2
   - Exclamation_1
   - Exclamation_0
+  - car_2
+  - car_3
+  - car_0
+  - car_1
+  - car_4
   - Fan_7
   - Fan_6
   - Fan_5
