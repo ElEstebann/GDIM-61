@@ -568,6 +568,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ai: {fileID: 0}
   scale: 0.15
+  Transition: {fileID: 0}
   hidden: 0
 --- !u!1 &1885967446140603202
 GameObject:
@@ -2083,7 +2084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9325c2f07d30c514d87247e94844e5e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fearbar: {fileID: 837471818}
+  fearbar: {fileID: 1309536127}
   meep: {fileID: 0}
   fillRate: 0.15
   depleteRate: 0.3

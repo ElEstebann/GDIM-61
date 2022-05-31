@@ -145,5 +145,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointerPrefab: {fileID: 4358574073185077285, guid: cd2c403bca4014c4ea0a06bf5c1a0789, type: 3}
+  targetSprite: {fileID: 21300000, guid: a21e6be32e6194e67b83a56051c170e9, type: 3}
   pointer: {fileID: 0}
   arrow: {fileID: 0}

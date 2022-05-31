@@ -12,8 +12,10 @@ public class Arrow : MonoBehaviour
     private Transform image;
     private float normalXPos;
     private Image sprite;
+    private Image targetImage;
     public float progress = 0.5f;
     public bool active = true;
+    public Sprite targetSprite = null;
     void Start()
     {
         camera = GameObject.FindGameObjectsWithTag("MainCamera")[0];
@@ -21,6 +23,19 @@ public class Arrow : MonoBehaviour
         LookAt image = this.gameObject.transform.GetChild(0).GetComponent<LookAt>();
         image.camera = camera;
         image.target = target;
+
+        LookAt objectSprite = this.gameObject.transform.GetChild(0).GetChild(0).GetComponent<LookAt>();
+        objectSprite.camera = camera;
+        objectSprite.target = target;
+        targetImage = this.gameObject.transform.GetChild(0).GetChild(0).GetComponent<Image>();
+        if(targetSprite)
+        {
+            targetImage.sprite = targetSprite;
+        }
+        else{
+            Debug.Log("BTW u forgot to set targetSprite on Target object");
+        }
+
         sprite = this.gameObject.transform.GetChild(0).GetComponent<Image>();
         pointPosition();
         
@@ -83,6 +98,7 @@ public class Arrow : MonoBehaviour
             {
                 sprite.color = new Color(1f,1f,2f*(ratio-0.5f),1f);
             }
+            targetImage.color = new Color(1f,1f,1f,1f);
         }
     }
 
@@ -90,6 +106,8 @@ public class Arrow : MonoBehaviour
     {
         if(sprite){
             sprite.color = new Color(sprite.color.r,sprite.color.b,sprite.color.g,0f);
+            targetImage.color = new Color(1f,1f,1f,0f);
+            
         }
     }
 

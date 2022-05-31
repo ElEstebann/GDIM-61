@@ -189,6 +189,8 @@ MonoBehaviour:
   Player: {fileID: 6784455462238060340, guid: e0ae587943a00d146b96c82fabfb08ce, type: 3}
   alertIcon: {fileID: 6284243182837983761}
   arrowTarget: {fileID: 7379796345974605245}
+  progressBar: {fileID: 0}
+  taskProgressBar: {fileID: 0}
   taskAnimator: {fileID: 7706760687203914400}
   target: {fileID: 0}
 --- !u!1001 &1639980800
@@ -273,6 +275,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Target
       objectReference: {fileID: 0}
+    - target: {fileID: 4666479050465511491, guid: 5bb57d82c938a754f86ec8c2b5f10a11, type: 3}
+      propertyPath: targetSprite
+      value: 
+      objectReference: {fileID: -4208126894944693974, guid: 5b0ccf71ebdba114697c1c40a6e97462, type: 3}
     - target: {fileID: 4666479050465511493, guid: 5bb57d82c938a754f86ec8c2b5f10a11, type: 3}
       propertyPath: m_Size.y
       value: 1.2321846

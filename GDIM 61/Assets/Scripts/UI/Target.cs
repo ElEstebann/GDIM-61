@@ -7,6 +7,7 @@ public class Target : MonoBehaviour
 {
     private Collider2D cameraCheck;
     [SerializeField] public GameObject pointerPrefab;
+    [SerializeField] public Sprite targetSprite;
     public GameObject pointer;
     public Arrow arrow;
    
@@ -21,6 +22,7 @@ public class Target : MonoBehaviour
         pointer = Instantiate(pointerPrefab,canvas.transform);
         arrow = pointer.GetComponent<Arrow>();
         arrow.target = gameObject;
+        arrow.targetSprite = targetSprite;
             
 
         
