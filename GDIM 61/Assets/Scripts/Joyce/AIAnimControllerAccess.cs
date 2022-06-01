@@ -2,10 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Joyce Mai
 public class AIAnimControllerAccess : MonoBehaviour
 {
-    [SerializeField] Animator anim;
-    [SerializeField] bool walking;
+    [SerializeField] private Animator anim;
+    [SerializeField] private List<string> paramNames;
+    [SerializeField] private int paramIndex;
+    [SerializeField] private bool isTrigger;
+    [SerializeField] private bool boolVal;
     void Start()
     {
         if (anim == null)
@@ -14,9 +18,18 @@ public class AIAnimControllerAccess : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        anim.SetBool("Walking", walking);
+        if (paramIndex >= 0)
+        {
+            if (isTrigger)
+            {
+                anim.SetTrigger(paramNames[paramIndex]);
+            }
+            else
+            {
+                anim.SetBool(paramNames[paramIndex], boolVal);
+            }
+        }
     }
 }

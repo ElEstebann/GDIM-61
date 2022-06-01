@@ -4606,7 +4606,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 1628812367}
-  walking: 0
+  paramNames:
+  - Walking
+  - Scared
+  paramIndex: 0
+  isTrigger: 0
+  boolVal: 0
 --- !u!95 &1628812367
 Animator:
   serializedVersion: 3
@@ -5143,7 +5148,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 1981514469}
-  walking: 0
+  paramNames:
+  - Walking
+  - Scared
+  paramIndex: 0
+  isTrigger: 0
+  boolVal: 0
 --- !u!95 &1981514469
 Animator:
   serializedVersion: 3
