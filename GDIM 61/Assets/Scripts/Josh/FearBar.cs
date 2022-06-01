@@ -8,6 +8,7 @@ public class FearBar : MonoBehaviour
 {
     [SerializeField] GameObject[] ai;
     private List<HumanFOV> detection = new List<HumanFOV>();
+    private HumanFOV chosen;
 
     
 
@@ -16,6 +17,7 @@ public class FearBar : MonoBehaviour
     [SerializeField] private Animator Transition;
 
     private float initialFill = 0f;
+    private bool fillUp = false;
     private float max = 1f;
     public bool hidden = false;
     
@@ -33,8 +35,21 @@ public class FearBar : MonoBehaviour
     {
         for (int i = 0; i < detection.Count; i++)
         {
+            //Bar fills up at rate based on number of people looking
             FillBar(detection[i]);
+
+           // Bar fills up at same rate no matter how many people see 
+           // if (detection[i].detectPlayer)
+           // {
+           //     fillUp = true;
+           //     chosen = detection[i];
+           // }
         }
+       // Uncomment this too for same rate
+       // if (fillUp)
+       // {
+       //     FillBar(chosen);
+       // }
     }
 
     void FillBar(HumanFOV detection)
