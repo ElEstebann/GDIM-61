@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+// Written by Zane
 public class BalloonTask: MonoBehaviour
 {
     [SerializeField] private KeyCode holdKey;
@@ -15,6 +16,7 @@ public class BalloonTask: MonoBehaviour
     [SerializeField] private LayerMask wallLayer;
 
     [SerializeField] private GameObject Player;
+    [SerializeField] private GameObject alertIcon;
     [SerializeField] private GameObject powerLines;
     [SerializeField] private GameObject balloon;
     [SerializeField] private GameObject arrowTarget;
@@ -169,14 +171,17 @@ public class BalloonTask: MonoBehaviour
     private void KeyHeld()
     {
         Debug.Log("TASK COMPLETE!! Key held down for " + holdTime + " seconds.");
-        arrowTarget.SetActive(false);
+        
+        // pops balloon
         balloonAnimator.SetBool("Fixed", true);
         balloonAnimator.ResetTrigger("Danger");
+
         StartCoroutine(Cooldown());
     }
 
     IEnumerator Cooldown()
     {
+        // waits for pop animation to play before destroying object
         yield return new WaitForSeconds(1);
         Destroy(this.gameObject);
     }
