@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class FearBar : MonoBehaviour
 {
-    [SerializeField] GameObject ai;
-    private HumanFOV detection;
+    [SerializeField] GameObject[] ai;
+    private List<HumanFOV> detection = new List<HumanFOV>();
 
     
 
@@ -18,20 +18,26 @@ public class FearBar : MonoBehaviour
     private float initialFill = 0f;
     private float max = 1f;
     public bool hidden = false;
-    //private float min = 0f;
+    
     
     void Start()
     {
         transform.localScale = new Vector3(initialFill, transform.localScale.y, transform.localScale.z);
-        detection = ai.GetComponent<HumanFOV>();
+        for (int i = 0; i < ai.Length; i++)
+        {
+            detection.Add(ai[i].GetComponent<HumanFOV>());
+        }
     }
 
     void Update()
     {
-        FillBar();
+        for (int i = 0; i < detection.Count; i++)
+        {
+            FillBar(detection[i]);
+        }
     }
 
-    void FillBar()
+    void FillBar(HumanFOV detection)
     {
         if (detection.detectPlayer && !hidden)
         {

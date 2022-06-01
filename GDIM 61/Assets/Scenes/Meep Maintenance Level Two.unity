@@ -1870,7 +1870,7 @@ GameObject:
   - component: {fileID: 199817242}
   m_Layer: 7
   m_Name: Purple Woman
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5475,7 +5475,7 @@ GameObject:
   - component: {fileID: 791442408}
   m_Layer: 7
   m_Name: Pink Man
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5608,7 +5608,7 @@ GameObject:
   - component: {fileID: 806009994}
   m_Layer: 7
   m_Name: Purple Man
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8079,7 +8079,7 @@ GameObject:
   - component: {fileID: 1356767238}
   m_Layer: 7
   m_Name: Man
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8207,7 +8207,7 @@ GameObject:
   - component: {fileID: 1367085597}
   m_Layer: 7
   m_Name: Woman
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10888,9 +10888,41 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1177255285}
     - target: {fileID: 1309536129, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
+      propertyPath: fov
+      value: 
+      objectReference: {fileID: 996278075}
+    - target: {fileID: 1309536129, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
       propertyPath: Transition
       value: 
       objectReference: {fileID: 1523467085}
+    - target: {fileID: 1309536129, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
+      propertyPath: ai.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1309536129, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
+      propertyPath: ai.Array.data[0]
+      value: 
+      objectReference: {fileID: 1177255285}
+    - target: {fileID: 1309536129, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
+      propertyPath: ai.Array.data[1]
+      value: 
+      objectReference: {fileID: 858699362}
+    - target: {fileID: 1309536129, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
+      propertyPath: ai.Array.data[2]
+      value: 
+      objectReference: {fileID: 365509507}
+    - target: {fileID: 1309536129, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
+      propertyPath: ai.Array.data[3]
+      value: 
+      objectReference: {fileID: 996278074}
+    - target: {fileID: 1309536129, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
+      propertyPath: ai.Array.data[4]
+      value: 
+      objectReference: {fileID: 1606674225}
+    - target: {fileID: 1309536129, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
+      propertyPath: ai.Array.data[5]
+      value: 
+      objectReference: {fileID: 492792543}
     - target: {fileID: 334851450668273866, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -14411,7 +14443,7 @@ GameObject:
   - component: {fileID: 2014378798}
   m_Layer: 7
   m_Name: Pink Woman
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
