@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+// Written by Zane
 public class IconChanger : MonoBehaviour, IPointerEnterHandler, ISelectHandler
 {
     [SerializeField] private GameObject iconOne;
@@ -12,6 +13,7 @@ public class IconChanger : MonoBehaviour, IPointerEnterHandler, ISelectHandler
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        // enables the corresponding icon when hovered over a button
         iconOne.SetActive(true);
         iconTwo.SetActive(false);
         iconThree.SetActive(false);
@@ -21,6 +23,7 @@ public class IconChanger : MonoBehaviour, IPointerEnterHandler, ISelectHandler
 
     public void OnSelect(BaseEventData eventData)
     {
+        // enables the corresponding icon when button is selected
         iconOne.SetActive(true);
         iconTwo.SetActive(false);
         iconThree.SetActive(false);

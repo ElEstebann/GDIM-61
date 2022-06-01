@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Written by Zane
 public class BalloonTaskActivator : MonoBehaviour
 {
     [SerializeField] private List<Rigidbody2D> balloons;
+    [SerializeField] private List<GameObject> alertIcons;
     [SerializeField] private List<Animator> balloonAnimators;
     [SerializeField] private List<GameObject> arrowTargets;
 
@@ -22,11 +24,6 @@ public class BalloonTaskActivator : MonoBehaviour
         InvokeRepeating("ActivateBalloon", 5f, activationInterval);
     }
 
-    private void Update()
-    {
-        
-    }
-
     private void ActivateBalloon()
     {
         // checks if balloon has been destroyed
@@ -36,6 +33,7 @@ public class BalloonTaskActivator : MonoBehaviour
             balloons.Remove(balloons[balloonsIndex]);
             balloonAnimators.Remove(balloonAnimators[balloonsIndex]);
             arrowTargets.Remove(arrowTargets[balloonsIndex]);
+            alertIcons.Remove(alertIcons[balloonsIndex]);
         }
 
         // checks if there are no balloons in the list
@@ -52,6 +50,7 @@ public class BalloonTaskActivator : MonoBehaviour
             balloons[balloonsIndex].velocity = new Vector2(0f, 1f * balloonSpeed);
             balloonAnimators[balloonsIndex].SetBool("Fixed", false);
             balloonAnimators[balloonsIndex].SetTrigger("Danger");
+            alertIcons[balloonsIndex].SetActive(true);
             arrowTargets[balloonsIndex].SetActive(true);
         }
     }

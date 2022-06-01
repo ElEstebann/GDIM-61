@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+// Written by Zane
 [RequireComponent(typeof(Selectable))]
 public class HighlightDestuck : EventTrigger
 {
