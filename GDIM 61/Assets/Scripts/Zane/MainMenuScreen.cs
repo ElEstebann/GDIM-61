@@ -11,7 +11,7 @@ public class MainMenuScreen : MonoBehaviour
     [SerializeField] private Image optionsIcon;
     [SerializeField] private Image creditsIcon;
 
-    private void Awake()
+    private void Start()
     {
         GameManager.TitleScreen();
         AudioManager.instance.Play("MenuTheme");
