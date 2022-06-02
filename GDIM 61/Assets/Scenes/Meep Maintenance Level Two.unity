@@ -1106,6 +1106,10 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 1098534359}
+    - target: {fileID: 6784455462238060344, guid: e0ae587943a00d146b96c82fabfb08ce, type: 3}
+      propertyPath: speed
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6784455462238060346, guid: e0ae587943a00d146b96c82fabfb08ce, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -2884,8 +2888,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d7e6a706d24bfb4180603e13f0ea93f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 7.5
-  angle: 90
+  radius: 3.5
+  angle: 45
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -3772,8 +3776,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d7e6a706d24bfb4180603e13f0ea93f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 7.5
-  angle: 90
+  radius: 4
+  angle: 45
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -5815,8 +5819,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d7e6a706d24bfb4180603e13f0ea93f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 7.5
-  angle: 90
+  radius: 3.5
+  angle: 45
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -6428,8 +6432,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d7e6a706d24bfb4180603e13f0ea93f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 7.5
-  angle: 90
+  radius: 3.5
+  angle: 45
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -7322,8 +7326,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d7e6a706d24bfb4180603e13f0ea93f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 7.5
-  angle: 90
+  radius: 3.5
+  angle: 45
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -12055,8 +12059,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d7e6a706d24bfb4180603e13f0ea93f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 7.5
-  angle: 90
+  radius: 3.5
+  angle: 45
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
