@@ -234,25 +234,25 @@ public class GhostTask : MonoBehaviour
         }
     }
 
-    private void OnDrawGizmos()
-    {
-        if (playing == true)
-        {
-           if (taskAnimator.GetBool("Fixed") == false)
-            {
-                // creates a visible circle in the gizmos that represents the key press range of the task
-                UnityEditor.Handles.color = Color.white;
-                UnityEditor.Handles.DrawWireDisc(transform.position, Vector3.forward, radius);
+    //private void OnDrawGizmos()
+    //{
+    //    if (playing == true)
+    //    {
+    //       if (taskAnimator.GetBool("Fixed") == false)
+    //        {
+    //            // creates a visible circle in the gizmos that represents the key press range of the task
+    //            UnityEditor.Handles.color = Color.white;
+    //            UnityEditor.Handles.DrawWireDisc(transform.position, Vector3.forward, radius);
 
-                // if the player is in range of the task, then the circle turns green
-                if (inRange)
-                {
-                    UnityEditor.Handles.color = Color.green;
-                    UnityEditor.Handles.DrawWireDisc(transform.position, Vector3.forward, radius);
-                }
-            }
-        }
-    }
+    //            // if the player is in range of the task, then the circle turns green
+    //            if (inRange)
+    //            {
+    //                UnityEditor.Handles.color = Color.green;
+    //                UnityEditor.Handles.DrawWireDisc(transform.position, Vector3.forward, radius);
+    //            }
+    //        }
+    //    }
+    //}
 
     private void updateArrowColor()
     {
