@@ -175,6 +175,8 @@ public class BalloonTask: MonoBehaviour
         // pops balloon
         balloonAnimator.SetBool("Fixed", true);
         balloonAnimator.ResetTrigger("Danger");
+        alertIcon.SetActive(false);
+        ///arrowTarget.SetActive(false);
 
         StartCoroutine(Cooldown());
     }
