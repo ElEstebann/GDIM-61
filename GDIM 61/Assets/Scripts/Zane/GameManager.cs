@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
     public static void NewGame()
     {
         ///state = GAMESTATE.PLAYING;
-        instance.level = 0;
+        instance.level = 1;
         SceneManager.LoadScene(instance.levels[0]);
         Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = 1.0f;

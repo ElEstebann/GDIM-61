@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 // Written by Zane
@@ -9,7 +10,15 @@ public class CountdownTimer : MonoBehaviour
     [SerializeField] private float timeValue;
     [SerializeField] private TextMeshProUGUI timeText;
 
+    private string sceneName;
+
     public bool timeTicking;
+
+    private void Start()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        sceneName = currentScene.name;
+    }
 
     void Update()
     {
@@ -27,10 +36,14 @@ public class CountdownTimer : MonoBehaviour
             // timer stops at zero
             timeValue = 0;
 
-            // sends player to next level
-            //GameManager.NextLevel();
-
-            GameManager.WinScreen();
+            if (sceneName == "Meep Maintenance Level Two")
+            {
+                GameManager.WinScreen();
+            }
+            else
+            {
+                GameManager.NextLevel();
+            }
         }
 
         DisplayTime(timeValue);
