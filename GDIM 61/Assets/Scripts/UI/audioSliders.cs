@@ -13,6 +13,15 @@ public class audioSliders : MonoBehaviour
     void Start()
     {
         slider = GetComponent<Slider>();
+        if(musicSlider)
+        {
+            slider.value = AudioManager.musicMod;
+        }
+        else if(sfxSlider)
+        {
+            
+            slider.value = AudioManager.sfxMod;
+        }
     }
 
     public void updateSoundLevel()
@@ -23,7 +32,7 @@ public class audioSliders : MonoBehaviour
         }
         else if(sfxSlider)
         {
-            Debug.Log("AAAWA");
+            
             AudioManager.instance.updateSfxLevel(slider.value);
         }
         

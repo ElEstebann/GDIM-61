@@ -10,8 +10,8 @@ public class AudioManager : MonoBehaviour
     //Or can use predefined:
     //                  AudioManager.instance.Play("sound name");
 
-    public float musicMod = 1f;
-    public float sfxMod = 1f;
+    public static float musicMod = 1f;
+    public static float sfxMod = 1f;
     
     public Sound[] sounds;
 

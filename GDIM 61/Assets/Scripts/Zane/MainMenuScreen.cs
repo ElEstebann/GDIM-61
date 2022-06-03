@@ -24,6 +24,14 @@ public class MainMenuScreen : MonoBehaviour
         AudioManager.instance.Stop("MenuTheme");
     }
 
+    public void ActivateTutorial()
+    {
+        Debug.Log("Tutorial");
+        titleAnimator.SetTrigger("Change");
+        titleAnimator.SetBool("Tutorial", true);
+    }
+    
+
     // credits appear
     public void ActivateCredits()
     {
