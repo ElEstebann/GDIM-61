@@ -43,28 +43,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0409bcfbf0ee1fc4f9338a697c14806d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicMod: 1
+  sfxMod: 1
   sounds:
   - name: MainTheme
     clip: {fileID: 8300000, guid: 9a4990e24e0eac34dbdb3ec72d25a1ed, type: 3}
     volume: 1
     pitch: 1
     loop: 1
+    bgm: 1
     source: {fileID: 0}
   - name: MenuTheme
     clip: {fileID: 8300000, guid: 1ae0e0c1dcd0049408a8f3880b599a3e, type: 3}
     volume: 1
     pitch: 1
     loop: 1
+    bgm: 1
     source: {fileID: 0}
   - name: Win
     clip: {fileID: 8300000, guid: 922a84f320f4e8a4bb71f51ea64a40e5, type: 3}
     volume: 1
     pitch: 1
     loop: 0
+    bgm: 1
     source: {fileID: 0}
   - name: Lose
     clip: {fileID: 8300000, guid: 99c15b8e79aea094c986988d32960fcb, type: 3}
     volume: 1
     pitch: 1
     loop: 0
+    bgm: 1
     source: {fileID: 0}

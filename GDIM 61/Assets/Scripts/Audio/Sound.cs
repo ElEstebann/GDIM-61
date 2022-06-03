@@ -7,6 +7,7 @@ public class Sound
     //https://youtu.be/6OT43pvUyfY
 
     public string name;
+    
 
     public AudioClip clip;
 
@@ -16,6 +17,7 @@ public class Sound
     public float pitch;
 
     public bool loop;
+    public bool bgm;
 
     [HideInInspector]
     public AudioSource source;

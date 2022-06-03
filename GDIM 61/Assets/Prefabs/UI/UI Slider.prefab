@@ -46,6 +46,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5101609759957318907}
   - component: {fileID: 5677558397456113841}
+  - component: {fileID: 2341812234717100910}
   m_Layer: 5
   m_Name: UI Slider
   m_TagString: Untagged
@@ -125,7 +126,34 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2341812234717100910}
+        m_TargetAssemblyTypeName: audioSliders, Assembly-CSharp
+        m_MethodName: updateSoundLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2341812234717100910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2503729358600609543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 295d6ba61fd77934a9146f1bc5ed490b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicSlider: 0
+  sfxSlider: 0
+  slider: {fileID: 0}
 --- !u!1 &3199303979060570598
 GameObject:
   m_ObjectHideFlags: 0

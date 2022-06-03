@@ -10,6 +10,9 @@ public class AudioManager : MonoBehaviour
     //Or can use predefined:
     //                  AudioManager.instance.Play("sound name");
 
+    public float musicMod = 1f;
+    public float sfxMod = 1f;
+    
     public Sound[] sounds;
 
     public static AudioManager instance;
@@ -100,6 +103,30 @@ public class AudioManager : MonoBehaviour
         }
 
         return s;
+    }
+
+    public void updateMusicLevel(float modifier)
+    {
+        musicMod = modifier;
+        foreach(Sound audio in sounds)
+        {
+            if(audio.bgm)
+            {
+                audio.source.volume = musicMod;
+            }
+        }
+    }
+
+    public void updateSfxLevel(float modifier)
+    {
+        sfxMod = modifier;
+        foreach(Sound audio in sounds)
+        {
+            if(!audio.bgm)
+            {
+                audio.source.volume = sfxMod;
+            }
+        }
     }
 
 }
