@@ -2774,6 +2774,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levels:
   - Meep Maintenance Level One
+  - Meep Maintenance Level Two
   SceneName: Meep Maintenance Main Menu
 --- !u!4 &1253924218
 Transform:
