@@ -46,6 +46,7 @@ public class GhostTask : MonoBehaviour
         taskProgressValue = 0;
         taskTimer = taskDuration;
         taskAnimator.SetBool("Fixed", true);
+        
 
         // finds player object
         Player = GameObject.FindGameObjectsWithTag("Player")[0];
@@ -272,4 +273,5 @@ public class GhostTask : MonoBehaviour
         }
         
     }
+
 }

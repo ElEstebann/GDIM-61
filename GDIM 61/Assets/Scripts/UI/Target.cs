@@ -23,10 +23,6 @@ public class Target : MonoBehaviour
         arrow = pointer.GetComponent<Arrow>();
         arrow.target = gameObject;
         arrow.targetSprite = targetSprite;
-            
-
-        
-
     }
 
     // Update is called once per frame

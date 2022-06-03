@@ -337,84 +337,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 885950819}
     - target: {fileID: 1372443399410578616, guid: 6f28ef8dafd32cc4d83952706d6dfd86, type: 3}
-      propertyPath: radius
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 1372443399410578616, guid: 6f28ef8dafd32cc4d83952706d6dfd86, type: 3}
-      propertyPath: alertIcon
-      value: 
-      objectReference: {fileID: 104294170}
-    - target: {fileID: 1372443399410578616, guid: 6f28ef8dafd32cc4d83952706d6dfd86, type: 3}
-      propertyPath: arrowTarget
-      value: 
-      objectReference: {fileID: 138993982}
-    - target: {fileID: 1372443399410578616, guid: 6f28ef8dafd32cc4d83952706d6dfd86, type: 3}
       propertyPath: progressBar
       value: 
       objectReference: {fileID: 182381034}
     - target: {fileID: 1372443399410578616, guid: 6f28ef8dafd32cc4d83952706d6dfd86, type: 3}
-      propertyPath: taskAnimator
-      value: 
-      objectReference: {fileID: 104294168}
-    - target: {fileID: 1372443399410578616, guid: 6f28ef8dafd32cc4d83952706d6dfd86, type: 3}
-      propertyPath: arrowIndicator
-      value: 
-      objectReference: {fileID: 138993982}
-    - target: {fileID: 1372443399410578616, guid: 6f28ef8dafd32cc4d83952706d6dfd86, type: 3}
       propertyPath: taskProgressBar
       value: 
       objectReference: {fileID: 182381036}
-    - target: {fileID: 1372443399410578616, guid: 6f28ef8dafd32cc4d83952706d6dfd86, type: 3}
-      propertyPath: progressBarCanvas
-      value: 
-      objectReference: {fileID: 1684962946}
     - target: {fileID: 2933083175552859628, guid: 6f28ef8dafd32cc4d83952706d6dfd86, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 759113057}
-    - target: {fileID: 2933083176749168294, guid: 6f28ef8dafd32cc4d83952706d6dfd86, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2933083176749168294, guid: 6f28ef8dafd32cc4d83952706d6dfd86, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6284243182837983761, guid: 6f28ef8dafd32cc4d83952706d6dfd86, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7379796345974605241, guid: 6f28ef8dafd32cc4d83952706d6dfd86, type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7379796345974605241, guid: 6f28ef8dafd32cc4d83952706d6dfd86, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7379796345974605241, guid: 6f28ef8dafd32cc4d83952706d6dfd86, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7379796345974605241, guid: 6f28ef8dafd32cc4d83952706d6dfd86, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7379796345974605245, guid: 6f28ef8dafd32cc4d83952706d6dfd86, type: 3}
-      propertyPath: m_Name
-      value: Microwave Target
-      objectReference: {fileID: 0}
-    - target: {fileID: 7379796345974605245, guid: 6f28ef8dafd32cc4d83952706d6dfd86, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7706760687203914401, guid: 6f28ef8dafd32cc4d83952706d6dfd86, type: 3}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7706760687203914401, guid: 6f28ef8dafd32cc4d83952706d6dfd86, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7706760687203914401, guid: 6f28ef8dafd32cc4d83952706d6dfd86, type: 3}
       propertyPath: m_LocalPosition.x
@@ -459,10 +395,6 @@ PrefabInstance:
     - target: {fileID: 7706760687203914407, guid: 6f28ef8dafd32cc4d83952706d6dfd86, type: 3}
       propertyPath: m_Name
       value: Microwave
-      objectReference: {fileID: 0}
-    - target: {fileID: 7706760687203914407, guid: 6f28ef8dafd32cc4d83952706d6dfd86, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f28ef8dafd32cc4d83952706d6dfd86, type: 3}
@@ -2980,6 +2912,10 @@ PrefabInstance:
       propertyPath: ai.Array.data[0]
       value: 
       objectReference: {fileID: 914979081}
+    - target: {fileID: 334851450668273866, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.00024414062
+      objectReference: {fileID: 0}
     - target: {fileID: 1229542127063809581, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -3074,7 +3010,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3675409395273140983, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5675996778809529849, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
       propertyPath: m_Color.a
@@ -3319,6 +3255,34 @@ PrefabInstance:
     - target: {fileID: 7610322439628243078, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: PauseMenuScreen, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280812607525010471, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
+      propertyPath: sounds.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280812607525010471, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
+      propertyPath: sounds.Array.data[4].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4594402a36df7ff4ab22fec391a3e8d0, type: 3}
+    - target: {fileID: 8280812607525010471, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
+      propertyPath: sounds.Array.data[4].name
+      value: Stove
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280812607525010471, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
+      propertyPath: sounds.Array.data[4].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280812607525010471, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
+      propertyPath: sounds.Array.data[0].volume
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280812607525010471, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
+      propertyPath: sounds.Array.data[1].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280812607525010471, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
+      propertyPath: sounds.Array.data[4].volume
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8521929491091564292, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
       propertyPath: m_TargetGraphic
@@ -5131,72 +5095,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 895453488}
     m_Modifications:
-    - target: {fileID: 2900054860733662682, guid: efef896479e133d4c8647f91a5fc21bf, type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2900054860733662682, guid: efef896479e133d4c8647f91a5fc21bf, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2900054860733662682, guid: efef896479e133d4c8647f91a5fc21bf, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2900054860733662682, guid: efef896479e133d4c8647f91a5fc21bf, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2900054860733662686, guid: efef896479e133d4c8647f91a5fc21bf, type: 3}
-      propertyPath: m_Name
-      value: Air Conditioner Target
-      objectReference: {fileID: 0}
-    - target: {fileID: 2900054860733662686, guid: efef896479e133d4c8647f91a5fc21bf, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3280334957604817416, guid: efef896479e133d4c8647f91a5fc21bf, type: 3}
       propertyPath: Player
       value: 
       objectReference: {fileID: 885950819}
     - target: {fileID: 3280334957604817416, guid: efef896479e133d4c8647f91a5fc21bf, type: 3}
-      propertyPath: radius
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3280334957604817416, guid: efef896479e133d4c8647f91a5fc21bf, type: 3}
-      propertyPath: alertIcon
-      value: 
-      objectReference: {fileID: 1589892230}
-    - target: {fileID: 3280334957604817416, guid: efef896479e133d4c8647f91a5fc21bf, type: 3}
-      propertyPath: arrowTarget
-      value: 
-      objectReference: {fileID: 748356843}
-    - target: {fileID: 3280334957604817416, guid: efef896479e133d4c8647f91a5fc21bf, type: 3}
       propertyPath: progressBar
       value: 
       objectReference: {fileID: 1306278022}
     - target: {fileID: 3280334957604817416, guid: efef896479e133d4c8647f91a5fc21bf, type: 3}
-      propertyPath: taskAnimator
-      value: 
-      objectReference: {fileID: 1589892228}
-    - target: {fileID: 3280334957604817416, guid: efef896479e133d4c8647f91a5fc21bf, type: 3}
-      propertyPath: arrowIndicator
-      value: 
-      objectReference: {fileID: 748356843}
-    - target: {fileID: 3280334957604817416, guid: efef896479e133d4c8647f91a5fc21bf, type: 3}
       propertyPath: taskProgressBar
       value: 
       objectReference: {fileID: 1306278024}
-    - target: {fileID: 3280334957604817416, guid: efef896479e133d4c8647f91a5fc21bf, type: 3}
-      propertyPath: progressBarCanvas
-      value: 
-      objectReference: {fileID: 1684962946}
     - target: {fileID: 4879678261680241568, guid: efef896479e133d4c8647f91a5fc21bf, type: 3}
       propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4879678261680241568, guid: efef896479e133d4c8647f91a5fc21bf, type: 3}
-      propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4879678261680241568, guid: efef896479e133d4c8647f91a5fc21bf, type: 3}
@@ -5242,14 +5154,6 @@ PrefabInstance:
     - target: {fileID: 4879678261680241571, guid: efef896479e133d4c8647f91a5fc21bf, type: 3}
       propertyPath: m_Name
       value: Air Conditioner
-      objectReference: {fileID: 0}
-    - target: {fileID: 4879678261680241571, guid: efef896479e133d4c8647f91a5fc21bf, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6284243182335228805, guid: efef896479e133d4c8647f91a5fc21bf, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efef896479e133d4c8647f91a5fc21bf, type: 3}
@@ -5465,48 +5369,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 885950819}
     - target: {fileID: 398072438, guid: 3cc52b433fad9dd438074a2f53c479d8, type: 3}
-      propertyPath: radius
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 398072438, guid: 3cc52b433fad9dd438074a2f53c479d8, type: 3}
-      propertyPath: alertIcon
-      value: 
-      objectReference: {fileID: 1895886579}
-    - target: {fileID: 398072438, guid: 3cc52b433fad9dd438074a2f53c479d8, type: 3}
-      propertyPath: arrowTarget
-      value: 
-      objectReference: {fileID: 601378469}
-    - target: {fileID: 398072438, guid: 3cc52b433fad9dd438074a2f53c479d8, type: 3}
       propertyPath: progressBar
       value: 
       objectReference: {fileID: 604911424}
     - target: {fileID: 398072438, guid: 3cc52b433fad9dd438074a2f53c479d8, type: 3}
-      propertyPath: taskAnimator
-      value: 
-      objectReference: {fileID: 1895886578}
-    - target: {fileID: 398072438, guid: 3cc52b433fad9dd438074a2f53c479d8, type: 3}
-      propertyPath: arrowIndicator
-      value: 
-      objectReference: {fileID: 601378469}
-    - target: {fileID: 398072438, guid: 3cc52b433fad9dd438074a2f53c479d8, type: 3}
       propertyPath: taskProgressBar
       value: 
       objectReference: {fileID: 604911426}
-    - target: {fileID: 398072438, guid: 3cc52b433fad9dd438074a2f53c479d8, type: 3}
-      propertyPath: progressBarCanvas
-      value: 
-      objectReference: {fileID: 1684962946}
     - target: {fileID: 4963710384881703354, guid: 3cc52b433fad9dd438074a2f53c479d8, type: 3}
       propertyPath: m_Name
       value: Sparks
-      objectReference: {fileID: 0}
-    - target: {fileID: 4963710384881703354, guid: 3cc52b433fad9dd438074a2f53c479d8, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4963710384881703354, guid: 3cc52b433fad9dd438074a2f53c479d8, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4963710384881703356, guid: 3cc52b433fad9dd438074a2f53c479d8, type: 3}
       propertyPath: m_RootOrder
@@ -5552,40 +5424,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6284243183943984066, guid: 3cc52b433fad9dd438074a2f53c479d8, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7465483640586748217, guid: 3cc52b433fad9dd438074a2f53c479d8, type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7465483640586748217, guid: 3cc52b433fad9dd438074a2f53c479d8, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7465483640586748217, guid: 3cc52b433fad9dd438074a2f53c479d8, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7465483640586748217, guid: 3cc52b433fad9dd438074a2f53c479d8, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7465483640586748221, guid: 3cc52b433fad9dd438074a2f53c479d8, type: 3}
-      propertyPath: m_Name
-      value: Sparks Target
-      objectReference: {fileID: 0}
-    - target: {fileID: 7465483640586748221, guid: 3cc52b433fad9dd438074a2f53c479d8, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7465483640586748221, guid: 3cc52b433fad9dd438074a2f53c479d8, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 398072437, guid: 3cc52b433fad9dd438074a2f53c479d8, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3cc52b433fad9dd438074a2f53c479d8, type: 3}
 --- !u!95 &1895886578 stripped
 Animator:
@@ -5607,32 +5446,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4963710384881703354, guid: 3cc52b433fad9dd438074a2f53c479d8, type: 3}
   m_PrefabInstance: {fileID: 1895886577}
   m_PrefabAsset: {fileID: 0}
---- !u!61 &1895886582
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1895886581}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.000000059604645, y: -0.061875984}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.125, y: 1}
-    newSize: {x: 1, y: 0.8888889}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.99807465, y: 0.5018188}
-  m_EdgeRadius: 0
 --- !u!1001 &1913328559
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5643,10 +5456,6 @@ PrefabInstance:
     - target: {fileID: 513226518709680516, guid: 253ea384b49cacf4ba27cc393c75533f, type: 3}
       propertyPath: m_RootOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 513226518709680516, guid: 253ea384b49cacf4ba27cc393c75533f, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 513226518709680516, guid: 253ea384b49cacf4ba27cc393c75533f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5692,74 +5501,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sink
       objectReference: {fileID: 0}
-    - target: {fileID: 513226518709680518, guid: 253ea384b49cacf4ba27cc393c75533f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1500076599775648558, guid: 253ea384b49cacf4ba27cc393c75533f, type: 3}
       propertyPath: Player
       value: 
       objectReference: {fileID: 885950819}
     - target: {fileID: 1500076599775648558, guid: 253ea384b49cacf4ba27cc393c75533f, type: 3}
-      propertyPath: radius
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 1500076599775648558, guid: 253ea384b49cacf4ba27cc393c75533f, type: 3}
-      propertyPath: alertIcon
-      value: 
-      objectReference: {fileID: 1913328562}
-    - target: {fileID: 1500076599775648558, guid: 253ea384b49cacf4ba27cc393c75533f, type: 3}
-      propertyPath: arrowTarget
-      value: 
-      objectReference: {fileID: 1222439601}
-    - target: {fileID: 1500076599775648558, guid: 253ea384b49cacf4ba27cc393c75533f, type: 3}
       propertyPath: progressBar
       value: 
       objectReference: {fileID: 1054260120}
     - target: {fileID: 1500076599775648558, guid: 253ea384b49cacf4ba27cc393c75533f, type: 3}
-      propertyPath: taskAnimator
-      value: 
-      objectReference: {fileID: 1913328560}
-    - target: {fileID: 1500076599775648558, guid: 253ea384b49cacf4ba27cc393c75533f, type: 3}
-      propertyPath: arrowIndicator
-      value: 
-      objectReference: {fileID: 1222439601}
-    - target: {fileID: 1500076599775648558, guid: 253ea384b49cacf4ba27cc393c75533f, type: 3}
       propertyPath: taskProgressBar
       value: 
       objectReference: {fileID: 1054260122}
-    - target: {fileID: 1500076599775648558, guid: 253ea384b49cacf4ba27cc393c75533f, type: 3}
-      propertyPath: progressBarCanvas
-      value: 
-      objectReference: {fileID: 1684962946}
-    - target: {fileID: 4655356179915138624, guid: 253ea384b49cacf4ba27cc393c75533f, type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4655356179915138624, guid: 253ea384b49cacf4ba27cc393c75533f, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4655356179915138624, guid: 253ea384b49cacf4ba27cc393c75533f, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4655356179915138624, guid: 253ea384b49cacf4ba27cc393c75533f, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4655356179915138628, guid: 253ea384b49cacf4ba27cc393c75533f, type: 3}
-      propertyPath: m_Name
-      value: Sink Target
-      objectReference: {fileID: 0}
-    - target: {fileID: 4655356179915138628, guid: 253ea384b49cacf4ba27cc393c75533f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6627477312954905624, guid: 253ea384b49cacf4ba27cc393c75533f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253ea384b49cacf4ba27cc393c75533f, type: 3}
 --- !u!95 &1913328560 stripped
@@ -5875,85 +5628,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 895453488}
     m_Modifications:
-    - target: {fileID: 886080128, guid: 7cbc5ac563b717842ac24b7e87a34a0b, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1229863646232587005, guid: 7cbc5ac563b717842ac24b7e87a34a0b, type: 3}
       propertyPath: Player
       value: 
       objectReference: {fileID: 885950819}
     - target: {fileID: 1229863646232587005, guid: 7cbc5ac563b717842ac24b7e87a34a0b, type: 3}
-      propertyPath: radius
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1229863646232587005, guid: 7cbc5ac563b717842ac24b7e87a34a0b, type: 3}
-      propertyPath: alertIcon
-      value: 
-      objectReference: {fileID: 2028775726}
-    - target: {fileID: 1229863646232587005, guid: 7cbc5ac563b717842ac24b7e87a34a0b, type: 3}
-      propertyPath: arrowTarget
-      value: 
-      objectReference: {fileID: 1040401600}
-    - target: {fileID: 1229863646232587005, guid: 7cbc5ac563b717842ac24b7e87a34a0b, type: 3}
       propertyPath: progressBar
       value: 
       objectReference: {fileID: 982108159}
     - target: {fileID: 1229863646232587005, guid: 7cbc5ac563b717842ac24b7e87a34a0b, type: 3}
-      propertyPath: taskAnimator
-      value: 
-      objectReference: {fileID: 2028775724}
-    - target: {fileID: 1229863646232587005, guid: 7cbc5ac563b717842ac24b7e87a34a0b, type: 3}
-      propertyPath: arrowIndicator
-      value: 
-      objectReference: {fileID: 1040401600}
-    - target: {fileID: 1229863646232587005, guid: 7cbc5ac563b717842ac24b7e87a34a0b, type: 3}
       propertyPath: taskProgressBar
       value: 
       objectReference: {fileID: 982108161}
-    - target: {fileID: 1229863646232587005, guid: 7cbc5ac563b717842ac24b7e87a34a0b, type: 3}
-      propertyPath: progressBarCanvas
-      value: 
-      objectReference: {fileID: 1684962946}
-    - target: {fileID: 3522796120253406704, guid: 7cbc5ac563b717842ac24b7e87a34a0b, type: 3}
-      propertyPath: m_Name
-      value: Stove Target
-      objectReference: {fileID: 0}
-    - target: {fileID: 3522796120253406704, guid: 7cbc5ac563b717842ac24b7e87a34a0b, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3522796120253406708, guid: 7cbc5ac563b717842ac24b7e87a34a0b, type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3522796120253406708, guid: 7cbc5ac563b717842ac24b7e87a34a0b, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3522796120253406708, guid: 7cbc5ac563b717842ac24b7e87a34a0b, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3522796120253406708, guid: 7cbc5ac563b717842ac24b7e87a34a0b, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6592921760787673074, guid: 7cbc5ac563b717842ac24b7e87a34a0b, type: 3}
       propertyPath: m_Name
       value: Stove
       objectReference: {fileID: 0}
-    - target: {fileID: 6592921760787673074, guid: 7cbc5ac563b717842ac24b7e87a34a0b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6592921760787673084, guid: 7cbc5ac563b717842ac24b7e87a34a0b, type: 3}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6592921760787673084, guid: 7cbc5ac563b717842ac24b7e87a34a0b, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6592921760787673084, guid: 7cbc5ac563b717842ac24b7e87a34a0b, type: 3}
       propertyPath: m_LocalPosition.x
