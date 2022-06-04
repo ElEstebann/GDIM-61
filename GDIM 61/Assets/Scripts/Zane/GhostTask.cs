@@ -148,7 +148,7 @@ public class GhostTask : MonoBehaviour
                 pauseTaskTimer = false;
             }
 
-            //progressBar.SetActive(false);
+            progressBar.SetActive(false);
         }
     }
 
