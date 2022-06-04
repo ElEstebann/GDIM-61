@@ -12,6 +12,7 @@ public class AudioManager : MonoBehaviour
     //                  AudioManager.instance.Play("sound name");
 
     [SerializeField] private AudioMixer master;
+    [SerializeField] private AudioMixerGroup sfxGroup;
     public static float musicMod = 1f;
     public static float sfxMod = 1f;
     
@@ -42,6 +43,10 @@ public class AudioManager : MonoBehaviour
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
+            if(!s.bgm)
+            {
+                s.source.outputAudioMixerGroup = sfxGroup;
+            }
         }
     }
 

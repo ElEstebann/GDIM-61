@@ -43,7 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0409bcfbf0ee1fc4f9338a697c14806d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  master: {fileID: 0}
+  master: {fileID: 24100000, guid: 15aa2dd320793424db9349e34c5a9a29, type: 2}
+  sfxGroup: {fileID: 24300002, guid: 15aa2dd320793424db9349e34c5a9a29, type: 2}
   sounds:
   - name: MainTheme
     clip: {fileID: 8300000, guid: 9a4990e24e0eac34dbdb3ec72d25a1ed, type: 3}
