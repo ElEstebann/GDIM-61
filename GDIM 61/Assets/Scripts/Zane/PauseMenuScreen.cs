@@ -12,15 +12,18 @@ public class PauseMenuScreen : MonoBehaviour
     [SerializeField] private Button resumeButton;
     [SerializeField] private Button startMenuResumeButton;
 
+    private static bool tutorialTwoDone = false;
+
     private bool gamePaused;
 
     public bool specialStart; //For displaying message on start
 
     public void Start()
     {   
-        if(specialStart)
+        if(specialStart && !tutorialTwoDone)
         {
             StartCoroutine(SpecialPause());
+            tutorialTwoDone = true;
         }
     }
 
