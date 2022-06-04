@@ -10,14 +10,17 @@ public class CountdownTimer : MonoBehaviour
     [SerializeField] private float timeValue;
     [SerializeField] private TextMeshProUGUI timeText;
 
-    private string sceneName;
+    private int sceneIndex;
 
     public bool timeTicking;
 
     private void Start()
     {
         Scene currentScene = SceneManager.GetActiveScene();
-        sceneName = currentScene.name;
+        sceneIndex = currentScene.buildIndex;
+
+        Debug.Log(sceneIndex);
+        Debug.Log(SceneManager.sceneCountInBuildSettings);
     }
 
     void Update()
@@ -36,7 +39,8 @@ public class CountdownTimer : MonoBehaviour
             // timer stops at zero
             timeValue = 0;
 
-            if (sceneName == "Meep Maintenance Level Two")
+            // checks if it is the last level
+            if (sceneIndex == SceneManager.sceneCountInBuildSettings - 3)
             {
                 GameManager.WinScreen();
             }

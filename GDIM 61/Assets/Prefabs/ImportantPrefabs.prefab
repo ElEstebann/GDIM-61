@@ -567,7 +567,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48d3eb7b9ca67a44ab3a4492487e17c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ai: {fileID: 0}
+  ai:
+  - {fileID: 0}
   scale: 0.15
   Transition: {fileID: 7253018098979154437}
   hidden: 0

@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 // Written by Zane
 public class EndScreen : MonoBehaviour
 {
     [SerializeField] public bool win;
+    [SerializeField] private TextMeshProUGUI loseText;
+
     void Start()
     {
         if(win)
@@ -15,9 +18,11 @@ public class EndScreen : MonoBehaviour
         }
         else
         {
+            loseText.text = GhostTask.loseMessageText;
             AudioManager.instance.Play("Lose");
         }
     }
+
     // quits to the main menu
     public void QuitToMenu()
     {

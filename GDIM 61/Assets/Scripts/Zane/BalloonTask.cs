@@ -165,6 +165,9 @@ public class BalloonTask: MonoBehaviour
     private void TaskFailed()
     {
         Debug.Log("YOU LOSE!! Failed to pop the balloon before it hit the power line.");
+
+        GhostTask.loseMessageText = "Failed to pop the balloon!";
+
         SceneManager.LoadScene("Lose");
     }
 

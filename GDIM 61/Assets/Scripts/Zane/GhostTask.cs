@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-//Written by Zane
+// Written by Zane
 public class GhostTask : MonoBehaviour
 {
     [SerializeField] private KeyCode holdKey;
 
+    [SerializeField] private string taskName;
     [SerializeField] private float radius;
     [SerializeField] private float holdTime;
     [SerializeField] private float taskDuration;
@@ -37,8 +38,11 @@ public class GhostTask : MonoBehaviour
     private bool keyHolding;
     private bool fixing;
     private bool playing;
-    public static bool taskDone;
+
     public bool inRange { get; private set; }
+    public static bool taskDone;
+
+    public static string loseMessageText;
 
     void Start()
     {
@@ -170,6 +174,9 @@ public class GhostTask : MonoBehaviour
     {
         Debug.Log("YOU LOSE!! Failed to complete the task in " + taskDuration + " seconds.");
         AudioManager.instance.Stop("MainTheme");
+
+        loseMessageText = "Failed to fix the " + taskName + "!";
+
         GameManager.LoseScreen();
     }
 

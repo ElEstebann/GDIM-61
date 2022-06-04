@@ -55,6 +55,7 @@ public class GameManager : MonoBehaviour
         ///state = GAMESTATE.PLAYING;
         AudioManager.instance.Stop("MainTheme");
         SceneManager.LoadScene(instance.levels[instance.level++]);
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public static void PauseGame()
