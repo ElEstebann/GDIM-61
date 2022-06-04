@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class FearBar : MonoBehaviour
 {
     [SerializeField] GameObject[] ai;
+    [SerializeField] private string fearFilledMessage;
     private List<HumanFOV> detection = new List<HumanFOV>();
     private HumanFOV chosen;
 
@@ -64,6 +65,8 @@ public class FearBar : MonoBehaviour
             {
                 //transform.localScale = new Vector3(max, transform.localScale.y, transform.localScale.z);
                 //GameManager.LoseScreen();
+
+                GhostTask.loseMessageText = fearFilledMessage;
                 StartCoroutine(transition());
             }
             

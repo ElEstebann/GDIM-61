@@ -8201,6 +8201,10 @@ PrefabInstance:
       propertyPath: ai.Array.data[5]
       value: 
       objectReference: {fileID: 492792543}
+    - target: {fileID: 1309536129, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
+      propertyPath: fearFilledMessage
+      value: Failed to stay hidden from the humans!
+      objectReference: {fileID: 0}
     - target: {fileID: 362387873294256379, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 417.85

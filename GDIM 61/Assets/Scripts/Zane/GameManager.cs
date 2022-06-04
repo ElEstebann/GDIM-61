@@ -8,7 +8,10 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private List<string> levels = new List<string>();
     [SerializeField] private string SceneName;
+
     private int level = 1;
+    public static int lastScene;
+    public static bool loadedLose;
 
     private static GameManager instance;
 
@@ -36,6 +39,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (loadedLose == true)
+        {
+
+        }
+    }
+
     public static void TitleScreen()
     {
         ///state = GAMESTATE.TITLESCREEN;
@@ -56,6 +67,21 @@ public class GameManager : MonoBehaviour
         AudioManager.instance.Stop("MainTheme");
         SceneManager.LoadScene(instance.levels[instance.level++]);
         Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    public static void RestartLevel()
+    {
+        if (lastScene == 1)
+        {
+            SceneManager.LoadScene(1);
+        }
+        else if (lastScene == 2)
+        {
+            SceneManager.LoadScene(2);
+        }
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Time.timeScale = 1.0f;
     }
 
     public static void PauseGame()
@@ -93,6 +119,7 @@ public class GameManager : MonoBehaviour
         ///state = GAMESTATE.LOSE;
         AudioManager.instance.Stop("MainTheme");
         Cursor.lockState = CursorLockMode.None;
+        lastScene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene("Lose");
     }
 }
