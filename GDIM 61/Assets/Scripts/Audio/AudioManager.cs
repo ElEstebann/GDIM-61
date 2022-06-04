@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class AudioManager : MonoBehaviour
     //Or can use predefined:
     //                  AudioManager.instance.Play("sound name");
 
+    [SerializeField] private AudioMixer master;
     public static float musicMod = 1f;
     public static float sfxMod = 1f;
     
@@ -120,13 +122,15 @@ public class AudioManager : MonoBehaviour
     public void updateSfxLevel(float modifier)
     {
         sfxMod = modifier;
-        foreach(Sound audio in sounds)
+        /*foreach(Sound audio in sounds)
         {
             if(!audio.bgm)
             {
                 audio.source.volume = sfxMod;
             }
-        }
+        }*/
+
+        master.SetFloat("MasterVolume", modifier);
     }
 
 }
