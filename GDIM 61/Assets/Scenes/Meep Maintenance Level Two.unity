@@ -8173,6 +8173,14 @@ PrefabInstance:
       propertyPath: ai.Array.data[5]
       value: 
       objectReference: {fileID: 492792543}
+    - target: {fileID: 362387873294256379, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 417.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 362387873294256379, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -500.8
+      objectReference: {fileID: 0}
     - target: {fileID: 1229542127063809581, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -8217,6 +8225,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1479730907927668692, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
+      propertyPath: m_text
+      value: Press Space Bar to activate. It lasts for a short amount of time.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1479730907927668692, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
+      propertyPath: m_fontSize
+      value: 62.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1479730907927668692, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 62.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1761555898154775495, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f686d84c168f18a47a130999e1943944, type: 3}
     - target: {fileID: 1812395004907170612, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -8245,6 +8269,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2725607145117723277, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
+      propertyPath: specialStart
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2942390081306070684, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
       propertyPath: m_SortingOrder
       value: -5
@@ -8264,6 +8292,14 @@ PrefabInstance:
     - target: {fileID: 3598235778059690755, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3955870924105318561, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5408022120584073491, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
+      propertyPath: m_Name
+      value: Resume
       objectReference: {fileID: 0}
     - target: {fileID: 5675996778809529849, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
       propertyPath: m_Color.a
@@ -8429,6 +8465,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7108731593679644492, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f686d84c168f18a47a130999e1943944, type: 3}
+    - target: {fileID: 7141664839394636528, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -486.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7141664839394636528, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -517.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7491749239744838842, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
       propertyPath: m_Color.a
       value: 0
@@ -8505,6 +8553,25 @@ PrefabInstance:
       propertyPath: fearbar
       value: 
       objectReference: {fileID: 1310361864}
+    - target: {fileID: 8063113372102951491, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
+      propertyPath: m_text
+      value: 'New Ability Unlocked!
+
+        INVISIBILITY'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8255714836184260063, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
+      propertyPath: m_text
+      value: When activated, you will not be seen by humans. It has to be  recharged
+        before using again.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8255714836184260063, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
+      propertyPath: m_fontSize
+      value: 62
+      objectReference: {fileID: 0}
+    - target: {fileID: 8255714836184260063, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 62
+      objectReference: {fileID: 0}
     - target: {fileID: 8280812607525010471, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
       propertyPath: sounds.Array.data[0].volume
       value: 0

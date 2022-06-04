@@ -2,13 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 // Written by Amber/Zane
 public class PauseMenuScreen : MonoBehaviour
 {
     [SerializeField] private GameObject pauseMenuUI; // UI of pause menu 
+    [SerializeField] private GameObject startMenuUI; //For tutorial messages
+    [SerializeField] private Button resumeButton;
+    [SerializeField] private Button startMenuResumeButton;
 
     private bool gamePaused;
+
+    public bool specialStart; //For displaying message on start
+
+    public void Start()
+    {   
+        if(specialStart)
+        {
+            StartCoroutine(SpecialPause());
+        }
+    }
 
     void Update()
     {
@@ -31,6 +45,16 @@ public class PauseMenuScreen : MonoBehaviour
     {
         GameManager.PauseGame();
         pauseMenuUI.SetActive(true);
+        resumeButton.Select();
+        gamePaused = true;
+    }
+
+    IEnumerator SpecialPause() //For displaying special message on start
+    {
+        yield return new WaitForSeconds(1);
+        GameManager.PauseGame();
+        startMenuUI.SetActive(true);
+        startMenuResumeButton.Select();
         gamePaused = true;
     }
 
@@ -39,6 +63,13 @@ public class PauseMenuScreen : MonoBehaviour
     {
         GameManager.ResumeGame();
         pauseMenuUI.SetActive(false);
+        gamePaused = false;
+    }
+
+    public void SpecialResume()
+    {
+        GameManager.ResumeGame();
+        startMenuUI.SetActive(false);
         gamePaused = false;
     }
 
