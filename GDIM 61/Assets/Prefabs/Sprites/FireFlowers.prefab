@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   holdKey: 0
+  taskFailedMessage: 
   radius: 0
   holdTime: 0
   taskDuration: 0
@@ -175,6 +176,10 @@ PrefabInstance:
     - target: {fileID: 6284243183370663185, guid: 720cf5388c14b38428e1f4a394a31ffd, type: 3}
       propertyPath: m_Name
       value: FireFlower AlertIcon
+      objectReference: {fileID: 0}
+    - target: {fileID: 6284243183370663185, guid: 720cf5388c14b38428e1f4a394a31ffd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6284243183370663187, guid: 720cf5388c14b38428e1f4a394a31ffd, type: 3}
       propertyPath: m_RootOrder
