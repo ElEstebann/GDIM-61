@@ -29,5 +29,6 @@ public class IconChanger : MonoBehaviour, IPointerEnterHandler, ISelectHandler
         iconThree.SetActive(false);
         iconFour.SetActive(false);
         Debug.Log("Button Selected");
+        //AudioManager.instance.Play("Hover");
     }
 }

@@ -773,6 +773,7 @@ GameObject:
   - component: {fileID: 3852931602583329577}
   - component: {fileID: 8590699528779186611}
   - component: {fileID: 5699047015887297928}
+  - component: {fileID: 4585471755918659041}
   m_Layer: 5
   m_Name: Main Menu
   m_TagString: Untagged
@@ -894,6 +895,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4585471755918659041}
+        m_TargetAssemblyTypeName: buttonSelectSound, Assembly-CSharp
+        m_MethodName: playSelect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4585471755918659041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2122070795022462170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f582966c612e8a4409de68db2c02d6a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2384641779984351337
 GameObject:
   m_ObjectHideFlags: 0
@@ -1111,6 +1136,7 @@ GameObject:
   - component: {fileID: 7049170445988881302}
   - component: {fileID: 7491749239744838842}
   - component: {fileID: 7610322439628243078}
+  - component: {fileID: 5169976646382486121}
   m_Layer: 5
   m_Name: Restart
   m_TagString: Untagged
@@ -1232,6 +1258,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 5169976646382486121}
+        m_TargetAssemblyTypeName: buttonSelectSound, Assembly-CSharp
+        m_MethodName: playSelect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5169976646382486121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3161088909791271185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f582966c612e8a4409de68db2c02d6a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3402340181499829742
 GameObject:
   m_ObjectHideFlags: 0
@@ -1479,6 +1529,7 @@ GameObject:
   - component: {fileID: 2897972513010327668}
   - component: {fileID: 5675996778809529849}
   - component: {fileID: 8521929491091564292}
+  - component: {fileID: 2953875054282210735}
   m_Layer: 5
   m_Name: Resume
   m_TagString: Untagged
@@ -1600,6 +1651,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2953875054282210735}
+        m_TargetAssemblyTypeName: buttonSelectSound, Assembly-CSharp
+        m_MethodName: playSelect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2953875054282210735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4462672717474037242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f582966c612e8a4409de68db2c02d6a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4748454252580101504
 GameObject:
   m_ObjectHideFlags: 0
@@ -1821,6 +1896,7 @@ GameObject:
   - component: {fileID: 1392538370245919049}
   - component: {fileID: 2326576424108573016}
   - component: {fileID: 6647920831663631438}
+  - component: {fileID: 6078754055784776448}
   m_Layer: 5
   m_Name: Quit Game
   m_TagString: Untagged
@@ -1942,6 +2018,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6078754055784776448}
+        m_TargetAssemblyTypeName: buttonSelectSound, Assembly-CSharp
+        m_MethodName: playSelect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6078754055784776448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6537163319983043581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f582966c612e8a4409de68db2c02d6a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6906617748455843357
 GameObject:
   m_ObjectHideFlags: 0

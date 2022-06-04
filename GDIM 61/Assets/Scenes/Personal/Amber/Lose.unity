@@ -291,6 +291,7 @@ GameObject:
   - component: {fileID: 138181283}
   - component: {fileID: 138181282}
   - component: {fileID: 138181281}
+  - component: {fileID: 138181284}
   m_Layer: 5
   m_Name: Quit
   m_TagString: Untagged
@@ -342,7 +343,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.745, g: 0.745, b: 0.745, a: 1}
     m_PressedColor: {r: 0.496, g: 0.496, b: 0.496, a: 1}
-    m_SelectedColor: {r: 0.745, g: 0.745, b: 0.745, a: 1}
+    m_SelectedColor: {r: 0.7379338, g: 0.7830189, b: 0.047276568, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -365,6 +366,18 @@ MonoBehaviour:
       - m_Target: {fileID: 184777511}
         m_TargetAssemblyTypeName: TestEndScreen, Assembly-CSharp
         m_MethodName: QuitToMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 138181284}
+        m_TargetAssemblyTypeName: buttonSelectSound, Assembly-CSharp
+        m_MethodName: playSelect
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -412,6 +425,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 138181279}
   m_CullTransparentMesh: 1
+--- !u!114 &138181284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138181279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f582966c612e8a4409de68db2c02d6a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &184777506
 GameObject:
   m_ObjectHideFlags: 0
@@ -544,6 +569,7 @@ GameObject:
   - component: {fileID: 384691261}
   - component: {fileID: 384691260}
   - component: {fileID: 384691259}
+  - component: {fileID: 384691262}
   m_Layer: 5
   m_Name: Restart
   m_TagString: Untagged
@@ -595,7 +621,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.745, g: 0.745, b: 0.745, a: 1}
     m_PressedColor: {r: 0.496, g: 0.496, b: 0.496, a: 1}
-    m_SelectedColor: {r: 0.752, g: 0.752, b: 0.752, a: 1}
+    m_SelectedColor: {r: 0.95405984, g: 0.9811321, b: 0.45724455, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -618,6 +644,18 @@ MonoBehaviour:
       - m_Target: {fileID: 184777511}
         m_TargetAssemblyTypeName: TestEndScreen, Assembly-CSharp
         m_MethodName: Restart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 384691262}
+        m_TargetAssemblyTypeName: buttonSelectSound, Assembly-CSharp
+        m_MethodName: playSelect
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -665,6 +703,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 384691257}
   m_CullTransparentMesh: 1
+--- !u!114 &384691262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384691257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f582966c612e8a4409de68db2c02d6a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &920344618
 GameObject:
   m_ObjectHideFlags: 0
@@ -1269,7 +1319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 384691257}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &1430077094
@@ -2337,7 +2387,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 0}
   m_HandleRect: {fileID: 0}

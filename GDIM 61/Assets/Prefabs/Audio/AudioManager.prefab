@@ -43,6 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0409bcfbf0ee1fc4f9338a697c14806d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  master: {fileID: 0}
   sounds:
   - name: MainTheme
     clip: {fileID: 8300000, guid: 9a4990e24e0eac34dbdb3ec72d25a1ed, type: 3}
@@ -116,6 +117,13 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Explosion
     clip: {fileID: 8300000, guid: 01f49216405154e40b10f92cd143e2a9, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    bgm: 0
+    source: {fileID: 0}
+  - name: Select
+    clip: {fileID: 8300000, guid: b9fde9fb6d0bf4844aac4209be6d047d, type: 3}
     volume: 1
     pitch: 1
     loop: 0
