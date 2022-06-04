@@ -8572,10 +8572,6 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 62
       objectReference: {fileID: 0}
-    - target: {fileID: 8280812607525010471, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
-      propertyPath: sounds.Array.data[0].volume
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8521929491091564292, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
       propertyPath: m_TargetGraphic
       value: 

@@ -3264,34 +3264,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: PauseMenuScreen, Assembly-CSharp
       objectReference: {fileID: 0}
-    - target: {fileID: 8280812607525010471, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
-      propertyPath: sounds.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8280812607525010471, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
-      propertyPath: sounds.Array.data[4].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 4594402a36df7ff4ab22fec391a3e8d0, type: 3}
-    - target: {fileID: 8280812607525010471, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
-      propertyPath: sounds.Array.data[4].name
-      value: Stove
-      objectReference: {fileID: 0}
-    - target: {fileID: 8280812607525010471, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
-      propertyPath: sounds.Array.data[4].pitch
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8280812607525010471, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
-      propertyPath: sounds.Array.data[0].volume
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8280812607525010471, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
-      propertyPath: sounds.Array.data[1].volume
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8280812607525010471, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
-      propertyPath: sounds.Array.data[4].volume
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8521929491091564292, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
       propertyPath: m_TargetGraphic
       value: 
