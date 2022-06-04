@@ -107,3 +107,10 @@ MonoBehaviour:
     loop: 0
     bgm: 0
     source: {fileID: 0}
+  - name: Alert
+    clip: {fileID: 8300000, guid: 04819cf3ca6b31a4bb2cb8656366e02d, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    bgm: 0
+    source: {fileID: 0}
