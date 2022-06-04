@@ -177,7 +177,6 @@ public class GhostTask : MonoBehaviour
 
         loseMessageText = taskFailedMessage;
 
-
         GameManager.LoseScreen();
     }
 

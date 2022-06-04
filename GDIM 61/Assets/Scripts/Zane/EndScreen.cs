@@ -12,7 +12,9 @@ public class EndScreen : MonoBehaviour
 
     void Start()
     {
-        if(win)
+        Cursor.lockState = CursorLockMode.None;
+
+        if (win)
         {
             AudioManager.instance.Play("Win");
         }
