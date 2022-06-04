@@ -11,7 +11,6 @@ public class GameManager : MonoBehaviour
 
     private int level = 1;
     public static int lastScene;
-    public static bool loadedLose;
 
     private static GameManager instance;
 
@@ -36,14 +35,6 @@ public class GameManager : MonoBehaviour
         else
         {
             Destroy(this);
-        }
-    }
-
-    private void Update()
-    {
-        if (loadedLose == true)
-        {
-
         }
     }
 
@@ -79,6 +70,15 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadScene(2);
         }
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Time.timeScale = 1.0f;
+    }
+
+    public static void PauseRestart()
+    {
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
 
         Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = 1.0f;

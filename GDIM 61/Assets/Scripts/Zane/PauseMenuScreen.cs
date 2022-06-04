@@ -79,7 +79,7 @@ public class PauseMenuScreen : MonoBehaviour
     // restarts the game
     public void Restart()
     {
-        GameManager.NewGame();
+        GameManager.PauseRestart();
     }
 
     // quits to the main menu
