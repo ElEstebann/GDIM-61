@@ -67,6 +67,7 @@ SpriteAtlas:
   - {fileID: 937562987166321355, guid: c2c98c50dca0c714e9c6c4899fd1299a, type: 3}
   - {fileID: -551955283001865208, guid: c7041cc0ec351c54cbcf65516cbe185d, type: 3}
   - {fileID: -998981137371720180, guid: c7041cc0ec351c54cbcf65516cbe185d, type: 3}
+  - {fileID: 21300000, guid: fc974de01266c624c998f4b064096005, type: 3}
   - {fileID: -6281948016502018350, guid: 7368f911cbf7dbb49b159f9aecd907d4, type: 3}
   - {fileID: 348407798956740916, guid: 7368f911cbf7dbb49b159f9aecd907d4, type: 3}
   - {fileID: 2995313231544700854, guid: 7368f911cbf7dbb49b159f9aecd907d4, type: 3}
@@ -140,6 +141,7 @@ SpriteAtlas:
   - {fileID: 5045231025623611844, guid: 0c6a09a380276984a959a17cfe1d8733, type: 3}
   - {fileID: 4122597067671167742, guid: 0c6a09a380276984a959a17cfe1d8733, type: 3}
   - {fileID: 21300000, guid: cfd1aed3f3d102640b888dcb50cdcaad, type: 3}
+  - {fileID: 21300000, guid: 2f81b3545aac2454fa1577a93234ef5d, type: 3}
   - {fileID: 3559387506013279281, guid: 83790a64165fe65439473f223c53e6e9, type: 3}
   - {fileID: 5680344771111065471, guid: 83790a64165fe65439473f223c53e6e9, type: 3}
   - {fileID: 21300000, guid: f5fad9b4a8c3e2c4d9629b99bcd2522b, type: 3}
@@ -239,6 +241,7 @@ SpriteAtlas:
   - {fileID: -2175977229370253631, guid: 2123af3a2c6e2534b8879397586ed27f, type: 3}
   - {fileID: 6071348644026256547, guid: 2123af3a2c6e2534b8879397586ed27f, type: 3}
   - {fileID: -6651666008571180006, guid: 2123af3a2c6e2534b8879397586ed27f, type: 3}
+  - {fileID: 21300000, guid: 4230828ab055d7047ae6afdfd752165b, type: 3}
   - {fileID: 21300000, guid: 195f699aeac8f8c4d8cc393c31c25d8b, type: 3}
   - {fileID: -7342860554088706546, guid: 7226dfea6e1227d49acc7ac01aabc81d, type: 3}
   - {fileID: 6491018542971298930, guid: 7226dfea6e1227d49acc7ac01aabc81d, type: 3}
@@ -309,6 +312,7 @@ SpriteAtlas:
   - Alerts_4
   - woman_wedding_idle_0
   - woman_wedding_idle_1
+  - Level1Full
   - woman_purple_walk_1
   - woman_purple_walk_0
   - woman_purple_walk_3
@@ -382,6 +386,7 @@ SpriteAtlas:
   - man_red_idle_1
   - man_red_idle_0
   - 4Darkening
+  - Level2Full
   - man_red_scared_1
   - man_red_scared_0
   - Level3
@@ -481,6 +486,7 @@ SpriteAtlas:
   - sparks_1
   - sparks_2
   - sparks_3
+  - Level3Full
   - Level2Walls
   - hide_fill_14
   - hide_fill_13
