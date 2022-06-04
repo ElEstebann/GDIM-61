@@ -35,6 +35,13 @@ public class EndScreen : MonoBehaviour
     // restarts the game
     public void Restart()
     {
-        GameManager.NewGame();
+        if (win)
+        {
+            GameManager.NewGame();
+        }
+        else
+        {
+            GameManager.RestartLevel();
+        }
     }
 }
