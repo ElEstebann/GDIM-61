@@ -33,10 +33,12 @@ public class LookAt : MonoBehaviour
             }
             //Debug.Log(target.transform.position);
         }
+        /*
         if(target.transform.position == null)
         {
             Debug.Log("?????\n");
         }
+        */
     }
 
 }

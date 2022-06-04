@@ -8144,7 +8144,7 @@ PrefabInstance:
     - target: {fileID: 1309536129, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
       propertyPath: Transition
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1431844380}
     - target: {fileID: 1309536129, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
       propertyPath: ai.Array.size
       value: 6
@@ -11129,6 +11129,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0.5, y: 0}
   m_SizeDelta: {x: -9, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &1431844380 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7253018098979154437, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
+  m_PrefabInstance: {fileID: 1310361861}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1440529282
 GameObject:
   m_ObjectHideFlags: 0
