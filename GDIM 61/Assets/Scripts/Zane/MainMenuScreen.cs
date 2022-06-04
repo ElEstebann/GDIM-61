@@ -11,6 +11,10 @@ public class MainMenuScreen : MonoBehaviour
     [SerializeField] private Image optionsIcon;
     [SerializeField] private Image creditsIcon;
 
+    [SerializeField] private GameObject mainScreen;
+    [SerializeField] private GameObject optionsScreen;
+    [SerializeField] private GameObject creditsScreen;
+
     private void Start()
     {
         GameManager.TitleScreen();
@@ -36,30 +40,40 @@ public class MainMenuScreen : MonoBehaviour
     public void ActivateCredits()
     {
         Debug.Log("Credits");
-        titleAnimator.SetTrigger("Change");
-        titleAnimator.SetBool("Credits", true);
+        //titleAnimator.SetTrigger("Change");
+        //titleAnimator.SetBool("Credits", true);
+        mainScreen.SetActive(false);
+        creditsScreen.SetActive(true);
     }
 
     // credits disappear
     public void DectivateCredits()
     {
-        titleAnimator.ResetTrigger("Change");
-        titleAnimator.SetBool("Credits", false);
+        //titleAnimator.ResetTrigger("Change");
+        //titleAnimator.SetBool("Credits", false);
+        creditsScreen.SetActive(false);
+        mainScreen.SetActive(true);
+        
     }
 
     // options appear
     public void ActivateOptions()
     {
         Debug.Log("Options");
-        titleAnimator.SetTrigger("Change");
-        titleAnimator.SetBool("Options", true);
+        mainScreen.SetActive(false);
+        optionsScreen.SetActive(true);
+        //titleAnimator.SetTrigger("Change");
+        //titleAnimator.SetBool("Options", true);
     }
 
     // options disappear
     public void DectivateOptions()
     {
-        titleAnimator.ResetTrigger("Change");
-        titleAnimator.SetBool("Options", false);
+        //titleAnimator.ResetTrigger("Change");
+        //titleAnimator.SetBool("Options", false);
+        optionsScreen.SetActive(false);
+        mainScreen.SetActive(true);
+        
     }
 
     // quits the game

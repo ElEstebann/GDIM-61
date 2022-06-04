@@ -21,6 +21,7 @@ public class EndScreen : MonoBehaviour
         else
         {
             loseText.text = GhostTask.loseMessageText;
+            AudioManager.instance.PlayOneShot("Explostion");
             AudioManager.instance.Play("Lose");
         }
     }
