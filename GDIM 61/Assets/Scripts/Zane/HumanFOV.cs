@@ -53,7 +53,12 @@ public class HumanFOV : MonoBehaviour
                 // checks if the player is in the direct line of sight of the AI
                 if (!Physics2D.Raycast(transform.position, directionToPlayer, distanceToPlayer, wallLayer))
                 {
-                    detectPlayer = true;
+                    if(!detectPlayer)
+                    {
+                        detectPlayer = true;
+                        AudioManager.instance.PlayOneShot("Alert");
+                    }
+                    
                 }
                 else
                 {
