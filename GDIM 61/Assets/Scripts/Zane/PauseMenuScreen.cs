@@ -54,7 +54,7 @@ public class PauseMenuScreen : MonoBehaviour
 
     IEnumerator SpecialPause() //For displaying special message on start
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0);
         GameManager.PauseGame();
         startMenuUI.SetActive(true);
         startMenuResumeButton.Select();
