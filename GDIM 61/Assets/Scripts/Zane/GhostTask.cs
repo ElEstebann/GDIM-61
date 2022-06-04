@@ -126,6 +126,7 @@ public class GhostTask : MonoBehaviour
                 fixing = true;
                 playerMoveScript.SetFixTrigger();
                 playerMoveScript.SetFixingBool(true);
+                playMeepSound();
             }
 
             // checks if the task is being fixed to show the task progress bar
@@ -279,6 +280,14 @@ public class GhostTask : MonoBehaviour
             target.updatePointerColor(ratio);
         }
         
+    }
+
+    private void playMeepSound()
+    {
+        
+        string h = "Working" + Random.Range(1,6).ToString();
+        //Debug.Log("played meep" + h);
+        AudioManager.instance.PlayOneShot(h);
     }
 
 }
