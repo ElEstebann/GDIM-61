@@ -1706,7 +1706,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Task Failed
+  m_text: Task Failed Message
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: aaba279d38f16f041a0cb644e5a251bd, type: 2}
   m_sharedMaterial: {fileID: 1358707599231895787, guid: aaba279d38f16f041a0cb644e5a251bd, type: 2}

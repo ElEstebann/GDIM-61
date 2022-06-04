@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 // Written by Zane
 public class GhostTask : MonoBehaviour
 {
     [SerializeField] private KeyCode holdKey;
 
-    [SerializeField] private string taskName;
+    [SerializeField] private string taskFailedMessage;
     [SerializeField] private float radius;
     [SerializeField] private float holdTime;
     [SerializeField] private float taskDuration;
@@ -31,7 +32,6 @@ public class GhostTask : MonoBehaviour
     private float taskTimer;
     private float taskProgressValue;
     private float taskProgressAdd;
-
     private bool pauseTaskTimer = false;
     private bool taskCompleted = false;
     private bool keyHeld = false;
@@ -50,7 +50,6 @@ public class GhostTask : MonoBehaviour
         taskProgressValue = 0;
         taskTimer = taskDuration;
         taskAnimator.SetBool("Fixed", true);
-        
 
         // finds player object
         Player = GameObject.FindGameObjectsWithTag("Player")[0];
@@ -175,7 +174,8 @@ public class GhostTask : MonoBehaviour
         Debug.Log("YOU LOSE!! Failed to complete the task in " + taskDuration + " seconds.");
         AudioManager.instance.Stop("MainTheme");
 
-        loseMessageText = "Failed to fix the " + taskName + "!";
+        loseMessageText = taskFailedMessage;
+
 
         GameManager.LoseScreen();
     }

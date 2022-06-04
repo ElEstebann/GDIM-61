@@ -338,7 +338,7 @@ PrefabInstance:
       objectReference: {fileID: 885950819}
     - target: {fileID: 1372443399410578616, guid: 6f28ef8dafd32cc4d83952706d6dfd86, type: 3}
       propertyPath: taskName
-      value: Microwave
+      value: microwave
       objectReference: {fileID: 0}
     - target: {fileID: 1372443399410578616, guid: 6f28ef8dafd32cc4d83952706d6dfd86, type: 3}
       propertyPath: progressBar
@@ -348,6 +348,10 @@ PrefabInstance:
       propertyPath: taskProgressBar
       value: 
       objectReference: {fileID: 182381036}
+    - target: {fileID: 1372443399410578616, guid: 6f28ef8dafd32cc4d83952706d6dfd86, type: 3}
+      propertyPath: taskFailedMessage
+      value: Failed to fix the overheating microwave!
+      objectReference: {fileID: 0}
     - target: {fileID: 2933083175552859628, guid: 6f28ef8dafd32cc4d83952706d6dfd86, type: 3}
       propertyPath: m_Camera
       value: 
@@ -2886,7 +2890,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 784888251, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
       propertyPath: timeValue
-      value: 5
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 837471819, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3544,7 +3548,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 749901745}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5, y: 0, z: 0}
+  m_LocalPosition: {x: 1.25, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 700524806}
@@ -5105,7 +5109,7 @@ PrefabInstance:
       objectReference: {fileID: 885950819}
     - target: {fileID: 3280334957604817416, guid: efef896479e133d4c8647f91a5fc21bf, type: 3}
       propertyPath: taskName
-      value: Air Conditioner
+      value: air conditioner
       objectReference: {fileID: 0}
     - target: {fileID: 3280334957604817416, guid: efef896479e133d4c8647f91a5fc21bf, type: 3}
       propertyPath: progressBar
@@ -5115,6 +5119,10 @@ PrefabInstance:
       propertyPath: taskProgressBar
       value: 
       objectReference: {fileID: 1306278024}
+    - target: {fileID: 3280334957604817416, guid: efef896479e133d4c8647f91a5fc21bf, type: 3}
+      propertyPath: taskFailedMessage
+      value: Failed to fix the faulty air conditioner!
+      objectReference: {fileID: 0}
     - target: {fileID: 4879678261680241568, guid: efef896479e133d4c8647f91a5fc21bf, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -5378,7 +5386,7 @@ PrefabInstance:
       objectReference: {fileID: 885950819}
     - target: {fileID: 398072438, guid: 3cc52b433fad9dd438074a2f53c479d8, type: 3}
       propertyPath: taskName
-      value: Outlet
+      value: outlet
       objectReference: {fileID: 0}
     - target: {fileID: 398072438, guid: 3cc52b433fad9dd438074a2f53c479d8, type: 3}
       propertyPath: progressBar
@@ -5388,6 +5396,10 @@ PrefabInstance:
       propertyPath: taskProgressBar
       value: 
       objectReference: {fileID: 604911426}
+    - target: {fileID: 398072438, guid: 3cc52b433fad9dd438074a2f53c479d8, type: 3}
+      propertyPath: taskFailedMessage
+      value: Failed to fix the faulty outlet!
+      objectReference: {fileID: 0}
     - target: {fileID: 4963710384881703354, guid: 3cc52b433fad9dd438074a2f53c479d8, type: 3}
       propertyPath: m_Name
       value: Sparks
@@ -5519,7 +5531,7 @@ PrefabInstance:
       objectReference: {fileID: 885950819}
     - target: {fileID: 1500076599775648558, guid: 253ea384b49cacf4ba27cc393c75533f, type: 3}
       propertyPath: taskName
-      value: Sink
+      value: sink
       objectReference: {fileID: 0}
     - target: {fileID: 1500076599775648558, guid: 253ea384b49cacf4ba27cc393c75533f, type: 3}
       propertyPath: progressBar
@@ -5529,6 +5541,10 @@ PrefabInstance:
       propertyPath: taskProgressBar
       value: 
       objectReference: {fileID: 1054260122}
+    - target: {fileID: 1500076599775648558, guid: 253ea384b49cacf4ba27cc393c75533f, type: 3}
+      propertyPath: taskFailedMessage
+      value: Failed to fix the overflowing sink!
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253ea384b49cacf4ba27cc393c75533f, type: 3}
 --- !u!95 &1913328560 stripped
@@ -5650,7 +5666,7 @@ PrefabInstance:
       objectReference: {fileID: 885950819}
     - target: {fileID: 1229863646232587005, guid: 7cbc5ac563b717842ac24b7e87a34a0b, type: 3}
       propertyPath: taskName
-      value: Oven
+      value: oven
       objectReference: {fileID: 0}
     - target: {fileID: 1229863646232587005, guid: 7cbc5ac563b717842ac24b7e87a34a0b, type: 3}
       propertyPath: progressBar
@@ -5660,6 +5676,10 @@ PrefabInstance:
       propertyPath: taskProgressBar
       value: 
       objectReference: {fileID: 982108161}
+    - target: {fileID: 1229863646232587005, guid: 7cbc5ac563b717842ac24b7e87a34a0b, type: 3}
+      propertyPath: taskFailedMessage
+      value: Failed to fix the overheating oven!
+      objectReference: {fileID: 0}
     - target: {fileID: 6592921760787673074, guid: 7cbc5ac563b717842ac24b7e87a34a0b, type: 3}
       propertyPath: m_Name
       value: Stove

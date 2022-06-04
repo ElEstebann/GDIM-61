@@ -1670,6 +1670,10 @@ PrefabInstance:
       value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 1372443399410578616, guid: 6f28ef8dafd32cc4d83952706d6dfd86, type: 3}
+      propertyPath: taskName
+      value: microwave
+      objectReference: {fileID: 0}
+    - target: {fileID: 1372443399410578616, guid: 6f28ef8dafd32cc4d83952706d6dfd86, type: 3}
       propertyPath: alertIcon
       value: 
       objectReference: {fileID: 190204669}
@@ -1696,6 +1700,10 @@ PrefabInstance:
     - target: {fileID: 1372443399410578616, guid: 6f28ef8dafd32cc4d83952706d6dfd86, type: 3}
       propertyPath: progressBarCanvas
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1372443399410578616, guid: 6f28ef8dafd32cc4d83952706d6dfd86, type: 3}
+      propertyPath: taskFailedMessage
+      value: Failed to fix the overheating microwave!
       objectReference: {fileID: 0}
     - target: {fileID: 2933083175552859627, guid: 6f28ef8dafd32cc4d83952706d6dfd86, type: 3}
       propertyPath: m_IsActive
@@ -2958,6 +2966,10 @@ PrefabInstance:
       value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 398072438, guid: 3cc52b433fad9dd438074a2f53c479d8, type: 3}
+      propertyPath: taskName
+      value: outlet
+      objectReference: {fileID: 0}
+    - target: {fileID: 398072438, guid: 3cc52b433fad9dd438074a2f53c479d8, type: 3}
       propertyPath: alertIcon
       value: 
       objectReference: {fileID: 423452588}
@@ -2984,6 +2996,10 @@ PrefabInstance:
     - target: {fileID: 398072438, guid: 3cc52b433fad9dd438074a2f53c479d8, type: 3}
       propertyPath: progressBarCanvas
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 398072438, guid: 3cc52b433fad9dd438074a2f53c479d8, type: 3}
+      propertyPath: taskFailedMessage
+      value: Failed to fix the faulty outlet!
       objectReference: {fileID: 0}
     - target: {fileID: 4963710384881703354, guid: 3cc52b433fad9dd438074a2f53c479d8, type: 3}
       propertyPath: m_Name
@@ -3197,6 +3213,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3280334957604817416, guid: efef896479e133d4c8647f91a5fc21bf, type: 3}
+      propertyPath: taskName
+      value: air conditioner
+      objectReference: {fileID: 0}
+    - target: {fileID: 3280334957604817416, guid: efef896479e133d4c8647f91a5fc21bf, type: 3}
       propertyPath: alertIcon
       value: 
       objectReference: {fileID: 434618677}
@@ -3223,6 +3243,10 @@ PrefabInstance:
     - target: {fileID: 3280334957604817416, guid: efef896479e133d4c8647f91a5fc21bf, type: 3}
       propertyPath: progressBarCanvas
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3280334957604817416, guid: efef896479e133d4c8647f91a5fc21bf, type: 3}
+      propertyPath: taskFailedMessage
+      value: Failed to fix the faulty air conditioner!
       objectReference: {fileID: 0}
     - target: {fileID: 4879678261680241568, guid: efef896479e133d4c8647f91a5fc21bf, type: 3}
       propertyPath: m_RootOrder
@@ -4938,6 +4962,10 @@ PrefabInstance:
     - target: {fileID: 8390156084765635882, guid: 5036ec54525a47f49a27964b27c77dba, type: 3}
       propertyPath: wallLayer.m_Bits
       value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 8390156084765635882, guid: 5036ec54525a47f49a27964b27c77dba, type: 3}
+      propertyPath: taskFailedMessage
+      value: Failed to keep the ice sculpture from falling over!
       objectReference: {fileID: 0}
     - target: {fileID: 8390156084765635882, guid: 5036ec54525a47f49a27964b27c77dba, type: 3}
       propertyPath: playerLayer.m_Bits
@@ -6734,6 +6762,10 @@ PrefabInstance:
       value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 2921172799411840196, guid: b2d9287d08bf00845b0e4e01cb9fef0a, type: 3}
+      propertyPath: taskFailedMessage
+      value: Failed to put out the fire on the flowers!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2921172799411840196, guid: b2d9287d08bf00845b0e4e01cb9fef0a, type: 3}
       propertyPath: playerLayer.m_Bits
       value: 8
       objectReference: {fileID: 0}
@@ -8103,7 +8135,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 784888251, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
       propertyPath: timeValue
-      value: 90
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 837471819, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -13133,6 +13165,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1229863646232587005, guid: 7cbc5ac563b717842ac24b7e87a34a0b, type: 3}
+      propertyPath: taskName
+      value: oven
+      objectReference: {fileID: 0}
+    - target: {fileID: 1229863646232587005, guid: 7cbc5ac563b717842ac24b7e87a34a0b, type: 3}
       propertyPath: alertIcon
       value: 
       objectReference: {fileID: 1713360370}
@@ -13159,6 +13195,10 @@ PrefabInstance:
     - target: {fileID: 1229863646232587005, guid: 7cbc5ac563b717842ac24b7e87a34a0b, type: 3}
       propertyPath: progressBarCanvas
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1229863646232587005, guid: 7cbc5ac563b717842ac24b7e87a34a0b, type: 3}
+      propertyPath: taskFailedMessage
+      value: Failed to fix the overheating oven!
       objectReference: {fileID: 0}
     - target: {fileID: 3522796120253406704, guid: 7cbc5ac563b717842ac24b7e87a34a0b, type: 3}
       propertyPath: m_Name
@@ -13334,6 +13374,10 @@ PrefabInstance:
       value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 1500076599775648558, guid: 253ea384b49cacf4ba27cc393c75533f, type: 3}
+      propertyPath: taskName
+      value: sink
+      objectReference: {fileID: 0}
+    - target: {fileID: 1500076599775648558, guid: 253ea384b49cacf4ba27cc393c75533f, type: 3}
       propertyPath: alertIcon
       value: 
       objectReference: {fileID: 1740007858}
@@ -13360,6 +13404,10 @@ PrefabInstance:
     - target: {fileID: 1500076599775648558, guid: 253ea384b49cacf4ba27cc393c75533f, type: 3}
       propertyPath: progressBarCanvas
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1500076599775648558, guid: 253ea384b49cacf4ba27cc393c75533f, type: 3}
+      propertyPath: taskFailedMessage
+      value: Failed to fix the overflowing sink!
       objectReference: {fileID: 0}
     - target: {fileID: 4655356179915138624, guid: 253ea384b49cacf4ba27cc393c75533f, type: 3}
       propertyPath: m_Color.a
@@ -15979,6 +16027,10 @@ PrefabInstance:
     - target: {fileID: 2921172799411840196, guid: b2d9287d08bf00845b0e4e01cb9fef0a, type: 3}
       propertyPath: wallLayer.m_Bits
       value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 2921172799411840196, guid: b2d9287d08bf00845b0e4e01cb9fef0a, type: 3}
+      propertyPath: taskFailedMessage
+      value: Failed to put out the fire on the flowers!
       objectReference: {fileID: 0}
     - target: {fileID: 2921172799411840196, guid: b2d9287d08bf00845b0e4e01cb9fef0a, type: 3}
       propertyPath: playerLayer.m_Bits
