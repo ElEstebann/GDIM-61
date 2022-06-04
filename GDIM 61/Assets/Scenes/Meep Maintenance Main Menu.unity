@@ -708,6 +708,9 @@ MonoBehaviour:
   titleAnimator: {fileID: 258836455}
   optionsIcon: {fileID: 712150591}
   creditsIcon: {fileID: 1512553552}
+  mainScreen: {fileID: 1021438517}
+  optionsScreen: {fileID: 1191611832}
+  creditsScreen: {fileID: 1165570692}
 --- !u!224 &258836454
 RectTransform:
   m_ObjectHideFlags: 0
