@@ -19,8 +19,8 @@ public class CountdownTimer : MonoBehaviour
         Scene currentScene = SceneManager.GetActiveScene();
         sceneIndex = currentScene.buildIndex;
 
-        Debug.Log(sceneIndex);
-        Debug.Log(SceneManager.sceneCountInBuildSettings);
+        //Debug.Log(sceneIndex);
+        //Debug.Log(SceneManager.sceneCountInBuildSettings);
     }
 
     void Update()

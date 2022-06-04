@@ -3226,6 +3226,7 @@ MonoBehaviour:
   levels:
   - Meep Maintenance Level One
   - Meep Maintenance Level Two
+  - Meep Maintenance Level Three
   SceneName: Meep Maintenance Main Menu
 --- !u!4 &1253924218
 Transform:

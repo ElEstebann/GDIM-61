@@ -70,6 +70,10 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadScene(2);
         }
+        else if (lastScene == 3)
+        {
+            SceneManager.LoadScene(3);
+        }
 
         Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = 1.0f;
