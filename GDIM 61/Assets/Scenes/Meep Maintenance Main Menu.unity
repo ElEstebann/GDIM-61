@@ -179,6 +179,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7537330493033318024, guid: d6fdcb01820c1104581b2b620e673574, type: 3}
+      propertyPath: master
+      value: 
+      objectReference: {fileID: 24100000, guid: 15aa2dd320793424db9349e34c5a9a29, type: 2}
+    - target: {fileID: 7537330493033318024, guid: d6fdcb01820c1104581b2b620e673574, type: 3}
       propertyPath: sounds.Array.data[1].bgm
       value: 1
       objectReference: {fileID: 0}
@@ -3323,6 +3327,14 @@ PrefabInstance:
     - target: {fileID: 5401295020287123784, guid: 3808a894be61d394eb63c8ddd3eecd50, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5677558397456113841, guid: 3808a894be61d394eb63c8ddd3eecd50, type: 3}
+      propertyPath: m_MaxValue
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 5677558397456113841, guid: 3808a894be61d394eb63c8ddd3eecd50, type: 3}
+      propertyPath: m_MinValue
+      value: -40
       objectReference: {fileID: 0}
     - target: {fileID: 5677558397456113841, guid: 3808a894be61d394eb63c8ddd3eecd50, type: 3}
       propertyPath: m_Navigation.m_Mode
