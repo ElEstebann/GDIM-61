@@ -6,7 +6,7 @@ MonoImporter:
   defaultReferences:
   - Player: {fileID: 6784455462238060340, guid: e0ae587943a00d146b96c82fabfb08ce, type: 3}
   - taskAnimator: {instanceID: 0}
-  executionOrder: 0
+  executionOrder: 400
   icon: {instanceID: 0}
   userData: 
   assetBundleName: 
