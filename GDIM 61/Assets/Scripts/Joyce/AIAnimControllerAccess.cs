@@ -10,6 +10,8 @@ public class AIAnimControllerAccess : MonoBehaviour
     [SerializeField] private int paramIndex;
     [SerializeField] private bool isTrigger;
     [SerializeField] private bool boolVal;
+
+    private int lastParam = 0;
     void Start()
     {
         if (anim == null)
@@ -20,6 +22,8 @@ public class AIAnimControllerAccess : MonoBehaviour
 
     private void Update()
     {
+        anim.SetBool(paramNames[lastParam], false);
+
         if (paramIndex >= 0)
         {
             if (isTrigger)
@@ -29,6 +33,7 @@ public class AIAnimControllerAccess : MonoBehaviour
             else
             {
                 anim.SetBool(paramNames[paramIndex], boolVal);
+                lastParam = paramIndex;
             }
         }
     }

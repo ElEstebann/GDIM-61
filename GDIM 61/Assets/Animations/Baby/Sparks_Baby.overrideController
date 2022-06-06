@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Sparks_Baby
+  m_Controller: {fileID: 9100000, guid: 1d0c14ccd0ad3324aa277a4d205b65fb, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: ffbb4181e078fa949a9a7eb5ec99f854, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: cd315a015232e7e42baacf4cbd7fb3fd, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 8522ce979e4abd74bba32492f45defae, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 1bc53b466d5b54946be44d69c18de982, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 13a962447dfa1ed4fbf546752ac6b9f9, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: aaa68821eda409b4cb454264b0882ce9, type: 2}
