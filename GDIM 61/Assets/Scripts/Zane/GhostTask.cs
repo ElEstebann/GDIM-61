@@ -19,6 +19,7 @@ public class GhostTask : MonoBehaviour
 
     [SerializeField] private GameObject Player;
     [SerializeField] private GameObject alertIcon;
+    [SerializeField] private Animator alertAnim;
     [SerializeField] private GameObject arrowTarget;
     [SerializeField] private GameObject progressBar;
     [SerializeField] private Slider taskProgressBar;
@@ -50,6 +51,8 @@ public class GhostTask : MonoBehaviour
         taskProgressValue = 0;
         taskTimer = taskDuration;
         taskAnimator.SetBool("Fixed", true);
+
+        alertAnim = alertIcon.GetComponent<Animator>();
 
         // finds player object
         Player = GameObject.FindGameObjectsWithTag("Player")[0];
@@ -99,6 +102,7 @@ public class GhostTask : MonoBehaviour
                 keyHeldTimer += Time.deltaTime;
                 pauseTaskTimer = true;
                 fixing = true;
+                alertAnim.SetBool("Fixed", false);
 
                 // when the key is held down for the required time, the timer stops and the function is called
                 if (keyHeldTimer >= (keyHeldStartTime + holdTime))
@@ -107,7 +111,7 @@ public class GhostTask : MonoBehaviour
                     taskDone = true;
                     fixing = false;
                     playerMoveScript.SetFixingBool(false);
-
+                    alertAnim.SetBool("Fixed", true);
                     KeyHeld();
                 }
             }
@@ -174,6 +178,15 @@ public class GhostTask : MonoBehaviour
         if (taskTimer <= 10)
         {
             taskAnimator.SetTrigger("Extreme");
+            alertAnim.SetTrigger("Critical");
+        }
+        else if (taskTimer <= 20)
+        {
+            alertAnim.SetTrigger("Danger");
+        }
+        else
+        {
+            alertAnim.SetTrigger("Warning");
         }
     }
 
