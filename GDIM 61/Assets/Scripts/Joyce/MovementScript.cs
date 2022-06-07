@@ -10,7 +10,8 @@ public class MovementScript : MonoBehaviour
     private float xtrans;
     private float ytrans;
 
-    [SerializeField] private float bumpDistance = 1.5f;
+    [SerializeField] private float bumpDistanceDown = 1.5f;
+    [SerializeField] private float bumpDistanceUp = 2f;
     [SerializeField] private Animator anim; // reference to animator; controls the left/right idle/movement animation trasitions
     [SerializeField] private GameObject cam; // referece to the main camera which will be used to tracking purposes later
     private CameraScript camScript;
@@ -92,13 +93,13 @@ public class MovementScript : MonoBehaviour
         Vector3 borderPos = borders.position;
         if (ytrans < 0) // if moving down
         {
-            float newY = (borderPos.y + (borders.localScale.y / 2)) - bumpDistance;
+            float newY = (borderPos.y + (borders.localScale.y / 2)) - bumpDistanceDown;
             print("going down" + newY);
             transform.position = new Vector3(transform.position.x, newY, transform.position.z);
         }
         else if (ytrans > 0) // if moving up
         {
-            float newY = (borderPos.y - (borders.localScale.y / 2)) + bumpDistance;
+            float newY = (borderPos.y - (borders.localScale.y / 2)) + bumpDistanceUp;
             print("going up" + newY);
             transform.position = new Vector3(transform.position.x, newY , transform.position.z);
         }
@@ -111,7 +112,7 @@ public class MovementScript : MonoBehaviour
     public void SetFixingBool(bool isFixing, GameObject task)
     {
         anim.SetBool("Fixing", isFixing);
-        if (isFixing)
+        if (!isFixing)
         {
             currTask = null;
         }

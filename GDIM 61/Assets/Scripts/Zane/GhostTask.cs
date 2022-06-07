@@ -146,12 +146,12 @@ public class GhostTask : MonoBehaviour
         }
         else
         {
-            if (Input.GetKey(holdKey))
-            {
-                if(playerMoveScript.getCurrTask() != null && this == playerMoveScript.getCurrTask())
-                    playerMoveScript.SetFixingBool(false, this.gameObject);
-                pauseTaskTimer = false;
-            }
+            //if (Input.GetKey(holdKey))
+            //{
+            if(this.gameObject == playerMoveScript.getCurrTask())
+                playerMoveScript.SetFixingBool(false, this.gameObject);
+            pauseTaskTimer = false;
+            //}
             fixing = false;
             progressBar.SetActive(false);
         }
