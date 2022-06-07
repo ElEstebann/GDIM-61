@@ -87,7 +87,7 @@ public class BalloonTask: MonoBehaviour
             // adds time to the timer while the key is held down
             if (Input.GetKey(holdKey) && keyHeld == false && popping == true)
             {
-                playerMoveScript.SetFixingBool(true);
+                playerMoveScript.SetFixingBool(true, this.gameObject);
                 progressBar.SetActive(true);
 
                 // task progress bar
@@ -104,7 +104,7 @@ public class BalloonTask: MonoBehaviour
                 {
                     keyHeld = true;
                     popping = false;
-                    playerMoveScript.SetFixingBool(false);
+                    playerMoveScript.SetFixingBool(false, this.gameObject);
 
                     KeyHeld();
                 }
@@ -115,7 +115,7 @@ public class BalloonTask: MonoBehaviour
             {
                 keyHeld = false;
                 popping = false;
-                playerMoveScript.SetFixingBool(false);
+                playerMoveScript.SetFixingBool(false, this.gameObject);
             }
 
             // checks if the fix key has been held to allow the fixing animation to be played again
@@ -123,7 +123,7 @@ public class BalloonTask: MonoBehaviour
             {
                 popping = true;
                 playerMoveScript.SetFixTrigger();
-                playerMoveScript.SetFixingBool(true);
+                playerMoveScript.SetFixingBool(true, this.gameObject);
             }
 
             // checks if the task is being fixed to show the task progress bar

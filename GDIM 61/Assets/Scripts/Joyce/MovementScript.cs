@@ -18,6 +18,7 @@ public class MovementScript : MonoBehaviour
 
     private bool faceRight;
     [SerializeField] private bool freeze;
+    private GameObject currTask;
 
     void Start()
     {
@@ -26,6 +27,7 @@ public class MovementScript : MonoBehaviour
         faceRight = true;
         freeze = false;
         camScript = cam.GetComponent<CameraScript>();
+        currTask = null;
     }
 
     void Update()
@@ -106,9 +108,22 @@ public class MovementScript : MonoBehaviour
     {
         anim.SetTrigger("Fix");
     }
-    public void SetFixingBool(bool isFixing)
+    public void SetFixingBool(bool isFixing, GameObject task)
     {
         anim.SetBool("Fixing", isFixing);
+        if (isFixing)
+        {
+            currTask = null;
+        }
+        else
+        {
+            currTask = task;
+        }
+    }
+
+    public GameObject getCurrTask()
+    {
+        return currTask;
     }
 
 }

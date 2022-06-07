@@ -90,7 +90,7 @@ public class GhostTask : MonoBehaviour
             // adds time to the timer while the key is held down
             if (Input.GetKey(holdKey) && keyHeld == false && fixing == true)
             {
-                playerMoveScript.SetFixingBool(true);
+                playerMoveScript.SetFixingBool(true, this.gameObject);
                 progressBar.SetActive(true);
 
                 // task progress bar
@@ -110,7 +110,7 @@ public class GhostTask : MonoBehaviour
                     keyHeld = true;
                     taskDone = true;
                     fixing = false;
-                    playerMoveScript.SetFixingBool(false);
+                    playerMoveScript.SetFixingBool(false, this.gameObject);
                     alertAnim.SetBool("Fixed", true);
                     KeyHeld();
                 }
@@ -122,15 +122,15 @@ public class GhostTask : MonoBehaviour
                 pauseTaskTimer = false;
                 keyHeld = false;
                 fixing = false;
-                playerMoveScript.SetFixingBool(false);
+                playerMoveScript.SetFixingBool(false, this.gameObject);
             }
 
             // checks if the fix key has been held to allow the fixing animation to be played again
-            if (Input.GetKeyDown(holdKey))
+            else if (Input.GetKeyDown(holdKey))
             {
                 fixing = true;
                 playerMoveScript.SetFixTrigger();
-                playerMoveScript.SetFixingBool(true);
+                playerMoveScript.SetFixingBool(true, this.gameObject);
                 playMeepSound();
             }
 
@@ -148,10 +148,11 @@ public class GhostTask : MonoBehaviour
         {
             if (Input.GetKey(holdKey))
             {
-                playerMoveScript.SetFixingBool(false);
+                if(playerMoveScript.getCurrTask() != null && this == playerMoveScript.getCurrTask())
+                    playerMoveScript.SetFixingBool(false, this.gameObject);
                 pauseTaskTimer = false;
             }
-
+            fixing = false;
             progressBar.SetActive(false);
         }
     }
