@@ -2214,6 +2214,10 @@ PrefabInstance:
       value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 398072438, guid: 3cc52b433fad9dd438074a2f53c479d8, type: 3}
+      propertyPath: alertAnim
+      value: 
+      objectReference: {fileID: 691004399}
+    - target: {fileID: 398072438, guid: 3cc52b433fad9dd438074a2f53c479d8, type: 3}
       propertyPath: alertIcon
       value: 
       objectReference: {fileID: 691004396}
@@ -2243,7 +2247,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 398072438, guid: 3cc52b433fad9dd438074a2f53c479d8, type: 3}
       propertyPath: taskFailedMessage
-      value: The baby stuck a fork into the outlet!
+      value: The baby stuck a fork into the outlet and got electrocuted!
       objectReference: {fileID: 0}
     - target: {fileID: 1895886587, guid: 3cc52b433fad9dd438074a2f53c479d8, type: 3}
       propertyPath: OutputAudioMixerGroup
@@ -2394,6 +2398,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.99807465, y: 0.5018188}
   m_EdgeRadius: 0
+--- !u!95 &691004399 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6284243183943984065, guid: 3cc52b433fad9dd438074a2f53c479d8, type: 3}
+  m_PrefabInstance: {fileID: 691004392}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &691004410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2918,7 +2927,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1229863646232587005, guid: 7cbc5ac563b717842ac24b7e87a34a0b, type: 3}
       propertyPath: taskFailedMessage
-      value: The baby climbed into the oven!
+      value: The baby climbed into the oven and got roasted!
       objectReference: {fileID: 0}
     - target: {fileID: 3522796120253406704, guid: 7cbc5ac563b717842ac24b7e87a34a0b, type: 3}
       propertyPath: m_Name
@@ -3192,7 +3201,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3280334957604817416, guid: efef896479e133d4c8647f91a5fc21bf, type: 3}
       propertyPath: taskFailedMessage
-      value: Failed to fix the faulty air conditioner!
+      value: The faulty air conditioner caused carbon monoxide poisoning!
       objectReference: {fileID: 0}
     - target: {fileID: 4879678261680241568, guid: efef896479e133d4c8647f91a5fc21bf, type: 3}
       propertyPath: m_RootOrder
@@ -4250,7 +4259,7 @@ PrefabInstance:
     - target: {fileID: 5297031791967600788, guid: 05ff5d5fd1600b643ba9fc41d7ae4a22, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1101432189}
+      objectReference: {fileID: 0}
     - target: {fileID: 5297031791967600788, guid: 05ff5d5fd1600b643ba9fc41d7ae4a22, type: 3}
       propertyPath: progressBar
       value: 
@@ -4263,6 +4272,10 @@ PrefabInstance:
       propertyPath: taskProgressBar
       value: 
       objectReference: {fileID: 1430605925}
+    - target: {fileID: 5297031791967600788, guid: 05ff5d5fd1600b643ba9fc41d7ae4a22, type: 3}
+      propertyPath: taskFailedMessage
+      value: The baby drank some bleach and got poisoned!
+      objectReference: {fileID: 0}
     - target: {fileID: 7167137298684330322, guid: 05ff5d5fd1600b643ba9fc41d7ae4a22, type: 3}
       propertyPath: m_Name
       value: Baby Bleach
@@ -4350,17 +4363,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7167137298684330322, guid: 05ff5d5fd1600b643ba9fc41d7ae4a22, type: 3}
   m_PrefabInstance: {fileID: 1101432183}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1101432189 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4644032217512252023, guid: 05ff5d5fd1600b643ba9fc41d7ae4a22, type: 3}
-  m_PrefabInstance: {fileID: 1101432183}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1101432186}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aab2dd96d3e12fd4898f51bf67a0d69a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1113230722
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4560,7 +4562,7 @@ MonoBehaviour:
   - {fileID: 1797941915}
   - {fileID: 1101432185}
   minimumActivationInterval: 5
-  maximumActivationInterval: 10
+  maximumActivationInterval: 15
   taskLayer:
     serializedVersion: 2
     m_Bits: 256
@@ -4579,8 +4581,8 @@ Transform:
   - {fileID: 1398771018}
   - {fileID: 890069460}
   - {fileID: 1865243869}
-  - {fileID: 1949070876}
   - {fileID: 6068356145569035744}
+  - {fileID: 1949070876}
   - {fileID: 1797941914}
   - {fileID: 1101432184}
   - {fileID: 691004395}
@@ -6244,6 +6246,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1309536129, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
+      propertyPath: scale
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1309536129, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
       propertyPath: Transition
       value: 
       objectReference: {fileID: 1264908840}
@@ -6639,6 +6645,14 @@ PrefabInstance:
       propertyPath: fearbar
       value: 
       objectReference: {fileID: 1264908846}
+    - target: {fileID: 7944496521521057326, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
+      propertyPath: fillRate
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7944496521521057326, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
+      propertyPath: depleteRate
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 8280812607525010471, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
       propertyPath: sounds.Array.data[0].volume
       value: 0
@@ -7443,7 +7457,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1372443399410578616, guid: 6f28ef8dafd32cc4d83952706d6dfd86, type: 3}
       propertyPath: taskFailedMessage
-      value: Failed to fix the overheating microwave!
+      value: The microwave overheated and caused a fire!
       objectReference: {fileID: 0}
     - target: {fileID: 2933083175552859627, guid: 6f28ef8dafd32cc4d83952706d6dfd86, type: 3}
       propertyPath: m_IsActive
@@ -8670,6 +8684,10 @@ PrefabInstance:
       propertyPath: taskProgressBar
       value: 
       objectReference: {fileID: 1618658530}
+    - target: {fileID: 9081105823511960434, guid: 6ac61b6dda9b6394bae8e14479a9c721, type: 3}
+      propertyPath: taskFailedMessage
+      value: The baby couldn't float in the bathtub and drowned!
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ac61b6dda9b6394bae8e14479a9c721, type: 3}
 --- !u!4 &1797941914 stripped
@@ -9028,7 +9046,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1500076599775648558, guid: 253ea384b49cacf4ba27cc393c75533f, type: 3}
       propertyPath: taskFailedMessage
-      value: Failed to fix the overflowing sink!
+      value: The sink overflowed and caused a flood!
       objectReference: {fileID: 0}
     - target: {fileID: 4655356179915138624, guid: 253ea384b49cacf4ba27cc393c75533f, type: 3}
       propertyPath: m_Color.a
@@ -9559,7 +9577,7 @@ PrefabInstance:
       objectReference: {fileID: 83276219}
     - target: {fileID: 8618652360199027866, guid: 3bb317ee02d7ebf4189e8e0d63d1cd4d, type: 3}
       propertyPath: taskFailedMessage
-      value: Failed to fix the loose celing fan!
+      value: The baby crawled under the ceiling fan and got crushed!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bb317ee02d7ebf4189e8e0d63d1cd4d, type: 3}
@@ -10537,7 +10555,7 @@ PrefabInstance:
       objectReference: {fileID: 144995996}
     - target: {fileID: 1764145362841287460, guid: edc3655bfb863374cbbfcef98aa78bd2, type: 3}
       propertyPath: taskFailedMessage
-      value: Failed to fix the smoking car!
+      value: The smoking car exhaust caused carbon monoxide poisoning!
       objectReference: {fileID: 0}
     - target: {fileID: 4290644669381500324, guid: edc3655bfb863374cbbfcef98aa78bd2, type: 3}
       propertyPath: m_Name

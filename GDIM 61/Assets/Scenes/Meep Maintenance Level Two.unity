@@ -241,6 +241,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 564064820}
     m_Modifications:
+    - target: {fileID: 6284243183370663184, guid: 720cf5388c14b38428e1f4a394a31ffd, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 497754003008788380, guid: c2c98c50dca0c714e9c6c4899fd1299a, type: 3}
     - target: {fileID: 6284243183370663185, guid: 720cf5388c14b38428e1f4a394a31ffd, type: 3}
       propertyPath: m_Name
       value: Balloon AlertIcon
@@ -252,6 +256,10 @@ PrefabInstance:
     - target: {fileID: 6284243183370663185, guid: 720cf5388c14b38428e1f4a394a31ffd, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6284243183370663186, guid: 720cf5388c14b38428e1f4a394a31ffd, type: 3}
+      propertyPath: m_Controller
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6284243183370663187, guid: 720cf5388c14b38428e1f4a394a31ffd, type: 3}
       propertyPath: m_RootOrder
@@ -1711,7 +1719,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1372443399410578616, guid: 6f28ef8dafd32cc4d83952706d6dfd86, type: 3}
       propertyPath: taskFailedMessage
-      value: Failed to fix the overheating microwave!
+      value: The microwave overheated and caused a fire!
       objectReference: {fileID: 0}
     - target: {fileID: 2933083175552859627, guid: 6f28ef8dafd32cc4d83952706d6dfd86, type: 3}
       propertyPath: m_IsActive
@@ -1928,6 +1936,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1971278550}
     m_Modifications:
+    - target: {fileID: 6284243183370663184, guid: 720cf5388c14b38428e1f4a394a31ffd, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 497754003008788380, guid: c2c98c50dca0c714e9c6c4899fd1299a, type: 3}
     - target: {fileID: 6284243183370663185, guid: 720cf5388c14b38428e1f4a394a31ffd, type: 3}
       propertyPath: m_Name
       value: Balloon AlertIcon
@@ -1939,6 +1951,10 @@ PrefabInstance:
     - target: {fileID: 6284243183370663185, guid: 720cf5388c14b38428e1f4a394a31ffd, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6284243183370663186, guid: 720cf5388c14b38428e1f4a394a31ffd, type: 3}
+      propertyPath: m_Controller
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6284243183370663187, guid: 720cf5388c14b38428e1f4a394a31ffd, type: 3}
       propertyPath: m_RootOrder
@@ -3007,7 +3023,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 398072438, guid: 3cc52b433fad9dd438074a2f53c479d8, type: 3}
       propertyPath: taskFailedMessage
-      value: Failed to fix the faulty outlet!
+      value: The faulty outlet caused an electrical fire!
       objectReference: {fileID: 0}
     - target: {fileID: 1895886587, guid: 3cc52b433fad9dd438074a2f53c479d8, type: 3}
       propertyPath: OutputAudioMixerGroup
@@ -3266,7 +3282,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3280334957604817416, guid: efef896479e133d4c8647f91a5fc21bf, type: 3}
       propertyPath: taskFailedMessage
-      value: Failed to fix the faulty air conditioner!
+      value: The faulty air conditioner caused carbon monoxide poisoning!
       objectReference: {fileID: 0}
     - target: {fileID: 4879678261680241568, guid: efef896479e133d4c8647f91a5fc21bf, type: 3}
       propertyPath: m_RootOrder
@@ -4792,6 +4808,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1440529287}
     m_Modifications:
+    - target: {fileID: 6284243183370663184, guid: 720cf5388c14b38428e1f4a394a31ffd, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 497754003008788380, guid: c2c98c50dca0c714e9c6c4899fd1299a, type: 3}
     - target: {fileID: 6284243183370663185, guid: 720cf5388c14b38428e1f4a394a31ffd, type: 3}
       propertyPath: m_Name
       value: Balloon AlertIcon
@@ -4803,6 +4823,10 @@ PrefabInstance:
     - target: {fileID: 6284243183370663185, guid: 720cf5388c14b38428e1f4a394a31ffd, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6284243183370663186, guid: 720cf5388c14b38428e1f4a394a31ffd, type: 3}
+      propertyPath: m_Controller
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6284243183370663187, guid: 720cf5388c14b38428e1f4a394a31ffd, type: 3}
       propertyPath: m_RootOrder
@@ -4989,7 +5013,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8390156084765635882, guid: 5036ec54525a47f49a27964b27c77dba, type: 3}
       propertyPath: taskFailedMessage
-      value: Failed to keep the ice sculpture from falling over!
+      value: The melting ice sculpture fell and caused someone to slip!
       objectReference: {fileID: 0}
     - target: {fileID: 8390156084765635882, guid: 5036ec54525a47f49a27964b27c77dba, type: 3}
       propertyPath: playerLayer.m_Bits
@@ -5246,6 +5270,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 289463350}
     m_Modifications:
+    - target: {fileID: 6284243183370663184, guid: 720cf5388c14b38428e1f4a394a31ffd, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 497754003008788380, guid: c2c98c50dca0c714e9c6c4899fd1299a, type: 3}
     - target: {fileID: 6284243183370663185, guid: 720cf5388c14b38428e1f4a394a31ffd, type: 3}
       propertyPath: m_Name
       value: Balloon AlertIcon
@@ -5257,6 +5285,10 @@ PrefabInstance:
     - target: {fileID: 6284243183370663185, guid: 720cf5388c14b38428e1f4a394a31ffd, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6284243183370663186, guid: 720cf5388c14b38428e1f4a394a31ffd, type: 3}
+      propertyPath: m_Controller
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6284243183370663187, guid: 720cf5388c14b38428e1f4a394a31ffd, type: 3}
       propertyPath: m_RootOrder
@@ -5368,6 +5400,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1566293886}
     m_Modifications:
+    - target: {fileID: 6284243183370663184, guid: 720cf5388c14b38428e1f4a394a31ffd, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 497754003008788380, guid: c2c98c50dca0c714e9c6c4899fd1299a, type: 3}
     - target: {fileID: 6284243183370663185, guid: 720cf5388c14b38428e1f4a394a31ffd, type: 3}
       propertyPath: m_Name
       value: Balloon AlertIcon
@@ -5379,6 +5415,10 @@ PrefabInstance:
     - target: {fileID: 6284243183370663185, guid: 720cf5388c14b38428e1f4a394a31ffd, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6284243183370663186, guid: 720cf5388c14b38428e1f4a394a31ffd, type: 3}
+      propertyPath: m_Controller
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6284243183370663187, guid: 720cf5388c14b38428e1f4a394a31ffd, type: 3}
       propertyPath: m_RootOrder
@@ -6226,6 +6266,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1819653434}
     m_Modifications:
+    - target: {fileID: 6284243183370663184, guid: 720cf5388c14b38428e1f4a394a31ffd, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 497754003008788380, guid: c2c98c50dca0c714e9c6c4899fd1299a, type: 3}
     - target: {fileID: 6284243183370663185, guid: 720cf5388c14b38428e1f4a394a31ffd, type: 3}
       propertyPath: m_Name
       value: Balloon AlertIcon
@@ -6237,6 +6281,10 @@ PrefabInstance:
     - target: {fileID: 6284243183370663185, guid: 720cf5388c14b38428e1f4a394a31ffd, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6284243183370663186, guid: 720cf5388c14b38428e1f4a394a31ffd, type: 3}
+      propertyPath: m_Controller
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6284243183370663187, guid: 720cf5388c14b38428e1f4a394a31ffd, type: 3}
       propertyPath: m_RootOrder
@@ -6787,7 +6835,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2921172799411840196, guid: b2d9287d08bf00845b0e4e01cb9fef0a, type: 3}
       propertyPath: taskFailedMessage
-      value: Failed to put out the fire on the flowers!
+      value: The flowers ignited and caused someone to catch on fire!
       objectReference: {fileID: 0}
     - target: {fileID: 2921172799411840196, guid: b2d9287d08bf00845b0e4e01cb9fef0a, type: 3}
       propertyPath: playerLayer.m_Bits
@@ -8120,7 +8168,7 @@ MonoBehaviour:
   - {fileID: 1044521483}
   - {fileID: 695708020}
   minimumActivationInterval: 5
-  maximumActivationInterval: 10
+  maximumActivationInterval: 15
   taskLayer:
     serializedVersion: 2
     m_Bits: 256
@@ -8168,6 +8216,10 @@ PrefabInstance:
     - target: {fileID: 837471819, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -420
+      objectReference: {fileID: 0}
+    - target: {fileID: 1309536129, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
+      propertyPath: scale
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 1309536129, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
       propertyPath: Transition
@@ -8585,6 +8637,14 @@ PrefabInstance:
       propertyPath: fearbar
       value: 
       objectReference: {fileID: 1310361864}
+    - target: {fileID: 7944496521521057326, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
+      propertyPath: fillRate
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7944496521521057326, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
+      propertyPath: depleteRate
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 8063113372102951491, guid: ee2c3fc340089794e8d09b398d21054c, type: 3}
       propertyPath: m_text
       value: 'New Ability Unlocked!
@@ -13306,7 +13366,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1229863646232587005, guid: 7cbc5ac563b717842ac24b7e87a34a0b, type: 3}
       propertyPath: taskFailedMessage
-      value: Failed to fix the overheating oven!
+      value: The oven overheated and caused a fire!
       objectReference: {fileID: 0}
     - target: {fileID: 3522796120253406704, guid: 7cbc5ac563b717842ac24b7e87a34a0b, type: 3}
       propertyPath: m_Name
@@ -13523,7 +13583,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1500076599775648558, guid: 253ea384b49cacf4ba27cc393c75533f, type: 3}
       propertyPath: taskFailedMessage
-      value: Failed to fix the overflowing sink!
+      value: The sink overflowed and caused a flood!
       objectReference: {fileID: 0}
     - target: {fileID: 4655356179915138624, guid: 253ea384b49cacf4ba27cc393c75533f, type: 3}
       propertyPath: m_Color.a
@@ -16146,7 +16206,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2921172799411840196, guid: b2d9287d08bf00845b0e4e01cb9fef0a, type: 3}
       propertyPath: taskFailedMessage
-      value: Failed to put out the fire on the flowers!
+      value: The flowers ignited and caused someone to catch on fire!
       objectReference: {fileID: 0}
     - target: {fileID: 2921172799411840196, guid: b2d9287d08bf00845b0e4e01cb9fef0a, type: 3}
       propertyPath: playerLayer.m_Bits

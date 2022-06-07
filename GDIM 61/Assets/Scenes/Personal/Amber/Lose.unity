@@ -1784,7 +1784,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Task Failed Message
+  m_text: Failed Task Message
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: aaba279d38f16f041a0cb644e5a251bd, type: 2}
   m_sharedMaterial: {fileID: 1358707599231895787, guid: aaba279d38f16f041a0cb644e5a251bd, type: 2}
@@ -1811,8 +1811,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

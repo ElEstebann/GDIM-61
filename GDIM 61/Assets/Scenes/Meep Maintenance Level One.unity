@@ -358,7 +358,7 @@ PrefabInstance:
       objectReference: {fileID: 182381036}
     - target: {fileID: 1372443399410578616, guid: 6f28ef8dafd32cc4d83952706d6dfd86, type: 3}
       propertyPath: taskFailedMessage
-      value: Failed to fix the overheating microwave!
+      value: The microwave overheated and caused a fire!
       objectReference: {fileID: 0}
     - target: {fileID: 2933083175552859628, guid: 6f28ef8dafd32cc4d83952706d6dfd86, type: 3}
       propertyPath: m_Camera
@@ -3706,7 +3706,7 @@ MonoBehaviour:
   - {fileID: 1913328560}
   - {fileID: 1895886578}
   minimumActivationInterval: 5
-  maximumActivationInterval: 10
+  maximumActivationInterval: 15
   taskLayer:
     serializedVersion: 2
     m_Bits: 256
@@ -5118,7 +5118,7 @@ PrefabInstance:
       objectReference: {fileID: 1306278024}
     - target: {fileID: 3280334957604817416, guid: efef896479e133d4c8647f91a5fc21bf, type: 3}
       propertyPath: taskFailedMessage
-      value: Failed to fix the faulty air conditioner!
+      value: The faulty air conditioner caused carbon monoxide poisoning!
       objectReference: {fileID: 0}
     - target: {fileID: 4879678261680241568, guid: efef896479e133d4c8647f91a5fc21bf, type: 3}
       propertyPath: m_RootOrder
@@ -5395,7 +5395,7 @@ PrefabInstance:
       objectReference: {fileID: 604911426}
     - target: {fileID: 398072438, guid: 3cc52b433fad9dd438074a2f53c479d8, type: 3}
       propertyPath: taskFailedMessage
-      value: Failed to fix the faulty outlet!
+      value: The faulty outlet caused an electrical fire!
       objectReference: {fileID: 0}
     - target: {fileID: 1895886587, guid: 3cc52b433fad9dd438074a2f53c479d8, type: 3}
       propertyPath: OutputAudioMixerGroup
@@ -5552,7 +5552,7 @@ PrefabInstance:
       objectReference: {fileID: 1054260122}
     - target: {fileID: 1500076599775648558, guid: 253ea384b49cacf4ba27cc393c75533f, type: 3}
       propertyPath: taskFailedMessage
-      value: Failed to fix the overflowing sink!
+      value: The sink overflowed and caused a flood!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253ea384b49cacf4ba27cc393c75533f, type: 3}
@@ -5695,7 +5695,7 @@ PrefabInstance:
       objectReference: {fileID: 982108161}
     - target: {fileID: 1229863646232587005, guid: 7cbc5ac563b717842ac24b7e87a34a0b, type: 3}
       propertyPath: taskFailedMessage
-      value: Failed to fix the overheating oven!
+      value: The oven overheated and caused a fire!
       objectReference: {fileID: 0}
     - target: {fileID: 6592921760787673074, guid: 7cbc5ac563b717842ac24b7e87a34a0b, type: 3}
       propertyPath: m_Name
