@@ -2827,7 +2827,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1165570693
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4587,9 +4587,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6253084073531929717, guid: 1b2e8bfa205593146b26c86326f60f68, type: 3}
       propertyPath: m_text
-      value: 'Jessica Lam
+      value: 'Joyce Mai
 
-        Joyce Mai
+        Sarah Smith
 
         Zane Moore
 
@@ -4602,7 +4602,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6253084073531929717, guid: 1b2e8bfa205593146b26c86326f60f68, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 4278190079
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7963326983463485727, guid: 1b2e8bfa205593146b26c86326f60f68, type: 3}
       propertyPath: m_Name
