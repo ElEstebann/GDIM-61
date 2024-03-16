@@ -18,6 +18,6 @@ UI/UX: Amber Chang & Esteban Aldana
 
 Programmers: Josh Nhean & Zane Moore
 
-Artists: Jessica Lam & Joyce Mai
+Artists: Sarah Smith & Joyce Mai
 
 Audio: Darius Friedhof & Haley Vlahos
